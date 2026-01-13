@@ -1,0 +1,22 @@
+ADD DIALOG FILES TO THIS FOLDER
+	Name them with the character name followed by line id from the script file (case insensitive).
+	For Display/Narrator lines, use "NARR" instead of the name.
+
+		Eg: 
+		Dave1.wav
+		Dave2.wav
+		NARR10.wav
+		Narr11.wav
+		Barney65.wav
+
+	You don't have to use wavs, but unity re-imports them anyway, so if you use ogg/mp3, they'll get compressed again.
+
+IMPORT SETTTINGS:
+
+	I find the import settings that work best are: 
+
+	- Load Type: Decompress On Load
+	- Preload Audio Data: Off
+	- Compression Format: Vorbis
+	- Quality: 50 (probably doesn't matter, but I couldn't hear any audible difference setting this lower)
+	- Sample Rate Settings: Optimize Sample Rate

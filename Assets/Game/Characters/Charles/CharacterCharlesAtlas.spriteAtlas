@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CharacterCharlesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a82ea0c786a3ff8439ecd97e084c3794, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ed918dd0affd05c438064ef985d54b21, type: 3}
+  - {fileID: 21300000, guid: a04c31012c2c7f249b853c6d1f5da4c5, type: 3}
+  - {fileID: 21300000, guid: 02cceff38f26ac94a9e160225df3841f, type: 3}
+  - {fileID: 21300000, guid: 5535b30614509eb47b3190bf390a889c, type: 3}
+  - {fileID: 21300000, guid: 8e93f4f6e14935b4b884daa33478a72b, type: 3}
+  - {fileID: 21300000, guid: c45e4af6fe3f9e343b66304eba39cf22, type: 3}
+  - {fileID: 21300000, guid: bf794c174a056fb49b2cc066223a3fb3, type: 3}
+  - {fileID: 21300000, guid: 91948e39bdaba6c4dab9b22ac66817b1, type: 3}
+  - {fileID: 21300000, guid: 808577d980f748147a6598b938ada6a3, type: 3}
+  - {fileID: 21300000, guid: 78de00bb4c91caf4393fedaec7529e37, type: 3}
+  - {fileID: 21300000, guid: 9cc329db0f6334842a1b7e4601f43cb2, type: 3}
+  - {fileID: 21300000, guid: 9c591dfecfc77d64189eda5642bf92c7, type: 3}
+  - {fileID: 21300000, guid: 3749d2bf80b26ef448fad227cc5a3199, type: 3}
+  - {fileID: 21300000, guid: 121607bfc82ce414e97cddff16e852ee, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TalkD_0
+  - WalkR_2
+  - TalkU_1
+  - TalkR_0
+  - WalkR_1
+  - TalkU_0
+  - WalkR_0
+  - TalkD_1
+  - TalkR_2
+  - IdleU_0
+  - IdleR_0
+  - TalkR_1
+  - IdleD_0
+  - WalkR_3
+  m_RenderDataMap: {}
+  m_Tag: CharacterCharlesAtlas
+  m_IsVariant: 0

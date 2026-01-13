@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f45b3ba7c948e48b618abc5be85736, type: 3}
+  m_Name: PowerQuestEditorSettings
+  m_EditorClassIdentifier: 
+  m_smartCompile: 1
+  m_scriptEditorFont: Consolas
+  m_scriptEditorColors:
+    m_plainText: {r: 0.6509804, g: 0.6745098, b: 0.8039216, a: 1}
+    m_event: {r: 0.9411765, g: 0.44313726, b: 0.47058824, a: 1}
+    m_speaker: {r: 0.78039217, g: 0.57254905, b: 0.91764706, a: 1}
+    m_dialog: {r: 0.7647059, g: 0.9098039, b: 0.5529412, a: 1}
+    m_comment: {r: 0.252047, g: 0.9056604, b: 0.8406261, a: 1}
+    m_background: {r: 0.16078432, g: 0.1764706, b: 0.24313726, a: 1}
+    m_sidebar: {r: 0.213452, g: 0.2284135, b: 0.292, a: 1}
+    m_cursor: {r: 1, g: 0.79607844, b: 0.41960785, a: 1}
+  m_scriptEditorTheme: 3
+  m_spellCheckEnabled: 1
+  m_spellCheckIgnoredWords: []
+  m_spellCheckDictionaryPath: Assets/Plugins/PowerQuest/ThirdParty/Editor/SpellCheck/en_US.dic
+  m_yieldRegexes: []
+  m_scriptReplaceRegexes: []
+  m_autoCompleteRegexes: []
+  m_colorRegexes: []
+  m_regexFoldOut: 0
+  m_regexError: 
+  m_scriptBtnUsedCol: {r: 1, g: 1, b: 1, a: 1}
+  m_scriptBtnUnusedCol: {r: 0.8, g: 0.8, b: 0.8, a: 1}
