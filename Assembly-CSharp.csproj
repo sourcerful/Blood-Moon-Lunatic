@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F5B794DA-3789-F989-B89D-F9C26EB2911F}</ProjectGuid>
+    <ProjectGuid>{66CA85AA-BEF3-21E7-9F7A-6EB69743C067}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -90,7 +90,6 @@
     <Compile Include="Assets\PowerQuest\Scripts\Systems\SystemDebug.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\Gui\Label.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\Gui\Button.cs" />
-    <Compile Include="Assets\Game\Rooms\Bedroom\RoomBedroom.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\QuestText.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\QuestInterfaces.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\Audio\SystemAudio.cs" />
@@ -105,7 +104,7 @@
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\PowerQuest.cs" />
     <Compile Include="Assets\Game\Gui\HoverText\GuiHoverText.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\PowerQuestDefinitions.cs" />
-    <Compile Include="Assets\Game\Characters\Test\CharacterTest.cs" />
+    <Compile Include="Assets\Game\Characters\Luna\CharacterLuna.cs" />
     <Compile Include="Assets\Game\GlobalScript.cs" />
     <Compile Include="Assets\Game\DialogTree\ChatWithCharles\DialogChatWithCharles.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\InventoryComponent.cs" />
@@ -138,15 +137,15 @@
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\Character.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\ThirdParty\clipper.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\PowerQuestSave.cs" />
-    <Compile Include="Assets\Game\DialogTree\ChatWithBarney\DialogChatWithBarney.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\PowerQuestGui.cs" />
-    <Compile Include="Assets\Game\Characters\Luna\CharacterLuna.cs" />
     <Compile Include="Assets\Game\Rooms\Title\RoomTitle.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\Systems\SystemTime.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\Gui\GuiDialogOption.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\QuestMenuManager.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\PixelPerfectCollider.cs" />
     <Compile Include="Assets\PowerQuest\Scripts\PowerQuest\QuestSaveManager.cs" />
+    <Compile Include="Assets\Game\Gui\InventoryBar\GuiInventoryBar.cs" />
+    <Compile Include="Assets\Game\Rooms\Workshop\RoomWorkshop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PowerQuest\Version.txt" />
@@ -833,7 +832,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{C1D90FE8-74C5-D837-01DA-44BDB1F18EE5}</Project>
+      <Project>{4EA97DAA-9129-D780-5BEE-5A0F63CFDD62}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

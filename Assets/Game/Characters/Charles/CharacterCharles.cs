@@ -12,10 +12,10 @@ public class CharacterCharles : CharacterScript<CharacterCharles>
 	{
 		yield return C.FaceClicked();
 		yield return C.Charles.Say("Luna, come.");
-		yield return C.Charles.Face(C.Luna);
+		yield return C.Charles.Face(C.Player);
 		yield return C.WalkToClicked();
-		yield return C.Luna.Face(C.Charles);
-		yield return C.Luna.Say("Yes my lord?");
+		yield return C.Plr.Face(C.Charles);
+		yield return C.Plr.Say("Yes my lord?");
 		D.ChatWithCharles.Start();
 		Globals.m_spokeToCharles= true;
 		yield return E.Break;

@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_data:
     m_description: Well
     m_cursor: 
-    m_visible: 0
+    m_visible: 1
     m_clickable: 1
     m_animation: Well
     m_alpha: 1

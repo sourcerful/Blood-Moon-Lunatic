@@ -26,11 +26,12 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	};
 	
 	public eProgress m_progressExample = eProgress.None;
-	public int m_insanity_counter = 0;
 	
 	/// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
 	/// All variables like this in Quest Scripts are automatically saved
 	public bool m_spokeToCharles = false;
+	public bool m_workshop_pagesExplored = false;
+	public bool m_charlesArrive = false;
 	
 	////////////////////////////////////////////////////////////////////////////////////
 	// Global Game Functions
