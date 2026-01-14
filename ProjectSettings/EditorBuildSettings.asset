@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Game/Rooms/Forest/SceneRoomForest.unity
     guid: 1121794b7ab7e6f44a29b3e8be8fbb08
   - enabled: 1
-    path: Assets/Game/Rooms/Bedroom/SceneRoomBedroom.unity
-    guid: 99b7c2fc5aff67b4fb97b2ff3658e53c
-  - enabled: 1
-    path: Assets/Game/Rooms/WritingRoom/SceneRoomWritingRoom.unity
-    guid: ddf47636072a2e147ab0dfad2f6885fa
+    path: Assets/Game/Rooms/Workshop/SceneRoomWorkshop.unity
+    guid: 607ff916e37b10e49beb1441ef8f713e
   m_configObjects: {}

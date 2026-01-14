@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Inventory/EmptyBottle/InventoryEmptyBottle.cs.meta
 guid: 8ba1e24ecd70e6a4d87e58647ffae766
+========
+guid: 0ec944b4b5629b34f9a87d611d43d943
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop/RoomWorkshop.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

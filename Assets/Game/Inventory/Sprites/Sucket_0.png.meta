@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Inventory/Sprites/Sucket_0.png.meta
 guid: 3128a95e76c6adf44a7ffde8daa56743
+========
+guid: 8a1bdfeade3ede54baa8b8a4a9969d9b
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop/Sprites/Bg.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,14 +98,18 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:Assets/Game/Inventory/Sprites/Sucket_0.png.meta
     spriteID: c0f87f6c6d520524cacd51e0b7f28528
+========
+    spriteID: 6dd1cf9b0e9d41043825331da951ff18
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop/Sprites/Bg.png.meta
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+  spritePackingTag: RoomForest
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 

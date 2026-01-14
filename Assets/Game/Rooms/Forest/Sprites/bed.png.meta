@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Rooms/Forest/Sprites/bed.png.meta
 guid: c4144a85fd326824580043c571d11c4e
+========
+guid: 53b90015ab82510479e07a03f0e58da1
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop/Sprites/WorkTable.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

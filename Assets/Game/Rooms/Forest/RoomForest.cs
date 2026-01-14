@@ -60,7 +60,7 @@ public class RoomForest : RoomScript<RoomForest>
 		// The string "useForest" can be anything you want, as long as it's unique the the "occurrence'
 		if ( E.Occurrence("useForest") == 2 )
 		{
-			yield return C.Luna.Say("Same as it did the last two times");
+			yield return C.Plr.Say("Same as it did the last two times");
 		}
 		
 		yield return E.Break;
@@ -138,7 +138,7 @@ public class RoomForest : RoomScript<RoomForest>
 			I.EmptyBottle.Remove();
 			I.FullBottle.AddAsActive();
 			yield return E.WaitSkip();
-			yield return C.Luna.FaceDown();
+			yield return C.Plr.FaceDown();
 			yield return E.WaitSkip();
 		}
 		if( item == I.FullBottle)
@@ -161,13 +161,13 @@ public class RoomForest : RoomScript<RoomForest>
 
 	public IEnumerator OnLookAtHotspotForest( IHotspot hotspot )
 	{
-		yield return C.Luna.FaceUp();
-
+		yield return C.Plr.FaceUp();
+		
 		// YOu can use FirstLook, FirstUse, LookCount, and UseCount to change what happens on subsequent clicks
 		if ( hotspot.FirstLook )
-			yield return C.Luna.Say("Looks impenetrable");
-		else 
-			yield return C.Luna.Say("Still looks impenetrable");
+			yield return C.Plr.Say("Looks impenetrable");
+		else
+			yield return C.Plr.Say("Still looks impenetrable");
 		yield return E.Break;
 	}
 
@@ -176,17 +176,17 @@ public class RoomForest : RoomScript<RoomForest>
 		// Here the player has entered a region. Regions can also just be used to scale or tint the character
 		
 		yield return E.WaitSkip();
-		C.Luna.StopWalking();
+		C.Plr.StopWalking();
 		yield return E.WaitSkip();
-		yield return C.Luna.FaceDown();
+		yield return C.Plr.FaceDown();
 		yield return E.WaitSkip();
-		yield return C.Luna.Say("This corner gives me the heebie jeebies");
+		yield return C.Plr.Say("This corner gives me the heebie jeebies");
 		yield return E.WaitSkip(0.25f);
-		yield return C.Charles.Face(C.Luna);
+		yield return C.Charles.Face(C.Plr);
 		yield return C.Charles.Say("Yeah, stay away from that corner dude, it has a Tint colour.");
 		yield return E.WaitSkip(0.25f);
-		yield return C.Luna.FaceUp();
-		yield return C.Luna.Say("Good idea, Let's set it's Walkable property to false so I'll never make the same mistake again");
+		yield return C.Plr.FaceUp();
+		yield return C.Plr.Say("Good idea, Let's set it's Walkable property to false so I'll never make the same mistake again");
 		yield return C.Plr.WalkTo(124, -67);
 		
 		// Setting a region's Walkable" as false will stop the player walking there
@@ -212,10 +212,16 @@ public class RoomForest : RoomScript<RoomForest>
 		// and the OnInteract function in Barney's main script will be called instead
 		if ( E.Reached(eThingsYouveDone.EatenSandwich) )
 		{
-			yield return C.Luna.Say("I ate your sandwich");
+			yield return C.Plr.Say("I ate your sandwich");
 			yield return C.Charles.Say("You monster");
 		}
 		
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvPropBucket( IProp prop, IInventory item )
+	{
+
 		yield return E.Break;
 	}
 

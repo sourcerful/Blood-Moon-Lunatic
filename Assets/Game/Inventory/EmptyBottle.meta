@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Inventory/EmptyBottle.meta
 guid: 83fdd73e84124524bba7793887492f35
+========
+guid: afb0121ebb5574b43b30c6dd1e5280ed
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

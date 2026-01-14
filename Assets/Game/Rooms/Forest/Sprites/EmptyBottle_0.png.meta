@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Rooms/Forest/Sprites/EmptyBottle_0.png.meta
 guid: 97605b8572a46b34e907806cf54b484a
+========
+guid: 20f34574c6a3efb429fa94b42ca636ae
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Rooms/Workshop/Sprites/NameList.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

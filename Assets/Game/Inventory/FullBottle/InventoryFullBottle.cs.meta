@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Game/Inventory/FullBottle/InventoryFullBottle.cs.meta
 guid: 75cbaf6a6c06f0c4885aad46b3dce58d
+========
+guid: e760e559af27aab458a75fc4f6339ada
+>>>>>>>> 4df836141f793d6f4e6e4a054e7589465dd22d10:Assets/Game/Gui/InventoryBar/GuiInventoryBar.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

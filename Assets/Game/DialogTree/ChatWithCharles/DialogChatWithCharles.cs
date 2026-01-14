@@ -9,7 +9,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	public IEnumerator OnStart()
 	{
 		yield return C.Charles.Say("I shall be absent this evening.");
-		yield return C.Luna.Say("Is everything alright?");
+		yield return C.Plr.Say("Is everything alright?");
 		yield return E.WaitSkip();
 		yield return C.Charles.Say("Indeed. The Blood Moon’s arrival is nigh.");
 		yield return E.WaitSkip();
@@ -26,9 +26,9 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 
 	IEnumerator Option1( IDialogOption option )
 	{
-		yield return C.Luna.Say(option.Description);
+		yield return C.Plr.Say(option.Description);
 		yield return E.WaitSkip();
-		yield return C.Luna.Say("Y-You are covered in red again... My Lord, it's... it's all over your sleeve.");
+		yield return C.Plr.Say("Y-You are covered in red again... My Lord, it's... it's all over your sleeve.");
 		
 		if(!option.FirstUse)
 			yield return C.Charles.Say(" As I said...");
@@ -55,11 +55,12 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return C.Charles.Say("I'd be glad if you could clean this room for tomorrow's big event.");
 		yield return C.Charles.Say("As usual, Do NOT go into my office!");
 		yield return E.WaitSkip();
-		yield return C.Luna.Say("Of course my lord.");
+		yield return C.Plr.Say("Of course my lord.");
 		yield return E.WaitSkip();
 		yield return C.Charles.WalkTo(-250, -54);
-		yield return C.Luna.Face(C.Charles);
+		yield return C.Plr.Face(C.Charles);
 		C.Charles.Disable();
+		yield return C.Plr.ChangeRoom(R.Workshop);
 		Stop();
 		yield return C.InnerThoughts.Say("Why would he still insist on me not entering his office?");
 		yield return C.InnerThoughts.Say("There must be a way to stop him in there");
@@ -70,7 +71,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 
 	IEnumerator Option2( IDialogOption option )
 	{
-		yield return C.Luna.Say(option.Description);
+		yield return C.Plr.Say(option.Description);
 		if(!option.FirstUse)
 			yield return C.Charles.Say(" As I said...");
 		yield return E.WaitSkip();
@@ -80,9 +81,9 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return E.WaitSkip();
 		
 		if(option.FirstUse)
-			yield return C.Luna.WalkTo(C.Luna.Position.x - 10, C.Luna.Position.y, true);
-			yield return C.Luna.Face(C.Charles);
-			yield return C.Luna.Say("And then... what will you do?");
+			yield return C.Plr.WalkTo(C.Player.Position.x - 10, C.Player.Position.y, true);
+			yield return C.Plr.Face(C.Charles);
+			yield return C.Plr.Say("And then... what will you do?");
 			yield return C.Charles.Say("I must mark the shops and the square.");
 			yield return C.Charles.Say("By tomorrow morning, no one will be able to walk down the main street without seeing the signs of what is coming.");
 			yield return C.Charles.Say("I want the town to wake up and feel the weight of the Blood Moon before it even arrives.");
@@ -94,7 +95,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 
 	IEnumerator Option3( IDialogOption option )
 	{
-		yield return C.Luna.Say(option.Description);
+		yield return C.Plr.Say(option.Description);
 		yield return C.Charles.Say("Tomorrow, The Blood Moon shall be out.");
 		yield return E.WaitSkip();
 		yield return C.Charles.Say("It is the moment I step out of the shadows and into the public eye.");
