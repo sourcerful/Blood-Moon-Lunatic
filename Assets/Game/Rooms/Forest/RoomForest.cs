@@ -26,19 +26,25 @@ public class RoomForest : RoomScript<RoomForest>
 	{
 		// Put things here that happen when you enter a room
 		
-		if ( FirstTimeVisited && EnteredFromEditor == false ) // Only run this part the first time you visit, and not when debugging
-		{
-			yield return E.WaitSkip();
-			yield return C.Luna.WalkTo(Point("EntryWalk"));
-			yield return C.Luna.Say("I should talk to Lord Charles");
-			Audio.PlayMusic("MusicExample");
-			yield return E.WaitSkip();
-			yield return C.Display("Left Click to Walk & Interact\nRight Click to Look At");
-		}
-		
-		
-		C.Luna.WalkToBG(Point("EntryWalk"));
-		
+		//if ( FirstTimeVisited && EnteredFromEditor == false ) // Only run this part the first time you visit, and not when debugging
+		//{
+			//Audio.PlayMusic("MusicExample");
+		//}
+		E.StartCutscene();
+		yield return E.Wait();
+		yield return C.Luna.WalkTo((Prop("Bed")));
+		yield return C.Player.Face(Prop("Bed"));
+		yield return E.Wait(((float)1.5));
+		yield return C.Charles.Say("Luna, come now.");
+		yield return E.Wait(1);
+		yield return C.InnerThoughts.Say("I must speak to Lord Charles or I will suffer the consequences...");
+		//Audio.PlayMusic("MusicExample");
+		yield return C.Player.WalkTo((C.Charles));
+		yield return C.Charles.Face(C.Luna);
+		yield return C.Luna.Face(C.Charles);
+		yield return C.Luna.Say("Yes my lord?");
+		E.EndCutscene();
+		//D.ChatWithCharles.Start();
 		yield return E.Break;
 	}
 
@@ -48,7 +54,7 @@ public class RoomForest : RoomScript<RoomForest>
 		yield return C.Plr.WalkTo( E.GetMousePosition() );
 		yield return C.Plr.FaceUp();
 		
-		yield return C.Luna.Say("Feels impenetrable");
+		yield return C.Plr.Say("Feels impenetrable");
 		
 		// Use to quickly check if something's been done before. See also E.FirstOccurrence(...)
 		// The string "useForest" can be anything you want, as long as it's unique the the "occurrence'
@@ -65,28 +71,9 @@ public class RoomForest : RoomScript<RoomForest>
 	{
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
-		E.StartCutscene();
-		yield return E.WaitSkip();
-		yield return C.Luna.Say("I can't see anything in the well");
-		yield return E.WaitSkip();
-		yield return C.Luna.Say("And I'm certainly not climbing down there");
-		yield return E.WaitSkip();
-		yield return C.Charles.Face(C.Luna);
-		yield return C.Charles.Say("Oh go on!");
-		yield return C.Luna.Face(C.Charles);
-		yield return C.Luna.Say("Ummmm...");
-		yield return E.WaitSkip();
-		yield return C.FaceClicked();
-		yield return E.WaitSkip(1.0f);
-		yield return C.Luna.Face(C.Charles);
-		yield return E.WaitSkip();
-		yield return C.FaceClicked();
-		yield return E.WaitSkip(1.0f);
-		yield return C.Luna.Face(C.Charles);
-		yield return E.WaitSkip(1.0f);
-		yield return C.Luna.Say("No");
-		yield return E.WaitSkip();
-		E.EndCutscene();
+		
+		yield return C.InnerThoughts.Say("T-This keg is filled with blood...");
+		yield return C.InnerThoughts.Say("I wonder how many he has killed to fill it up...");
 		
 		yield return E.Break;
 		
@@ -96,12 +83,25 @@ public class RoomForest : RoomScript<RoomForest>
 	{
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
+		if(I.Key.Owned){
+			yield return C.InnerThoughts.Say("It fits");
+			Globals.m_progressExample = eProgress.Room2;
+			yield return E.Wait(1);
+			yield return C.Display("*Click*");
+			I.Key.Remove();
+			// TP to Workshop
+		
+		}
+		else {
 		yield return E.WaitSkip();
-		yield return C.Luna.Say("No way am I going in there!");
+		yield return C.InnerThoughts.Say("Lord Charles' Workshop...");
+		yield return C.InnerThoughts.Say("I never dared to set foot in there...");
+		yield return C.InnerThoughts.Say("Maybe I will find a way to stop him in there");
 		yield return C.Luna.FaceDown();
 		yield return E.WaitSkip();
-		yield return C.Luna.Say("There might be beetles");
-		
+		yield return C.InnerThoughts.Say("It's locked");
+		yield return C.InnerThoughts.Say("His spare key must be somewhere in here");
+		}
 		yield return E.Break;
 	}
 
@@ -110,13 +110,12 @@ public class RoomForest : RoomScript<RoomForest>
 	{
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
-		yield return C.Display("Dave stoops to pick up the bucket");
+		yield return C.InnerThoughts.Say("What is this empty bottle doing here?");
 		Audio.Play("Bucket");
 		prop.Disable();
-		I.Bucket.AddAsActive();
+		I.EmptyBottle.AddAsActive();
 		yield return E.WaitSkip();
 		yield return C.Plr.FaceDown();
-		yield return C.Luna.Say("Yaaay! I got a bucket!");
 		yield return E.WaitSkip();
 		yield return C.Display("Access your Inventory from the top of the screen");
 		
@@ -127,22 +126,24 @@ public class RoomForest : RoomScript<RoomForest>
 	public IEnumerator OnUseInvPropWell( Prop prop, Inventory item )
 	{
 		// NB: You need to check they used the correct item!
-		if ( item == I.Bucket )
-		{ 
+		if ( item == I.EmptyBottle && Globals.m_progressExample == eProgress.GotBottle)
+		{
 			yield return C.WalkToClicked();
 			yield return C.FaceClicked();
-			yield return C.Display("Dave lowers the bucket down, and collects some juicy well water");
-			Globals.m_progressExample = eProgress.GotWater;
-			yield return C.Luna.Say("Yaaay! I solved the real hard puzzle!");
+			yield return C.InnerThoughts.Say("I hope it's a good idea");
+			yield return C.Display("Luna lowers the bottle down, and fills it with fresh blood from the keg");
+			Globals.m_progressExample = eProgress.FilledBottle;
 			yield return E.Wait(1);
-			yield return C.Display("THE END");
+			yield return C.Luna.Say("God, please have mercy on those poor souls");
+			I.EmptyBottle.Remove();
+			I.FullBottle.AddAsActive();
 			yield return E.WaitSkip();
 			yield return C.Luna.FaceDown();
 			yield return E.WaitSkip();
-			yield return C.Luna.Say("Yaay!");
-
-			// Here we're setting a custom 'enum' so we could check it somewhere else to see if the player won yet
-			Globals.m_progressExample = eProgress.WonGame; 		
+		}
+		if( item == I.FullBottle)
+		{
+			yield return C.InnerThoughts.Say("I already filled the bottle");
 		}
 		yield return E.Break;
 		
@@ -195,7 +196,7 @@ public class RoomForest : RoomScript<RoomForest>
 	public IEnumerator OnLookAtPropWell( IProp prop )
 	{
 		yield return C.FaceClicked();
-		yield return C.Luna.Say("Well well well");
+		yield return C.InnerThoughts.Say("Why does he have a keg in his room?");
 		yield return E.Break;
 	}
 
@@ -215,6 +216,108 @@ public class RoomForest : RoomScript<RoomForest>
 			yield return C.Charles.Say("You monster");
 		}
 		
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropBucket( IProp prop )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropBed( IProp prop )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnInteractPropBed( IProp prop )
+	{
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		yield return C.Display("You Searched the bed, then cleaned it.");
+		yield return E.Break;
+	}
+
+	IEnumerator OnInteractPropDresser( IProp prop )
+	{
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("The top drawer seems to be locked");
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropDresser( IProp prop )
+	{
+		yield return C.InnerThoughts.Say("It has an empty chalice on top");
+		yield return C.InnerThoughts.Say("It's stuck to the dresser");
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropEmptyBottle( IProp prop )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnInteractPropEmptyBottle( IProp prop )
+	{
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("What is this empty bottle doing here?");
+		Audio.Play("Bucket");
+		prop.Disable();
+		I.EmptyBottle.AddAsActive();
+		yield return E.WaitSkip();
+		yield return C.Plr.FaceDown();
+		yield return E.WaitSkip();
+		Globals.m_progressExample = eProgress.GotBottle;
+		yield return C.Display("Access your Inventory from the top of the screen");
+		
+		yield return E.Break;
+		
+		
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvPropDresser( IProp prop, IInventory item )
+	{
+		// NB: You need to check they used the correct item!
+		if ( item == I.FullBottle && Globals.m_progressExample == eProgress.FilledBottle)
+		{
+			yield return C.WalkToClicked();
+			yield return C.FaceClicked();
+			yield return C.InnerThoughts.Say("I hope it's a good idea");
+			yield return C.Display("You fill the chalice with blood...");
+			Globals.m_progressExample = eProgress.Room2;
+			yield return E.Wait(1);
+			yield return C.Display("*Click*");
+			yield return C.InnerThoughts.Say("It actually worked, the spare key was in here");
+			yield return C.InnerThoughts.Say("I can now access the workshop");
+			I.Key.Add();
+			yield return E.WaitSkip();
+			yield return C.Luna.FaceDown();
+			yield return E.WaitSkip();
+		}
+		else
+		{
+			if(item == I.FullBottle)
+			{
+			yield return C.InnerThoughts.Say("I got the key, I should enter the workshop");
+			}
+		}
+		yield return E.Break;
+		
+	}
+
+	IEnumerator OnUseInvPropEmptyBottle( IProp prop, IInventory item )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvHotspotCave( IHotspot hotspot, IInventory item )
+	{
 		yield return E.Break;
 	}
 }

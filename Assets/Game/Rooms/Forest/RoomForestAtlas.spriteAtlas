@@ -54,6 +54,9 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6a9d21147036e934cad6c2691beae302, type: 3}
   - {fileID: 21300000, guid: 6c1b7f14280e1b446aa2a03d164a0041, type: 3}
   - {fileID: 21300000, guid: 92c28a057d747be4fafd0804afd42832, type: 3}
+  - {fileID: 21300000, guid: c4144a85fd326824580043c571d11c4e, type: 3}
+  - {fileID: 21300000, guid: 97605b8572a46b34e907806cf54b484a, type: 3}
+  - {fileID: 21300000, guid: f5aebdccae607de49ac4fd0a9b2efb83, type: 3}
   - {fileID: 21300000, guid: 845e6dad78aa6134aa8a0d045feccd21, type: 3}
   m_PackedSpriteNamesToIndex:
   - Bucket_0
@@ -61,6 +64,9 @@ SpriteAtlas:
   - Well_0
   - Foreground_0
   - ForegroundR_0
+  - bed
+  - EmptyBottle_0
+  - dresser
   - Back_0
   m_RenderDataMap: {}
   m_Tag: RoomForestAtlas

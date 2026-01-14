@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Barney
+    m_description: Charles
     m_cursor: Talk
     m_room: Forest
     m_position: {x: 84, y: -26}

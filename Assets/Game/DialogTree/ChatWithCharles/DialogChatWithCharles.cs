@@ -53,7 +53,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	{
 		yield return C.Charles.Say("Luna, before I leave");
 		yield return C.Charles.Say("I'd be glad if you could clean this room for tomorrow's big event.");
-		yield return C.Charles.Say("Do NOT go into my office!");
+		yield return C.Charles.Say("As usual, Do NOT go into my office!");
 		yield return E.WaitSkip();
 		yield return C.Luna.Say("Of course my lord.");
 		yield return E.WaitSkip();
@@ -61,6 +61,10 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return C.Luna.Face(C.Charles);
 		C.Charles.Disable();
 		Stop();
+		yield return C.InnerThoughts.Say("Why would he still insist on me not entering his office?");
+		yield return C.InnerThoughts.Say("There must be a way to stop him in there");
+		yield return C.InnerThoughts.Say("His spare key should be somewhere in this room");
+		yield return C.Display("Left Click to Walk & Interact\nRight Click to Look At");
 		yield return E.Break;
 	}
 

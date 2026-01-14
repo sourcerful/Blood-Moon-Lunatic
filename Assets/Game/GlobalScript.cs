@@ -20,9 +20,9 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	public enum eProgress
 	{
 		None,
-		GotWater,
-		DrankWater,
-		WonGame
+		GotBottle,
+		FilledBottle,
+		Room2,
 	};
 	
 	public eProgress m_progressExample = eProgress.None;
