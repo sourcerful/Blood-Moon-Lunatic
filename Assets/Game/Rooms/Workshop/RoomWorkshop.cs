@@ -13,13 +13,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		// Put things here that happen when you enter a room
 		
 		C.Plr.SetPosition(Point("EntryPoint"));
+		C.Elton.Disable();
 		
 		yield return E.Break;
 	}
 
 	IEnumerator OnInteractPropCloset( IProp prop )
 	{
-		if (Globals.m_charlesArrive == false)
+		if (Globals.m_charlesArrive == true)
+		{
+			E.StartCutscene();
 			yield return C.Plr.FaceRight();
 			yield return E.WaitSkip();
 			yield return C.Plr.FaceDown();
@@ -30,10 +33,45 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return E.WaitSkip();
 			yield return C.Plr.Say("The closet!");
 			yield return E.WaitSkip();
+			C.Plr.WalkSpeed = new Vector2(80,80);
 			yield return C.Plr.WalkToClicked(true);
-		if (Globals.m_charlesArrive == false)
 			yield return C.Plr.FaceClicked();
 			yield return C.Plr.WalkToClicked();
+			C.Plr.ResetWalkSpeed();
+			E.EndCutscene();
+		
+			yield return E.Wait(1);
+		
+			E.StartCutscene();
+			yield return C.Charles.ChangeRoom(R.Workshop);
+			C.Charles.Enable();
+			yield return C.Charles.MoveTo(Point("EntryPoint"));
+			yield return C.Charles.FaceRight(true);
+			yield return E.Wait(1);
+		
+			yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
+			yield return C.Charles.Say("Luna are you in here?");
+			yield return C.InnerThoughts.Say("I have to keep quiet, If he finds me in here I am DONE");
+			yield return E.Wait((float) 0.5);
+			yield return C.Charles.Say("Anyway, I have to get the list again. I can't keep Elton waiting");
+			yield return C.InnerThoughts.Say("Dear god, He killed another one...");
+			C.Charles.WalkSpeed = new Vector2(50,50);
+			yield return C.Charles.WalkTo(Prop("NameList"));
+			yield return C.Charles.Face(eFace.Up);
+			C.Charles.Cursor="Left";
+		
+			yield return E.Wait(1);
+			yield return C.InnerThoughts.Say("He is looking away");
+			yield return C.InnerThoughts.Say("This is it. I still got the bottle. It has to be now...");
+			yield return C.InnerThoughts.Say("I have to kill this fiend NOW");
+			Prop("Closet").Clickable=false;
+			E.EndCutscene();
+		}
+		else{
+			yield return C.WalkToClicked();
+			yield return C.FaceClicked();
+			yield return C.InnerThoughts.Say("A closet, It's empty");
+		}
 		yield return E.Break;
 	}
 
@@ -56,14 +94,29 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("Is he...");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("Some of the names are checked, are they... DEAD?!?");
+		yield return C.Plr.Say("Some of the names are checked...");
 		yield return C.Plr.Say("Perhaps... Victims?");
-		yield return C.InnerThoughts.Say("HE MURDERED THEM!!");
+		yield return C.InnerThoughts.Say("Wait... are they... DEAD?!?");
+		yield return C.InnerThoughts.Say("HE MURDERED SO MANY PEOPLE?!?");
 		yield return C.InnerThoughts.Say("THIS ROOM IS FULL OF THEIR BLOOD!");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("This has to stop, I need to save the rest of them.");
+		yield return C.Plr.Say("This has to stop, I must save the village.");
 		yield return E.WaitSkip();
-		Globals.m_workshop_pagesExplored = true;
+		if(Prop("NameList").FirstUse) Globals.m_interactionCounter++;
+		
+		
+		if(Globals.m_interactionCounter==2){
+			yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
+			yield return E.WaitSkip();
+			Audio.Play("Bucket"); // bedroom door closes
+			Globals.m_charlesArrive = true;
+			yield return C.InnerThoughts.Say("Oh god, he's here!");
+			yield return E.WaitSkip();
+			yield return C.InnerThoughts.Say("I must hide, FAST");
+			yield return C.Display("HIDE IN THE CLOSET");
+			Prop("NameList").Clickable=false;
+			Prop("WorkTable").Clickable=false;
+		}
 		yield return E.Break;
 	}
 
@@ -95,32 +148,42 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("Red.");
 		yield return C.Plr.Say("A single, heavy drop. It glistens in the candlelight.");
-		yield return C.Plr.Say("It is not ink... it is too thick. Too dark.");
 		
-		if (Globals.m_workshop_pagesExplored == true)
-			yield return C.InnerThoughts.Say("The blood of his victims!");
-			yield return C.InnerThoughts.Say("He uses their blood to write the journal!");
-			yield return E.WaitSkip();
-			yield return C.Plr.Say("I must read his plans. I must know the truth.");
-			yield return C.Display("\"To summon the beast, one must not hesitate to spill blood.\"");
-			yield return C.Display("The narrative demands a sacrifice to become immortal.\"");
-			yield return C.InnerThoughts.Say("Immortal...");
-			yield return C.InnerThoughts.Say("He confesses it on the very page.");
-			yield return C.InnerThoughts.Say("The 'narrative'... that is what he calls the ritual.");
-			yield return C.InnerThoughts.Say("That's what the blood moon is all about!");
-			yield return E.WaitSkip();
+
+		yield return C.InnerThoughts.Say("The blood of his victims!");
+		yield return C.InnerThoughts.Say("He uses their blood to write the journal!");
+		yield return E.WaitSkip();
+		yield return C.Plr.Say("I must read his plans. I must know the truth.");
+		yield return C.Display("\"To unleash the inner beast, one must not hesitate to spill blood.\"");
+		yield return C.Display("A sacrifice of a maiden is required to become immortal.\"");
+		yield return C.InnerThoughts.Say("Immortal...");
+		yield return C.InnerThoughts.Say("He confesses it on the very page.");
+		yield return C.InnerThoughts.Say("A maiden... I was wrong all along...");
+		yield return C.InnerThoughts.Say("He needs me to complete his ritual");
+		yield return C.InnerThoughts.Say("That's what the blood moon is all about!");
+		yield return C.InnerThoughts.Say("This lunatic kept me unconverted just to use me as a sacrifice!");
+		yield return E.WaitSkip();
+		
+		if(Prop("WorkTable").FirstUse) Globals.m_interactionCounter++;
+
+		if (Globals.m_interactionCounter == 2)
+		{
 			yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
 			yield return E.WaitSkip();
 			yield return C.Charles.FaceRight(true);
-			yield return E.ChangeRoom(R.Forest);
+			//E.ChangeRoom(R.Forest);
 			C.Charles.Enable();
+			yield return C.Charles.MoveTo(Point("EntryPoint"));
 			Audio.Play("Bucket"); // bedroom door closes
 			Globals.m_charlesArrive = true;
 			yield return E.ChangeRoom(R.Workshop);
 			yield return C.InnerThoughts.Say("Oh god, he's here!");
 			yield return E.WaitSkip();
-			yield return C.InnerThoughts.Say("I must hide.");
+			yield return C.InnerThoughts.Say("I must hide, FAST");
 			yield return C.Display("HIDE IN THE CLOSET");
+			Prop("NameList").Clickable = false;
+			Prop("WorkTable").Clickable = false;
+		}
 		yield return E.Break;
 	}
 }

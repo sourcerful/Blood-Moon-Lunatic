@@ -10,15 +10,17 @@ public class CharacterCharles : CharacterScript<CharacterCharles>
 
 	public IEnumerator OnInteract()
 	{
-		yield return C.FaceClicked();
-		yield return C.Charles.Say("Luna, come.");
-		yield return C.Charles.Face(C.Player);
 		yield return C.WalkToClicked();
-		yield return C.Plr.Face(C.Charles);
-		yield return C.Plr.Say("Yes my lord?");
+		yield return C.FaceClicked();
+		if(R.Workshop.Active)
+		{
+			D.KillingCharles.Start();
+			C.Charles.Clickable=false;
+		}
+		else
+		{
 		D.ChatWithCharles.Start();
-		Globals.m_spokeToCharles= true;
+		}
 		yield return E.Break;
-		
 	}
 }

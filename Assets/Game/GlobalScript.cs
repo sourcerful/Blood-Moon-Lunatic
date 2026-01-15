@@ -20,9 +20,9 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	public enum eProgress
 	{
 		None,
-		GotWater,
-		DrankWater,
-		WonGame
+		GotBottle,
+		FilledBottle,
+		Room2,
 	};
 	
 	public eProgress m_progressExample = eProgress.None;
@@ -32,6 +32,9 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	public bool m_spokeToCharles = false;
 	public bool m_workshop_pagesExplored = false;
 	public bool m_charlesArrive = false;
+	public bool m_hidden = false;
+	public int m_interactionCounter = 0;
+	public int m_stabCounter=0;
 	
 	////////////////////////////////////////////////////////////////////////////////////
 	// Global Game Functions

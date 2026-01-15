@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: NameList
+    m_description: Sheet
     m_cursor: 
     m_visible: 1
     m_clickable: 1
@@ -57,8 +57,8 @@ MonoBehaviour:
     m_position: {x: 0, y: 0}
     m_baseline: 7
     m_baselineFixed: 0
-    m_walkToPoint: {x: 0, y: 0}
-    m_lookAtPoint: {x: 0, y: 0}
+    m_walkToPoint: {x: 1, y: -20}
+    m_lookAtPoint: {x: 0, y: 1}
     m_scriptName: NameList
   m_parallaxDepth: 0
   m_parallaxAlignment: {x: 0, y: 0}
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: HideSpot
+    m_description: Closet
     m_cursor: 
     m_visible: 1
     m_clickable: 1
@@ -889,6 +889,8 @@ MonoBehaviour:
     m_points:
     - m_name: EntryPoint
       m_position: {x: 90, y: -30}
+    - m_name: Entry2
+      m_position: {x: 90, y: -20}
   m_debugStartFunction: 
   m_hotspotComponents: []
   m_propComponents:

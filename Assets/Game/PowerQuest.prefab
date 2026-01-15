@@ -107,6 +107,7 @@ MonoBehaviour:
   - {fileID: 7027004144145136974, guid: cadc82bcd54075245abb59a8fdcaa892, type: 3}
   - {fileID: 114894982771319608, guid: 65de018bf92bf6a4088d8c3f977119e7, type: 3}
   - {fileID: 5856979038141687439, guid: 71f5e0c56ffd71b459415f913c515eed, type: 3}
+  - {fileID: 4916335056584076424, guid: 832f5b9f0ad81654a89171c35a2991ac, type: 3}
   m_guiPrefabs:
   - {fileID: 114997530584156344, guid: 411a5d13109ce024888cfebc375721e4, type: 3}
   - {fileID: 8056484958200454590, guid: 008d06288a0a6bf40a1f91be9220b969, type: 3}
@@ -119,12 +120,18 @@ MonoBehaviour:
   - {fileID: 5183830718263160604, guid: 9795157985253a44d8fa296584da06e9, type: 3}
   m_dialogTreePrefabs:
   - {fileID: 6378637158797254624, guid: 44709f747d7cb9841b5c8be9fa82cf26, type: 3}
+  - {fileID: 3295097464029513811, guid: dcc021216be13df4bbd9b29d1cb38e86, type: 3}
+  - {fileID: 9144160954400848822, guid: 0d2c36f63fe4a424786f41ecb0522cc6, type: 3}
   m_inventoryPrefabs:
-  - {fileID: 114497078864246608, guid: 7a896bee3c107ce49b5aebeb3b5d1b31, type: 3}
+  - {fileID: 3571109000857766253, guid: 35cecb801040c804f80c7015a4fb9f7c, type: 3}
+  - {fileID: 4637714767937110553, guid: cdd6011d005b7284b8552463e8a4c0bf, type: 3}
+  - {fileID: 7192102823870511662, guid: 6ba5417333f949f4fb6f8cafd91fdb57, type: 3}
   m_inventoryAnimations:
   - {fileID: 7400000, guid: 10856a3a6e09a994f876dd16f8272cce, type: 2}
   m_inventorySprites:
-  - {fileID: 21300000, guid: 3128a95e76c6adf44a7ffde8daa56743, type: 3}
+  - {fileID: 21300000, guid: d72344c48ef10704e9b6523535ffbaab, type: 3}
+  - {fileID: 21300000, guid: db113d298c3b95547b4d9fbcee6859e1, type: 3}
+  - {fileID: 21300000, guid: b0316dfc7bd7d24439aade3b74940061, type: 3}
   m_guiAnimations:
   - {fileID: 0}
   - {fileID: 0}

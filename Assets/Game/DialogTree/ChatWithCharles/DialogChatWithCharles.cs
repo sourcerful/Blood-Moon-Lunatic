@@ -60,8 +60,11 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return C.Charles.WalkTo(-250, -54);
 		yield return C.Plr.Face(C.Charles);
 		C.Charles.Disable();
-		yield return C.Plr.ChangeRoom(R.Workshop);
 		Stop();
+		yield return C.InnerThoughts.Say("Why would he still insist on me not entering his office?");
+		yield return C.InnerThoughts.Say("There must be a way to stop him in there");
+		yield return C.InnerThoughts.Say("His spare key should be here somewhere");
+		yield return C.Display("Left Click to Walk & Interact\nRight Click to Look At");
 		yield return E.Break;
 	}
 
