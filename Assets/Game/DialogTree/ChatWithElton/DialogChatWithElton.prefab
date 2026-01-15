@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2179289984640710284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8501844888249200863}
+  - component: {fileID: 9144160954400848822}
+  m_Layer: 0
+  m_Name: DialogChatWithElton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8501844888249200863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179289984640710284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9144160954400848822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2179289984640710284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86cb530816edbf41b6daa364f3a3311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_options:
+    - m_name: 1
+      m_text: Who are you?
+      m_visible: 1
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
+    - m_name: 3
+      m_text: Book?
+      m_visible: 0
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
+    - m_name: 4
+      m_text: He was about to add your name to his kill list
+      m_visible: 0
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
+    - m_name: 5
+      m_text: End
+      m_visible: 0
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
+    - m_name: 2
+      m_text: What are you doing here?
+      m_visible: 1
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
+    m_scriptName: ChatWithElton
+    m_scriptClass: DialogChatWithElton

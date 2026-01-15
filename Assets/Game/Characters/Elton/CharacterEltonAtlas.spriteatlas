@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CharacterEltonAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 15061122c0f1ccb49b24d180a98da71d, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: a87ab7205aa82e549999df19ff8bfbb9, type: 3}
+  - {fileID: 21300000, guid: 36e93ac00806b934894d84250e7bcd95, type: 3}
+  - {fileID: 21300000, guid: a6a98011817a2f84b850d48ceaed7d56, type: 3}
+  - {fileID: 21300000, guid: 2ee8cf8219f0e6745a578da84b1d49d0, type: 3}
+  - {fileID: 21300000, guid: 612815c2a3bad9d4788e45d9d6e84021, type: 3}
+  - {fileID: 21300000, guid: 3dbe6673d2c6d5542bc555a3cce21ad2, type: 3}
+  - {fileID: 21300000, guid: c0e406933bc89f2459134314a07378b8, type: 3}
+  - {fileID: 21300000, guid: 39523893e395f7440a8bab480636ce35, type: 3}
+  - {fileID: 21300000, guid: 779d2ce3c042a4f499d88a7c1cd1ec76, type: 3}
+  - {fileID: 21300000, guid: 2cfafef399d6bd74d9d4e3bbfa56b7d9, type: 3}
+  - {fileID: 21300000, guid: 74fe6dd47d3af7c4089632b40c9ca44e, type: 3}
+  - {fileID: 21300000, guid: 01f3e367e79ea0a4d99178f548c31fb8, type: 3}
+  - {fileID: 21300000, guid: 8c749c67f2933184e83452aff12f9ced, type: 3}
+  - {fileID: 21300000, guid: 7aadbb392e816ff44bece3d03c404829, type: 3}
+  - {fileID: 21300000, guid: d5c4a289b17229d43aab8e0bd29b09ec, type: 3}
+  - {fileID: 21300000, guid: d85818dc205f18249afe0ebf58a4e0dc, type: 3}
+  - {fileID: 21300000, guid: 5c183d0dc5f230840a25c3f1486877f1, type: 3}
+  - {fileID: 21300000, guid: bf63f26de27b18d47a5cfe35be336d2d, type: 3}
+  - {fileID: 21300000, guid: c567f11ec079caf498cfd6630facbb42, type: 3}
+  - {fileID: 21300000, guid: 6fb7fa5e20b9f6c4389f6cef1e958c23, type: 3}
+  - {fileID: 21300000, guid: 51b42b7f8e7c20e4d888ef4c617049fd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - TalkR_1
+  - WalkUR_1
+  - TalkD_0
+  - WalkUR_2
+  - WalkR_0
+  - TalkR_2
+  - TalkU_1
+  - WalkR_2
+  - WalkUR_3
+  - IdleU_0
+  - WalkR_3
+  - TalkD_1
+  - TalkU_0
+  - IdleD_0
+  - IdleUR_0
+  - WalkUR_0
+  - TalkUR_1
+  - TalkUR_0
+  - WalkR_1
+  - TalkR_0
+  - IdleR_0
+  m_RenderDataMap: {}
+  m_Tag: CharacterEltonAtlas
+  m_IsVariant: 0
