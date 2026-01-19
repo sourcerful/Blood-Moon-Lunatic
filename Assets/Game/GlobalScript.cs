@@ -25,8 +25,6 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 		Room2,
 	};
 	
-	
-	public HashSet<IProp> m_interacted_props = new HashSet<IProp>();
 	public eProgress m_progressExample = eProgress.None;
 	/// Just an example of using a global variable that can be accessed in any room with `Globals.m_spokeToBarney`.
 	/// All variables like this in Quest Scripts are automatically saved

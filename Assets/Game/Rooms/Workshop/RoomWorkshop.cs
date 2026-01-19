@@ -3,26 +3,24 @@ using System.Collections;
 using PowerTools.Quest;
 using PowerScript;
 using static GlobalScript;
+using System.Collections.Generic;
 
 public class RoomWorkshop : RoomScript<RoomWorkshop>
 {
 
-
+	private HashSet<IProp> _interactToProceed;
 	IEnumerator OnEnterRoomAfterFade()
 	{
-		// Put things here that happen when you enter a room
-		
-		Globals.m_progressExample = eProgress.Room2;
+		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable") };
+        Globals.m_progressExample = eProgress.Room2;
 		C.Plr.SetPosition(Point("EntryPoint"));
 		C.Elton.Disable();
 		C.Charles.Disable();
-		
 		yield return E.Break;
 	}
 
 	IEnumerator OnInteractPropCloset( IProp prop )
 	{
-		Globals.m_interacted_props.Add(Prop("Closet"));
 		if (Globals.m_charlesArrive == true)
 		{
 			E.StartCutscene();
@@ -48,8 +46,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			E.StartCutscene();
 			yield return C.Charles.ChangeRoom(R.Workshop);
 			C.Charles.Enable();
-			yield return C.Charles.MoveTo(Point("EntryPoint"));
-			yield return C.Charles.FaceRight(true);
+            C.Charles.SetPosition(Point("EntryPoint"));
+			yield return C.Charles.FaceLeft(true);
 			yield return E.Wait(1);
 		
 			yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
@@ -92,7 +90,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	{
 		yield return C.FaceClicked();
 		yield return C.WalkToClicked();
-		Globals.m_interacted_props.Add(Prop("NameList"));
 		yield return C.InnerThoughts.Say("Wha-");
 		yield return C.InnerThoughts.Say("Are those... NAMES?!?");
 		yield return E.WaitSkip();
@@ -106,10 +103,11 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("This has to stop!");
 		yield return E.WaitSkip();
+		yield return E.WaitFor(()=> this.tryToProceed(prop) );
 		
-	}
+ }
 
-	IEnumerator OnLookAtPropCloset( IProp prop )
+    IEnumerator OnLookAtPropCloset( IProp prop )
 	{
 		yield return C.FaceClicked();
 		yield return C.InnerThoughts.Say("Looks like a filthy closet...");
@@ -131,7 +129,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	{
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
-		Globals.m_interacted_props.Add(Prop("WorkTable"));
 		yield return C.Plr.Say("Looks like a journal of his.");
 		yield return C.InnerThoughts.Say("What kind of sick things does this monster have here?");
 		yield return C.Plr.Say("The quill... it is resting on the page.");
@@ -152,42 +149,51 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return C.InnerThoughts.Say("He needs me to complete his ritual");
 		yield return C.InnerThoughts.Say("This lunatic kept me unconverted just to use me as a sacrifice!");
 		yield return E.WaitSkip();
-		
-		if (Globals.m_interacted_props.Contains(Prop("NameList")))
-		{
-			yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
-			yield return E.WaitSkip();
-			C.Plr.Visible = false;
-			yield return E.ChangeRoom(R.Forest);
-		
-			C.Charles.Enable();
-			C.Charles.Visible = false;
-			yield return C.Charles.FaceRight(true);
-			C.Charles.SetPosition(Point("EntryWalk"));
-		
-			yield return E.WaitSkip();
-			C.Charles.Visible = true;
-			Globals.m_charlesArrive = true;
-			yield return E.Wait();
-			Audio.Play("Bucket"); // bedroom door closes
-			yield return E.WaitSkip();
-			yield return C.Charles.Say("I shall finish my work");
-			C.Charles.WalkToBG(Point("WorkshopDoor"));
-			yield return E.Wait(1);
-		
-			yield return E.ChangeRoom(R.Workshop);
-			C.Plr.SetPosition(Point("WorkTable"));
-			C.Plr.Visible = true;
-		
-			yield return E.WaitSkip();
-			yield return C.Plr.FaceRight();
-			yield return C.InnerThoughts.Say("Oh god, he's here!");
-			yield return E.WaitSkip();
-			yield return C.InnerThoughts.Say("I must hide, FAST");
-			yield return C.Display("HIDE IN THE CLOSET");
-			Prop("NameList").Clickable = false;
-			Prop("WorkTable").Clickable = false;
-		}
+		yield return E.WaitFor(()=> this.tryToProceed(prop) );
 		yield return E.Break;
 	}
+
+	IEnumerator tryToProceed(IProp prop)
+	{
+
+		if (this._interactToProceed.Remove(prop))
+		{
+            if (this._interactToProceed.Count == 0)
+			{
+				yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
+				yield return E.WaitSkip();
+				C.Plr.Visible = false;
+				yield return E.ChangeRoom(R.Forest);
+
+                C.Charles.Enable();
+                C.Charles.Visible = false;
+                C.Charles.SetPosition(Point("EntryWalk"));
+                yield return C.Charles.FaceRight(true);
+
+				yield return E.WaitSkip();
+				C.Charles.Visible = true;
+				Globals.m_charlesArrive = true;
+				yield return E.Wait();
+				Audio.Play("Bucket"); // bedroom door closes
+				yield return E.WaitSkip();
+				yield return C.Charles.Say("I shall finish my work");
+				C.Charles.WalkToBG(Point("WorkshopDoor"));
+				yield return E.Wait(1);
+
+				yield return E.ChangeRoom(R.Workshop);
+				C.Plr.SetPosition(Point("WorkTable"));
+				C.Plr.Visible = true;
+
+				yield return E.WaitSkip();
+				yield return C.Plr.FaceRight();
+				yield return C.InnerThoughts.Say("Oh god, he's here!");
+				yield return E.WaitSkip();
+				yield return C.InnerThoughts.Say("I must hide, FAST");
+				yield return C.Display("HIDE IN THE CLOSET");
+				Prop("NameList").Clickable = false;
+				Prop("WorkTable").Clickable = false;
+			}
+		}
+        yield return E.Break;
+    }
 }
