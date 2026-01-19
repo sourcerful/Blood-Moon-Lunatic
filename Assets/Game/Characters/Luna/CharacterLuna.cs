@@ -14,4 +14,10 @@ public class CharacterLuna : CharacterScript<CharacterLuna>
 
 		yield return E.Break;
 	}
+
+	IEnumerator OnUseInv( IInventory item )
+	{
+
+		yield return E.Break;
+	}
 }

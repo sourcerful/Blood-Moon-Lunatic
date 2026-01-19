@@ -376,6 +376,8 @@ Transform:
   - {fileID: 339264080286898872}
   - {fileID: 4990473841932670}
   - {fileID: 9049962826853049229}
+  - {fileID: 2345140651352337617}
+  - {fileID: 6398366351511286736}
   - {fileID: 4330873527250974}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -409,6 +411,8 @@ MonoBehaviour:
     m_points:
     - m_name: EntryWalk
       m_position: {x: -123, y: -53}
+    - m_name: WorkshopDoor
+      m_position: {x: 83, y: -30}
   m_debugStartFunction: 
   m_hotspotComponents:
   - {fileID: 114219409658312480}
@@ -426,6 +430,8 @@ MonoBehaviour:
   m_regionComponents:
   - {fileID: 114669272114807092}
   - {fileID: 849616719225249885}
+  - {fileID: 2066265879673760653}
+  - {fileID: 8235235489031048357}
   m_walkableAreas:
   - {fileID: 114719209457619438}
   m_animations:
@@ -620,7 +626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4865622036928958}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &60535162138186210
 PolygonCollider2D:
@@ -663,7 +669,7 @@ GameObject:
   - component: {fileID: 114687130378422130}
   - component: {fileID: 60858949076639026}
   m_Layer: 0
-  m_Name: HotspotCave
+  m_Name: HotspotWorkshopDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,7 +708,7 @@ MonoBehaviour:
     m_baseline: -12
     m_walkToPoint: {x: 103, y: -29}
     m_lookAtPoint: {x: 97, y: -5}
-    m_scriptName: Cave
+    m_scriptName: WorkshopDoor
 --- !u!60 &60858949076639026
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1522,6 +1528,98 @@ PolygonCollider2D:
       - {x: -120.49863, y: -7.230932}
       - {x: 153.74333, y: -7.612021}
       - {x: 155.11601, y: -25.284718}
+--- !u!1 &1486848847729166750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6398366351511286736}
+  - component: {fileID: 8235235489031048357}
+  - component: {fileID: 661849419611800716}
+  m_Layer: 0
+  m_Name: RegionTriggerDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6398366351511286736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486848847729166750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 62.21, y: -25.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4865622036928958}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8235235489031048357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486848847729166750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20008c577fbd68147a04948177cd9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_enabled: 1
+    m_walkable: 1
+    m_playerOnly: 0
+    m_tint: {r: 1, g: 1, b: 1, a: 0}
+    m_fadeDistance: 0
+    m_scaleTop: 1
+    m_scaleBottom: 1
+    m_scriptName: TriggerDialog
+--- !u!60 &661849419611800716
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486848847729166750}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.5589981, y: -15.280001}
+      - {x: -9.895996, y: -15.405001}
+      - {x: -12.161995, y: -14.758001}
+      - {x: -20.699997, y: -5.896002}
+      - {x: -20.699997, y: 0.87399864}
+      - {x: -12.809998, y: 9.735998}
+      - {x: -7.6889954, y: 10.000999}
+      - {x: -6.982998, y: 10.706999}
+      - {x: 9.998001, y: 10.000999}
+      - {x: 17.066002, y: 3.7879982}
+      - {x: 18.361008, y: 1.5219994}
+      - {x: 18.037003, y: -8.810003}
+      - {x: 11.765007, y: -15.081003}
+      - {x: -1.5069962, y: -15.405001}
 --- !u!1 &1763959332558272462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,6 +1975,89 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4309628437398228616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2345140651352337617}
+  - component: {fileID: 2066265879673760653}
+  - component: {fileID: 5000952961556677089}
+  m_Layer: 0
+  m_Name: RegionRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2345140651352337617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4309628437398228616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4865622036928958}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066265879673760653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4309628437398228616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20008c577fbd68147a04948177cd9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_data:
+    m_enabled: 1
+    m_walkable: 1
+    m_playerOnly: 1
+    m_tint: {r: 1, g: 1, b: 1, a: 0}
+    m_fadeDistance: 0
+    m_scaleTop: 0.8
+    m_scaleBottom: 0.8
+    m_scriptName: Room
+--- !u!60 &5000952961556677089
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4309628437398228616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -203.03122, y: -88.64236}
+      - {x: -204.81854, y: -40.938797}
+      - {x: -20.974478, y: -19.719755}
+      - {x: 148.96463, y: -18.597218}
+      - {x: 204.37173, y: -88.64236}
 --- !u!1 &6680157807103698461
 GameObject:
   m_ObjectHideFlags: 0

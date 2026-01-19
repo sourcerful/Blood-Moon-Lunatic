@@ -19,7 +19,7 @@ public class CharacterCharles : CharacterScript<CharacterCharles>
 		}
 		else
 		{
-		D.ChatWithCharles.Start();
+			D.ChatWithCharles.Start();
 		}
 		yield return E.Break;
 	}

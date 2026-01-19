@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557011659709001394}
   m_LocalRotation: {x: 0, y: 0, z: 0.23887235, w: 0.971051}
-  m_LocalPosition: {x: -81.6, y: -8.4, z: 0}
+  m_LocalPosition: {x: -58.2, y: 10.41, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 6594970343365039928}
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: -174
   m_Sprite: {fileID: 21300000, guid: 20f34574c6a3efb429fa94b42ca636ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
     m_animation: Bg
     m_alpha: 1
     m_position: {x: 0, y: 0}
-    m_baseline: 0
+    m_baseline: 26
     m_baselineFixed: 0
     m_walkToPoint: {x: 0, y: 0}
     m_lookAtPoint: {x: 0, y: 0}
@@ -315,7 +315,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -260
   m_Sprite: {fileID: 21300000, guid: 8a1bdfeade3ede54baa8b8a4a9969d9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -420,22 +420,6 @@ PolygonCollider2D:
       - {x: 147.399, y: -78.011}
       - {x: 144.58301, y: -80.023}
       - {x: 40.767002, y: -81.632}
-    - - {x: 27.401001, y: -57.595}
-      - {x: 34.534, y: -55.986004}
-      - {x: 44.037003, y: -47.800003}
-      - {x: -0.712, y: -41.136}
-      - {x: -4.8630004, y: -41.407}
-      - {x: -14.825001, y: -45.078003}
-      - {x: -27.638, y: -53.867004}
-      - {x: -33.199, y: -55.619003}
-      - {x: 23.071001, y: -61.969}
-    - - {x: 99.122, y: -43.446003}
-      - {x: 94.082, y: -43.309002}
-      - {x: 98.173004, y: -47.401}
-    - - {x: 80.21001, y: -55.957005}
-      - {x: 80.437004, y: -55.357002}
-      - {x: 68.583, y: -56.230003}
-      - {x: 69.642006, y: -58.574}
 --- !u!114 &154887320249272736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +487,7 @@ MonoBehaviour:
     m_animation: WorkTable
     m_alpha: 1
     m_position: {x: 0, y: 0}
-    m_baseline: 0
+    m_baseline: 25
     m_baselineFixed: 0
     m_walkToPoint: {x: 0, y: 0}
     m_lookAtPoint: {x: 0, y: 0}
@@ -618,7 +602,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: -247
   m_Sprite: {fileID: 21300000, guid: 53b90015ab82510479e07a03f0e58da1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -891,6 +875,8 @@ MonoBehaviour:
       m_position: {x: 90, y: -30}
     - m_name: Entry2
       m_position: {x: 90, y: -20}
+    - m_name: WorkTable
+      m_position: {x: -3, y: -31}
   m_debugStartFunction: 
   m_hotspotComponents: []
   m_propComponents:

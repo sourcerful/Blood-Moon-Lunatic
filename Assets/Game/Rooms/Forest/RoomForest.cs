@@ -24,29 +24,33 @@ public class RoomForest : RoomScript<RoomForest>
 
     public IEnumerator OnEnterRoomAfterFade()
     {
-        // Put things here that happen when you enter a room
-
-        //if ( FirstTimeVisited && EnteredFromEditor == false ) // Only run this part the first time you visit, and not when debugging
-        //{
-        //Audio.PlayMusic("MusicExample");
-        //}
-        E.StartCutscene();
-        yield return E.Wait();
-        yield return C.Luna.WalkTo((Prop("Bed")));
-        yield return C.Player.Face(Prop("Bed"));
-        yield return E.Wait(((float)1.5));
-        yield return C.Charles.Say("Luna, come now.");
-        yield return E.Wait(1);
-        yield return C.InnerThoughts.Say("I must speak to Lord Charles or I will suffer the consequences...");
-        //Audio.PlayMusic("MusicExample");
-        yield return C.Player.WalkTo((C.Charles));
-        yield return C.Charles.Face(C.Luna);
-        yield return C.Luna.Face(C.Charles);
-        yield return C.Luna.Say("Yes my lord?");
-        E.EndCutscene();
-        //D.ChatWithCharles.Start();
-        yield return E.Break;
-    }
+		// Put things here that happen when you enter a room
+		
+		//if ( FirstTimeVisited && EnteredFromEditor == false ) // Only run this part the first time you visit, and not when debugging
+		//{
+		//Audio.PlayMusic("MusicExample");
+		//}
+		Debug.Log(Globals.m_progressExample);
+		if (Globals.m_progressExample != eProgress.Room2)
+		{
+			E.StartCutscene();
+			yield return E.Wait();
+			yield return C.Plr.WalkTo((Prop("Bed")));
+			yield return C.Player.Face(Prop("Bed"));
+			yield return E.Wait(((float)1.5));
+			yield return C.Charles.Say("Luna, come now.");
+			yield return E.Wait(1);
+			yield return C.InnerThoughts.Say("I must speak to Lord Charles or I will suffer the consequences...");
+			//Audio.PlayMusic("MusicExample");
+			yield return C.Player.WalkTo((C.Charles));
+			yield return C.Charles.Face(C.Luna);
+			yield return C.Plr.Face(C.Charles);
+			yield return C.Luna.Say("Yes my lord?");
+			E.EndCutscene();
+		}
+		yield return E.Break;
+		
+ }
 
     public IEnumerator OnInteractHotspotForest(Hotspot hotspot)
     {
@@ -79,20 +83,17 @@ public class RoomForest : RoomScript<RoomForest>
 
     }
 
-    public IEnumerator OnInteractHotspotCave(Hotspot hotspot)
+    public IEnumerator OnInteractHotspotWorkshopDoor(Hotspot hotspot)
     {
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
 		if (I.Key.Owned)
 		{
 			yield return C.InnerThoughts.Say("It fits");
-			Globals.m_progressExample = eProgress.Room2;
 			yield return E.Wait(1);
 			yield return C.Display("*Click*");
-			I.Key.Remove();
-			yield return C.Plr.ChangeRoom(R.Workshop);
-			// TP to Workshop
-		
+			//C.Plr.ChangeRoom(R.Workshop);
+			yield return R.Workshop.Enter();
 		}
 		else
 		{
@@ -207,21 +208,17 @@ public class RoomForest : RoomScript<RoomForest>
 
     IEnumerator OnInteractCharacterCharles(ICharacter character)
     {
-        // You can add character interactions like this one to a room script
-
-        // In that room, clicking the character will call the room script first
-        // If the room script doesn't do anything, it will fall back to the Charcter Script
-
-        // In this case you're haven't 'EatenSandwich', so nothing happens here,
-        // and the OnInteract function in Barney's main script will be called instead
-        if (E.Reached(eThingsYouveDone.EatenSandwich))
-        {
-            yield return C.Plr.Say("I ate your sandwich");
-            yield return C.Charles.Say("You monster");
-        }
-
-        yield return E.Break;
-    }
+		// You can add character interactions like this one to a room script
+		
+		// In that room, clicking the character will call the room script first
+		// If the room script doesn't do anything, it will fall back to the Charcter Script
+		
+		// In this case you're haven't 'EatenSandwich', so nothing happens here,
+		// and the OnInteract function in Barney's main script will be called instead
+		D.ChatWithCharles.Start();
+		yield return E.Break;
+		
+ }
 
     IEnumerator OnUseInvPropBucket(IProp prop, IInventory item)
     {
@@ -326,8 +323,41 @@ public class RoomForest : RoomScript<RoomForest>
         yield return E.Break;
     }
 
-    IEnumerator OnUseInvHotspotCave(IHotspot hotspot, IInventory item)
+    IEnumerator OnUseInvHotspotWorkshopDoor(IHotspot hotspot, IInventory item)
     {
         yield return E.Break;
     }
+
+	IEnumerator OnLookAtHotspotSky( IHotspot hotspot )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnEnterRegionScale( IRegion region, ICharacter character )
+	{
+
+		yield return E.Break;
+	}
+
+	void OnEnterRegionBGScale( IRegion region, ICharacter character )
+	{
+	}
+
+	IEnumerator OnExitRegionScale( IRegion region, ICharacter character )
+	{
+
+		yield return E.Break;
+	}
+
+	void OnExitRegionBGScale( IRegion region, ICharacter character )
+	{
+	}
+
+	IEnumerator OnEnterRegionTriggerDialog( IRegion region, ICharacter character )
+	{
+		Region("TriggerDialog").Enabled = false;
+		D.ChatWithCharles.Start();
+		yield return E.Break;
+	}
 }
