@@ -235,8 +235,9 @@ public class RoomForest : RoomScript<RoomForest>
     IEnumerator OnLookAtPropBed(IProp prop)
     {
 
-        yield return E.Break;
-    }
+		yield return C.InnerThoughts.Say("Lord Charles' bed");
+		yield return E.Break;
+ }
 
     IEnumerator OnInteractPropBed(IProp prop)
     {
@@ -267,8 +268,9 @@ public class RoomForest : RoomScript<RoomForest>
     IEnumerator OnLookAtPropEmptyBottle(IProp prop)
     {
 
-        yield return E.Break;
-    }
+		yield return C.InnerThoughts.Say("What is this empty bottle doing here?");
+		yield return E.Break;
+ }
 
     IEnumerator OnInteractPropEmptyBottle(IProp prop)
     {
