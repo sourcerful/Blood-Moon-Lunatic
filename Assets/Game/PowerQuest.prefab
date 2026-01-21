@@ -131,7 +131,7 @@ MonoBehaviour:
   m_inventorySprites:
   - {fileID: 21300000, guid: d72344c48ef10704e9b6523535ffbaab, type: 3}
   - {fileID: 21300000, guid: db113d298c3b95547b4d9fbcee6859e1, type: 3}
-  - {fileID: 21300000, guid: b0316dfc7bd7d24439aade3b74940061, type: 3}
+  - {fileID: 21300000, guid: 334ec0f165a18d54eabe0c72be177150, type: 3}
   m_guiAnimations:
   - {fileID: 0}
   - {fileID: 0}

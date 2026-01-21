@@ -53,11 +53,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 53b90015ab82510479e07a03f0e58da1, type: 3}
   - {fileID: 21300000, guid: 67daa94541d37a649af2a015456a816e, type: 3}
   - {fileID: 21300000, guid: 8a1bdfeade3ede54baa8b8a4a9969d9b, type: 3}
+  - {fileID: 21300000, guid: 3f54ae0c7a4a35641806b78c3c7fa041, type: 3}
   m_PackedSpriteNamesToIndex:
   - NameList
   - WorkTable
   - HideSpot
   - Bg
+  - Closet_0
   m_RenderDataMap: {}
   m_Tag: RoomWorkshopAtlas
   m_IsVariant: 0

@@ -9,12 +9,13 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	public IEnumerator OnStart()
 	{
 		yield return C.Charles.Say("I shall be absent this evening.");
-		yield return E.WaitSkip();
+		yield return C.InnerThoughts.Say("He always lurks out at night to feed off the blood of the townsfolk");
+		yield return C.InnerThoughts.Say("But this doesn't match his usual routine...");
 		yield return C.Plr.Say("Is everything alright?");
 		yield return E.WaitSkip();
 		yield return C.Charles.Say("Indeed. The Blood Moon’s arrival is nigh.");
 		yield return E.WaitSkip();
-		yield return C.InnerThoughts.Say("oh god...");
+		yield return C.InnerThoughts.Say("Oh god...");
 		yield return E.WaitSkip();
 		yield return E.Break;
 	}
@@ -29,6 +30,8 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	{
 		yield return C.Plr.Say(option.Description);
 		yield return E.WaitSkip();
+		yield return C.InnerThoughts.Say("Again... He has blood on his hands...");
+		yield return C.InnerThoughts.Say("This fiend sucked another victim of their blood...");
 		yield return C.Plr.Say("Y-You are covered in red again... My Lord, it's... it's all over your sleeve.");
 		
 		if(option.TimesUsed > 2)
@@ -96,7 +99,6 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 			yield return C.Plr.MoveTo(C.Player.Position.x - 15, C.Player.Position.y, true);
 			C.Plr.StopAnimation();
 			C.Plr.ResetWalkSpeed();
-		
 			yield return C.Plr.Say("And then... what will you do?");
 			yield return C.Charles.Say("I must mark the shops and the square.");
 			yield return C.Charles.Say("By tomorrow morning, no one will be able to walk down the main street without seeing the signs of what is coming.");
@@ -130,8 +132,9 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return E.WaitSkip();
 		yield return C.InnerThoughts.Say("Tomorrow...?");
 		yield return E.WaitSkip();
-		yield return C.InnerThoughts.Say("If the blood moon starts... This town would be no more than a big bloodshed.");
-		yield return C.InnerThoughts.Say("I must do something, and fast.");
+		yield return C.InnerThoughts.Say("If the blood moon starts... He will drain the entire town of their blood.");
+		yield return C.InnerThoughts.Say("Everyone's life is at stake here.");
+		yield return C.InnerThoughts.Say("I must find a way to stop this upcoming massacre, and fast.");
 		yield return E.WaitSkip();
 		OptionOn("End");
 		yield return E.Break;

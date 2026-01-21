@@ -55,6 +55,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6c1b7f14280e1b446aa2a03d164a0041, type: 3}
   - {fileID: 21300000, guid: 92c28a057d747be4fafd0804afd42832, type: 3}
   - {fileID: 21300000, guid: a092fb8723e4d184cbf181e790447aa5, type: 3}
+  - {fileID: 21300000, guid: f9bc794cdfc678f469cc8432f3d5b27b, type: 3}
   - {fileID: 21300000, guid: 845e6dad78aa6134aa8a0d045feccd21, type: 3}
   - {fileID: 21300000, guid: 96d8683e308367c41854d57bba2526a6, type: 3}
   - {fileID: 21300000, guid: 267ad71f773f2924dbd9399ef82fd842, type: 3}
@@ -65,6 +66,7 @@ SpriteAtlas:
   - Foreground_0
   - ForegroundR_0
   - dresser
+  - Keg_0
   - Back_0
   - EmptyBottle_0
   - bed
