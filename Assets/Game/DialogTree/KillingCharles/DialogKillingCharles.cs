@@ -70,6 +70,7 @@ public class DialogKillingCharles : DialogTreeScript<DialogKillingCharles>
 		
 			yield return C.Elton.ChangeRoom(R.Workshop);
 			C.Elton.Enable();
+			C.Elton.SetPosition(Point("EntryPoint"));
 			yield return C.Elton.Say("You have made a grave mistake little one...");
 			//C.Elton.Position=Point("Entry2");
 			break;

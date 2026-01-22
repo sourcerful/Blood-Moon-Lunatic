@@ -9,6 +9,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	public IEnumerator OnStart()
 	{
 		yield return C.Charles.Say("I shall be absent this evening.");
+		yield return C.InnerThoughts.Say("This blood sucking fiend");
 		yield return C.InnerThoughts.Say("He always lurks out at night to feed off the blood of the townsfolk");
 		yield return C.InnerThoughts.Say("But this doesn't match his usual routine...");
 		yield return C.Plr.Say("Is everything alright?");
@@ -72,7 +73,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return E.Wait(2);
 		yield return C.Charles.FaceDownRight();
 		yield return E.WaitSkip();
-		yield return C.Charles.Say("I'd appriciate if you could clean my bed by the time I'm back.");
+		yield return C.Charles.Say("I'd appreciate if you could clean my bed by the time I'm back.");
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("Yes my lord.");
 		C.Charles.WalkToBG(-140, -100);

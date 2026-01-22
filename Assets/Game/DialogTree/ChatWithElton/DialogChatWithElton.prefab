@@ -51,6 +51,12 @@ MonoBehaviour:
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0
+    - m_name: 2
+      m_text: What are you doing here?
+      m_visible: 1
+      m_disabled: 0
+      m_used: 0
+      m_timesUsed: 0
     - m_name: 3
       m_text: Book?
       m_visible: 0
@@ -64,14 +70,14 @@ MonoBehaviour:
       m_used: 0
       m_timesUsed: 0
     - m_name: 5
-      m_text: End
+      m_text: The keg in his bedroom if filled with blood
       m_visible: 0
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0
-    - m_name: 2
-      m_text: What are you doing here?
-      m_visible: 1
+    - m_name: End
+      m_text: End
+      m_visible: 0
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0

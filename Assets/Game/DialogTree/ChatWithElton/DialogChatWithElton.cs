@@ -8,10 +8,9 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 {
 	public IEnumerator OnStart()
 	{
-		yield return C.Elton.Say("Moron, Lunatic, You killed my future bestseller");
-		yield return C.Elton.Say("I know he was eccentric but he didn't deserve to die");
-		yield return C.Elton.Say("I am gonna go bankrupt because of you");
-		yield return C.Elton.Say("And you are going to be charged for murder");
+		yield return C.Elton.Say("You... You lunatic. Look at what you've done!");
+		yield return C.Elton.Say("He was finally finishing it. The book that was going to put this miserable town on the map");
+		yield return C.Elton.Say("Charles was a genius! A bit eccentric, sure, but he didn't deserve to be slaughtered in his own home!");
 		yield return E.Break;
 	}
 
@@ -22,49 +21,57 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 
 	IEnumerator Option1( IDialogOption option )
 	{
-		yield return C.Elton.Say("I am Elton, a book publisher from a town nearby");
-		yield return C.Elton.Say("And you just killed my most promising author");
-		yield return C.Elton.Say("He was supposed to make me filthy rich with his book, it was unlike anything else I have read");
-		
+		yield return C.Plr.Say(option.Description);
+		yield return C.Elton.Say("My name is Elton, a book publisher from a town nearby");
+		yield return C.Elton.Say("Charles spent months coming to my office at night, pitching ideas about his book, The Blood Moon");
+		yield return C.Elton.Say("I was the only one who believed in his vision. His horror book ideas were a masterpiece.");
+		yield return C.InnerThoughts.Say("He has been helping Charles all this time...");
+		yield return C.InnerThoughts.Say("I have to play along for now.");
 		C.Elton.Description= "Elton";
 		
 		if(Option(2).Used){
-			OptionOn(3);
-			OptionOn(4);
+			OptionOn(2);
 		}
 		yield return E.Break;
 	}
 
 	IEnumerator Option2( IDialogOption option )
 	{
-		yield return C.Elton.Say("I came over to help Charles with the final arrangements for the book");
-		
-		if(Option(1).Used){
-			OptionOn(3);
-			OptionOn(4);
-		}
+		yield return C.Plr.Say(option.Description);
+		yield return C.Elton.Say("I came over to help Charles with the final arrangements of the book");
+		yield return C.Elton.Say("But YOU killed him.");
+		yield return C.InnerThoughts.Say("He sounds genuine, Maybe he doesn't know that Charles is a blood sucking fiend");
+		OptionOn(3);
+		OptionOn(4);
 		yield return E.Break;
 	}
 
 	IEnumerator Option4( IDialogOption option )
 	{
+		yield return C.Plr.Say(option.Description);
+		
 		yield return C.Elton.Say("What Kill list? The list of preorders?");
-		yield return C.Elton.Say("Are you insane? Those people are ALIVE");
+		yield return C.Elton.Say("Those people are ALIVE");
 		yield return C.Elton.Say("They just paid in advance to receive an early copy of the book");
+		
+		yield return C.InnerThoughts.Say("They can't be alive... Why would he say that?");
 		
 		if(Option(3).Used){
 			OptionOn(5);
 		}
-		
 		yield return E.Break;
 	}
 
 	IEnumerator Option3( IDialogOption option )
 	{
-		yield return C.Elton.Say("You live with him and you never heard of his book? The Blood Moon");
-		yield return C.Elton.Say("It was supposed to be released tomorrow");
-		yield return C.Elton.Say("I know he is a private guy, but I assumed he would at least tell his maid about the book he wrote");
+		yield return C.Plr.Say(option.Description);
 		
+		yield return C.Elton.Say("The Blood Moon");
+		yield return C.Elton.Say("He wanted to write a horror story so good that people couldn't sleep. It wasn't a threat... it was an ambition");
+		yield return C.Elton.Say("He was a frantic editor. He’d spend all day marking up drafts until he looked like he’d been in a war zone");
+		yield return C.Elton.Say("I mean, look at this workshop, red ink scattered everywhere...");
+		
+		yield return C.InnerThoughts.Say("Charles has fed him so many lies, He can't tell right from wrong...");
 		if(Option(4).Used){
 			OptionOn(5);
 		}
@@ -74,9 +81,40 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 
 	IEnumerator Option5( IDialogOption option )
 	{
-		D.ChatWithElton.Stop();
+		yield return C.Plr.Say(option.Description);
 		
-		yield return C.Luna.Say("The End");
+		yield return C.Elton.Say("*sigh*");
+		yield return C.Elton.Say("Luna... T-That's just wine...");
+		yield return E.WaitSkip();
+		yield return E.WaitSkip();
+		yield return C.Elton.Say("Listen, Luna... Have you been diagnosed?");
+		yield return C.InnerThoughts.Say("Diagnosed? What does he mean?");
+		yield return E.WaitSkip();
+		yield return C.Elton.Say("Well, It's too late for that now.");
+		OptionOn("End");
+		yield return E.Break;
+	}
+
+	IEnumerator Option6( IDialogOption option )
+	{
+		yield return C.Elton.Say("Luna, T-That's wine...");
+		yield return C.Elton.Say("I think I am starting to get the full story...");
+		yield return C.Elton.Say("Listen... Luna... Have you ever been diagnosed?");
+		yield return C.InnerThoughts.Say("Diagnosed?");
+		yield return E.Break;
+	}
+
+	IEnumerator OptionEnd( IDialogOption option )
+	{
+		D.ChatWithElton.Stop();
+		yield return C.Elton.Say("I have to take you to the authorities.");
+		yield return C.Elton.Say("At the end of the day, you killed someone");
+		yield return C.Elton.Say("They have places that takes care of people with your condition");
+		
+		yield return C.InnerThoughts.Say("I don't think I can overpower him. I have to follow him for now");
+		yield return C.InnerThoughts.Say("The town will hire investigators and they will find out I saved them all");
+		yield return C.Plr.Say("Okay, Lets go.");
+		// End Screen
 		yield return E.Break;
 	}
 }
