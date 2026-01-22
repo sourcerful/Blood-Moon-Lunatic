@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559334147943854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84, y: -26, z: 0}
+  m_LocalPosition: {x: 100.86, y: -60.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,13 +51,13 @@ MonoBehaviour:
   m_data:
     m_description: Charles
     m_cursor: Talk
-    m_room: Forest
-    m_position: {x: 84, y: -26}
+    m_room: Bedroom
+    m_position: {x: 25.06, y: -27}
     m_faceDirection: 3
     m_clickable: 1
     m_visible: 1
     m_inventory: []
-    m_walkSpeed: {x: 80, y: 60}
+    m_walkSpeed: {x: 50, y: 50}
     m_moveable: 1
     m_solid: 1
     m_solidSize: {x: 20, y: 4}
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_turnBeforeFacing: 1
     m_turnSpeedFPS: 12
     m_adjustSpeedWithScaling: 1
-    m_textColour: {r: 0.52156866, g: 0.69411767, b: 1, a: 1}
+    m_textColour: {r: 0.5058824, g: 0, b: 0, a: 1}
     m_animIdle: Idle
     m_animWalk: Walk
     m_animTalk: Talk
@@ -87,13 +87,18 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
-  - {fileID: 7400000, guid: 2798b7acc99b7204eb58b3d7f618aa00, type: 2}
-  - {fileID: 7400000, guid: 6863a6854a465c54fbb41eb5c7a26fbe, type: 2}
-  - {fileID: 7400000, guid: 5a1f478790248754dae832cc648accac, type: 2}
-  - {fileID: 7400000, guid: 2fa3b95e75b87a84e88d01decc8727e8, type: 2}
-  - {fileID: 7400000, guid: 92d0c25cd8050b84dbcabc7a5b223d77, type: 2}
-  - {fileID: 7400000, guid: 0f69390c55193a842968beef3fca19b7, type: 2}
-  - {fileID: 7400000, guid: f3d8e3fb90e7ef5478393df9c025fa95, type: 2}
+  - {fileID: 7400000, guid: 05169f57e3ff5b64598ee68e29a7ec98, type: 2}
+  - {fileID: 7400000, guid: 33baf2e7b4125e24aa45320a071c6721, type: 2}
+  - {fileID: 7400000, guid: d8ffdab7225233443a850b6cc967eb52, type: 2}
+  - {fileID: 7400000, guid: 5af9d591993ec064690ef499f6bf8e27, type: 2}
+  - {fileID: 7400000, guid: bc6a4285a8788de4dba89d6c5adaecbd, type: 2}
+  - {fileID: 7400000, guid: ee6edc274343c594885dfcac3a91e984, type: 2}
+  - {fileID: 7400000, guid: 03f01a94edc53184ba3a2e14da885298, type: 2}
+  - {fileID: 7400000, guid: c555ebb5d5f2c9d478b51efc95c89ed5, type: 2}
+  - {fileID: 7400000, guid: 5d764545130cfd9448a9a256dbff2713, type: 2}
+  - {fileID: 7400000, guid: 0b7aee12c19abbb40ac0b9f63784f7ef, type: 2}
+  - {fileID: 7400000, guid: 025dfb1c6222b804d9d9d0e3e52ea29a, type: 2}
+  - {fileID: 7400000, guid: 9ffa6685a309a08488d4b38162c61a5f, type: 2}
 --- !u!60 &60498109293141074
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -111,8 +116,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 80, y: 80}
-    newSize: {x: 80, y: 80}
+    oldSize: {x: 160, y: 160}
+    newSize: {x: 160, y: 160}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -165,13 +170,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 260
-  m_Sprite: {fileID: 21300000, guid: 9cc329db0f6334842a1b7e4601f43cb2, type: 3}
+  m_SortingOrder: 609
+  m_Sprite: {fileID: 21300000, guid: 9af9e101d2b886e4290bdc966569694b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 80, y: 80}
+  m_Size: {x: 160, y: 160}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

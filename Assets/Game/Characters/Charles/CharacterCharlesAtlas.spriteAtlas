@@ -49,35 +49,83 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: ed918dd0affd05c438064ef985d54b21, type: 3}
-  - {fileID: 21300000, guid: a04c31012c2c7f249b853c6d1f5da4c5, type: 3}
-  - {fileID: 21300000, guid: 02cceff38f26ac94a9e160225df3841f, type: 3}
-  - {fileID: 21300000, guid: 5535b30614509eb47b3190bf390a889c, type: 3}
-  - {fileID: 21300000, guid: 8e93f4f6e14935b4b884daa33478a72b, type: 3}
-  - {fileID: 21300000, guid: c45e4af6fe3f9e343b66304eba39cf22, type: 3}
-  - {fileID: 21300000, guid: bf794c174a056fb49b2cc066223a3fb3, type: 3}
-  - {fileID: 21300000, guid: 91948e39bdaba6c4dab9b22ac66817b1, type: 3}
-  - {fileID: 21300000, guid: 808577d980f748147a6598b938ada6a3, type: 3}
-  - {fileID: 21300000, guid: 78de00bb4c91caf4393fedaec7529e37, type: 3}
-  - {fileID: 21300000, guid: 9cc329db0f6334842a1b7e4601f43cb2, type: 3}
-  - {fileID: 21300000, guid: 9c591dfecfc77d64189eda5642bf92c7, type: 3}
-  - {fileID: 21300000, guid: 3749d2bf80b26ef448fad227cc5a3199, type: 3}
-  - {fileID: 21300000, guid: 121607bfc82ce414e97cddff16e852ee, type: 3}
+  - {fileID: 21300000, guid: b47be1202fb2d304a911b32baaac8312, type: 3}
+  - {fileID: 21300000, guid: 16a712207b7c9d94ca11b37d1ecfd959, type: 3}
+  - {fileID: 21300000, guid: bc627040bcadc444c86d85a07a0500dd, type: 3}
+  - {fileID: 21300000, guid: 9e299660979f0f7449a54d9aed3884e9, type: 3}
+  - {fileID: 21300000, guid: 9af9e101d2b886e4290bdc966569694b, type: 3}
+  - {fileID: 21300000, guid: 0e4f4a21fd66a7046aaae9462224642b, type: 3}
+  - {fileID: 21300000, guid: 7e9bc02273afdc54185a88f9814a46ce, type: 3}
+  - {fileID: 21300000, guid: 777ea822e641b6d4aaf93e524e33d997, type: 3}
+  - {fileID: 21300000, guid: 8f90b752d0a00c340aeca34299685651, type: 3}
+  - {fileID: 21300000, guid: 828cd7033ccdfd84cac094085962780b, type: 3}
+  - {fileID: 21300000, guid: ba898b03fe785e144959d42d73a61d2c, type: 3}
+  - {fileID: 21300000, guid: a51e3d939e9d3db47a24e5c6d6fe683c, type: 3}
+  - {fileID: 21300000, guid: 4fd7adc305ce3a643acd163ecb5b092f, type: 3}
+  - {fileID: 21300000, guid: c450fcd33e3577f459e2e0a39ac9f4fd, type: 3}
+  - {fileID: 21300000, guid: 4e9f5e14aeaff3748a24b77fd78cb4ad, type: 3}
+  - {fileID: 21300000, guid: b9e17a64e8e9b404082b5dcc5e918872, type: 3}
+  - {fileID: 21300000, guid: ca75477424dbb944082fb55bdf05da1a, type: 3}
+  - {fileID: 21300000, guid: 32ed4c841a93c124a92498759d082ef2, type: 3}
+  - {fileID: 21300000, guid: c4a66285d08ae8b4b84da3f71094fcc2, type: 3}
+  - {fileID: 21300000, guid: 2ec8921728a31864a9664633a1fd34a0, type: 3}
+  - {fileID: 21300000, guid: 2aa87e1759c88ac40b96ca191ad048d5, type: 3}
+  - {fileID: 21300000, guid: 039c373783fd0ca42a4e55b01d5e2ffe, type: 3}
+  - {fileID: 21300000, guid: c32c9f8716346534eaf059670fe0c74e, type: 3}
+  - {fileID: 21300000, guid: bd6145085623fe94bafdc19a895ae71a, type: 3}
+  - {fileID: 21300000, guid: 1eaeb5082d98f58448485a2b6dbab053, type: 3}
+  - {fileID: 21300000, guid: 39d36858a10f96140b97630f87c7af39, type: 3}
+  - {fileID: 21300000, guid: 1273a8a871c19ed408e50562bd0d04f2, type: 3}
+  - {fileID: 21300000, guid: 11ea8ce8c5009d84a81bfbf34cd04d48, type: 3}
+  - {fileID: 21300000, guid: cb6090f85498ae144ac160f57929e751, type: 3}
+  - {fileID: 21300000, guid: 8c2c1659fb20ff04087b61ffba01a7cd, type: 3}
+  - {fileID: 21300000, guid: 51855cc9519bb414c98ad81e449c840b, type: 3}
+  - {fileID: 21300000, guid: 9c846ad929e1bd94bad63d507296bd1c, type: 3}
+  - {fileID: 21300000, guid: 097ddb1af61d67c40bef03be0975c00d, type: 3}
+  - {fileID: 21300000, guid: cd2ae3ca5bec1b74a902c912ec5f8603, type: 3}
+  - {fileID: 21300000, guid: 93a3076b21f35dc4eb6d2cb1f28ab740, type: 3}
+  - {fileID: 21300000, guid: 7d4b88fbd00a98649a45864b0ed8269c, type: 3}
+  - {fileID: 21300000, guid: 08c4db9d6ca4a3746b666e5bd009f9d8, type: 3}
+  - {fileID: 21300000, guid: 8c41a0cd7a249504ca1fcb39ac0023b3, type: 3}
   m_PackedSpriteNamesToIndex:
-  - TalkD_0
-  - WalkR_2
-  - TalkU_1
-  - TalkR_0
-  - WalkR_1
-  - TalkU_0
-  - WalkR_0
-  - TalkD_1
-  - TalkR_2
-  - IdleU_0
-  - IdleR_0
-  - TalkR_1
-  - IdleD_0
-  - WalkR_3
+  - frame_002
+  - frame_000
+  - frame_000
+  - frame_002
+  - east
+  - north
+  - frame_000
+  - frame_003
+  - frame_002
+  - frame_002
+  - south-west
+  - south
+  - frame_001
+  - frame_002
+  - frame_001
+  - frame_000
+  - frame_001
+  - frame_000
+  - frame_003
+  - frame_001
+  - frame_000
+  - frame_003
+  - frame_003
+  - frame_001
+  - frame_001
+  - frame_003
+  - frame_002
+  - west
+  - frame_001
+  - frame_003
+  - frame_002
+  - south-east
+  - frame_002
+  - frame_000
+  - frame_000
+  - frame_001
+  - frame_003
+  - frame_003
   m_RenderDataMap: {}
   m_Tag: CharacterCharlesAtlas
   m_IsVariant: 0

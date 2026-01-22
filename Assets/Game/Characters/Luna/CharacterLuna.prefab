@@ -51,7 +51,7 @@ MonoBehaviour:
   m_data:
     m_description: Test
     m_cursor: 
-    m_room: Forest
+    m_room: Bedroom
     m_position: {x: -140, y: -54}
     m_faceDirection: 1
     m_clickable: 0

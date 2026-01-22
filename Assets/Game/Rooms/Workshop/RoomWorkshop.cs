@@ -163,7 +163,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
 				yield return E.WaitSkip();
 				C.Plr.Visible = false;
-				yield return E.ChangeRoom(R.Forest);
+				yield return E.ChangeRoom(R.Bedroom);
 
                 C.Charles.Enable();
                 C.Charles.Visible = false;

@@ -105,5 +105,4 @@ MonoBehaviour:
   m_shakeIntensityMult: 1
   m_shakeFalloffMult: 1
   m_shakeSpeed: 20
-  m_prefabPixelCam: {fileID: 1260359474244802, guid: 3d14a5e089970814486e93bba090846d,
-    type: 3}
+  m_prefabPixelCam: {fileID: 1260359474244802, guid: 3d14a5e089970814486e93bba090846d, type: 3}

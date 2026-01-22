@@ -64,8 +64,20 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("Of course my lord.");
 		yield return E.WaitSkip();
-		yield return C.Charles.WalkTo(-250, -54);
+		C.Charles.WalkToBG(Point("EntryWalk"));
+		yield return E.Wait(2);
 		yield return C.Plr.Face(C.Charles);
+		yield return E.Wait(2);
+		yield return C.Charles.FaceUp();
+		yield return E.Wait(2);
+		yield return C.Charles.FaceDownRight();
+		yield return E.WaitSkip();
+		yield return C.Charles.Say("I'd appriciate if you could clean my bed by the time I'm back.");
+		yield return E.WaitSkip();
+		yield return C.Plr.Say("Yes my lord.");
+		C.Charles.WalkToBG(-140, -100);
+		yield return E.Wait(2);
+		yield return C.Plr.FaceDownLeft();
 		C.Charles.Disable();
 		Stop();
 		yield return C.InnerThoughts.Say("Why would he still insist on me not entering his office?");
@@ -94,9 +106,9 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		
 		if(option.FirstUse)
 		{
-			C.Plr.PlayAnimationBG("WalkR");
+			C.Plr.PlayAnimationBG("WalkUR");
 			C.Plr.WalkSpeed = slowWalkSpeed;
-			yield return C.Plr.MoveTo(C.Player.Position.x - 15, C.Player.Position.y, true);
+			yield return C.Plr.MoveTo(C.Player.Position.x - 15, C.Player.Position.y -15, true);
 			C.Plr.StopAnimation();
 			C.Plr.ResetWalkSpeed();
 			yield return C.Plr.Say("And then... what will you do?");
