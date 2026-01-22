@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: FullBottle
+    m_description: Full Bottle
     m_animGui: FullBottle
     m_animCursor: FullBottle
     m_animCursorInactive: FullBottle

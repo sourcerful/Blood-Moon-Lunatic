@@ -23,6 +23,8 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 		GotBottle,
 		FilledBottle,
 		Room2,
+		CharlesArrive,
+		TalkToElton,
 	};
 	
 	public eProgress m_progressExample = eProgress.None;

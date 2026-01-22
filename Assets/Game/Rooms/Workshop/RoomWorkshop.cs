@@ -8,17 +8,21 @@ using System.Collections.Generic;
 public class RoomWorkshop : RoomScript<RoomWorkshop>
 {
 
+	
 	private HashSet<IProp> _interactToProceed;
+	private bool door_closed = false;
 	IEnumerator OnEnterRoomAfterFade()
 	{
 		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable") };
-		Globals.m_progressExample = eProgress.Room2;
 		C.Plr.SetPosition(Point("EntryPoint"));
 		C.Elton.Disable();
 		C.Charles.Disable();
-
+		
 		if (R.Current.FirstTimeVisited)
 		{
+			Globals.m_progressExample = eProgress.Room2;
+			C.Plr.AddInventory(I.FullBottle);
+			C.Plr.AddInventory(I.Key);
 			yield return C.InnerThoughts.Say("...");
 			yield return E.Wait((float)0.5);
 			yield return C.InnerThoughts.Say("Blood...");
@@ -30,7 +34,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator OnInteractPropCloset( IProp prop )
 	{
-		if (Globals.m_charlesArrive == true)
+		if (Globals.m_progressExample == eProgress.CharlesArrive)
 		{
 			E.StartCutscene();
 			yield return C.Plr.FaceRight();
@@ -44,27 +48,69 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return C.Plr.Say("The closet!");
 			yield return E.WaitSkip();
 			C.Plr.WalkSpeed = new Vector2(80,80);
-			yield return C.Plr.WalkToClicked(true);
-			yield return C.Plr.FaceClicked();
-			yield return C.Plr.WalkToClicked();
+			yield return C.Plr.WalkTo(Point("HidingSpot"));
 			C.Plr.ResetWalkSpeed();
 			E.EndCutscene();
 		
 			yield return E.Wait(1);
 		
 			E.StartCutscene();
+			C.Charles.Visible = false;
 			yield return C.Charles.ChangeRoom(R.Workshop);
+			Camera.SetCharacterToFollow(C.Charles);
+			yield return E.WaitSkip();
 			C.Charles.Enable();
-            C.Charles.SetPosition(Point("EntryPoint"));
+			yield return C.Charles.FaceRight();
+			C.Charles.SetPosition(Prop("WorkshopDoor").Position.x + 30, Prop("WorkshopDoor").Position.y - 45);
+			yield return E.WaitSkip();
+			C.Charles.Visible = true;
+			yield return E.Wait(1);
+			//TODO: Door close sound
 			yield return C.Charles.FaceLeft(true);
 			yield return E.Wait(1);
 		
-			yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
-			yield return C.Charles.Say("Luna are you in here?");
-			yield return C.InnerThoughts.Say("I have to keep quiet, If he finds me in here I am DONE");
-			yield return E.Wait((float) 0.5);
-			yield return C.Charles.Say("Anyway, I have to get the list again. I can't keep Elton waiting");
+		
+			if(!this.door_closed)
+			{
+				yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
+				yield return E.WaitSkip();
+				yield return C.Charles.FaceRight();
+				yield return E.WaitSkip();
+				yield return C.Charles.Say("Luna? are you in here?");
+				yield return E.WaitSkip();
+				Camera.SetCharacterToFollow(C.Luna);
+				yield return E.WaitSkip();
+				yield return C.InnerThoughts.Say("I have to keep quiet, If he finds me in here I am DONE");
+				yield return E.WaitSkip();
+				Camera.SetCharacterToFollow(C.Charles);
+				yield return E.WaitSkip();
+				yield return C.Charles.WalkTo(Point("EntryPoint"));
+				yield return C.Charles.Say("Hmm...");
+				yield return E.WaitSkip();
+				yield return C.Charles.Say("Anyway, I have to get the list again. I can't keep Elton waiting.");
+			}
+			else
+			{
+				yield return C.Charles.Say("Hmm...");
+				yield return E.WaitSkip();
+				yield return C.Charles.FaceRight();
+				yield return E.WaitSkip();
+				Camera.SetCharacterToFollow(C.Luna);
+				yield return E.WaitSkip();
+				yield return C.InnerThoughts.Say("I have to keep quiet, If he finds me in here I am DONE");
+				yield return E.WaitSkip();
+				Camera.SetCharacterToFollow(C.Charles);
+				yield return E.WaitSkip();
+				yield return C.Charles.WalkTo(Point("EntryPoint"));
+				yield return E.WaitSkip();
+				yield return C.Charles.Say("I better get to my list again, I can't keep Elton waiting.");
+			}
+			yield return E.WaitSkip();
+			Camera.SetCharacterToFollow(C.Luna);
+			yield return E.WaitSkip();
 			yield return C.InnerThoughts.Say("Dear god, He killed another one...");
+			yield return E.WaitSkip();
+			Camera.SetCharacterToFollow(C.Luna);
 			C.Charles.WalkSpeed = new Vector2(50,50);
 			yield return C.Charles.WalkTo(Prop("NameList"));
 			yield return C.Charles.Face(eFace.Up);
@@ -119,9 +165,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
     IEnumerator OnLookAtPropCloset( IProp prop )
 	{
 		yield return C.FaceClicked();
-		yield return C.InnerThoughts.Say("Looks like a filthy closet...");
+		yield return C.InnerThoughts.Say("Looks like his giant filthy closet...");
 		yield return E.WaitSkip();
-		yield return C.InnerThoughts.Say("His filthy closet.");
 		yield return E.Break;
 	}
 
@@ -165,21 +210,25 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	IEnumerator tryToProceed(IProp prop)
 	{
 
+		
 		if (this._interactToProceed.Remove(prop))
 		{
-            if (this._interactToProceed.Count == 0)
+			if (this._interactToProceed.Count == 0)
 			{
 				yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
 				yield return E.WaitSkip();
 				C.Plr.Visible = false;
+				C.Plr.SetPosition(Point("EntryPoint"));
 				yield return E.ChangeRoom(R.Bedroom);
-
-                C.Charles.Enable();
-                C.Charles.Visible = false;
-                C.Charles.SetPosition(-145, -85, eFace.Up); 
+		
+				C.Charles.Enable();
+				C.Charles.Visible = false;
+				C.Charles.SetPosition(-145, -85, eFace.Up);
 				yield return E.WaitSkip();
 				C.Charles.Visible = true;
-				Globals.m_charlesArrive = true;
+				Globals.m_progressExample = eProgress.CharlesArrive;
+				Debug.Log(Globals.m_progressExample);
+		
 				yield return E.Wait();
 				Audio.Play("Bucket"); // bedroom door closes
 				yield return E.WaitSkip();
@@ -187,19 +236,72 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				C.Charles.WalkToBG(Point("WorkshopDoor"));
 				yield return E.Wait(1);
 				yield return E.ChangeRoom(R.Workshop);
-				C.Plr.SetPosition(Point("EntryPoint"));
-				C.Plr.FaceLeft();
-                C.Plr.Visible = true;
-
+				yield return C.Plr.FaceLeft();
+				C.Plr.Visible = true;
+		
 				yield return E.WaitSkip();
 				yield return C.Plr.FaceRight();
 				yield return C.InnerThoughts.Say("Oh god, he's here!");
+				if (!this.door_closed)
+				{
+					yield return C.InnerThoughts.Say("The door, I left it open!");
+				}
+				yield return C.InnerThoughts.Say("He must not find me here!");
 				yield return E.WaitSkip();
-				yield return C.InnerThoughts.Say("I must hide, FAST");
 				Prop("NameList").Clickable = false;
 				Prop("WorkTable").Clickable = false;
 			}
 		}
-        yield return E.Break;
-    }
+		yield return E.Break;
+		
+ }
+
+	IEnumerator OnInteractCharacterCharles( ICharacter character )
+	{
+		Vector2 luna_attack_pos = C.Charles.Position;
+		luna_attack_pos.y -= 20;
+		yield return C.Luna.WalkTo(luna_attack_pos);
+		yield return C.Luna.FaceUp();
+		D.KillingCharles.Start();
+		yield return E.Break;
+	}
+
+	IEnumerator OnInteractPropWorkshopDoor( IProp prop )
+	{
+		if(Globals.m_progressExample == eProgress.TalkToElton)
+		{
+			yield return C.Display("The End");
+		}
+		
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvPropWorkshopDoor( IProp prop, IInventory item )
+	{
+		if (item == I.Key)
+		{
+			if(Globals.m_progressExample == eProgress.CharlesArrive && !this.door_closed)
+			{
+				yield return C.WalkToClicked();
+				yield return C.FaceClicked();
+				// Door lock sound
+				yield return E.WaitSkip();
+				this.door_closed = true;
+				yield return C.Display("Workshop door locked.");
+				yield return E.WaitSkip();
+				yield return C.Plr.FaceRight();
+				yield return C.InnerThoughts.Say("I must hide, AND FAST");
+			}
+			else if(!this.door_closed)
+			{
+				yield return C.WalkToClicked();
+				yield return C.FaceClicked();
+				// Door lock sound
+				yield return E.WaitSkip();
+				this.door_closed = true;
+				yield return C.Display("Workshop door locked.");
+			}
+		}
+		yield return E.Break;
+	}
 }
