@@ -176,8 +176,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
                 C.Charles.Enable();
                 C.Charles.Visible = false;
-                C.Charles.SetPosition(Point("EntryWalk"));
-                yield return C.Charles.FaceRight(true);
+                C.Charles.SetPosition(-145, -85, eFace.Up); 
 				yield return E.WaitSkip();
 				C.Charles.Visible = true;
 				Globals.m_charlesArrive = true;
