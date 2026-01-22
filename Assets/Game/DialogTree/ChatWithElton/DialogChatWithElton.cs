@@ -114,6 +114,7 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.InnerThoughts.Say("I don't think I can overpower him. I have to follow him for now");
 		yield return C.InnerThoughts.Say("The town will hire investigators and they will find out I saved them all");
 		yield return C.Plr.Say("Okay, Lets go.");
+		Globals.m_progressExample = eProgress.TalkToElton;
 		// End Screen
 		yield return E.Break;
 	}
