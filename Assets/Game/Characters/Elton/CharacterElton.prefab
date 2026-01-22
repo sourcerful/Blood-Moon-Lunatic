@@ -78,9 +78,9 @@ MonoBehaviour:
     m_antiGlide: 0
     m_footstepSound: 
     m_useSpriteAsHotspot: 0
-    m_baseline: 0
-    m_walkToPoint: {x: 0, y: 0}
-    m_lookAtPoint: {x: 0, y: 0}
+    m_baseline: -32
+    m_walkToPoint: {x: 40, y: -31}
+    m_lookAtPoint: {x: 2, y: -3}
     m_scriptName: Elton
     m_scriptClass: CharacterElton
   m_clickableColliders: []
@@ -96,6 +96,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: b07ebcdba961a4944a4547bcc3dd80b3, type: 2}
   - {fileID: 7400000, guid: de3786316bbcb7944ba2837a712ecbf8, type: 2}
   - {fileID: 7400000, guid: 8820e9bf36559294d964ad6f57297b7b, type: 2}
+  - {fileID: 7400000, guid: 2d1f606d85afb2345b6705818a627f1c, type: 2}
   - {fileID: 7400000, guid: e1c490c43dbf5d843b3974c116b597a4, type: 2}
   - {fileID: 7400000, guid: ade078bb42e92124ebd002eb357306ef, type: 2}
   - {fileID: 7400000, guid: 976ed18bea4462746b23bf96493dda3d, type: 2}
@@ -103,7 +104,9 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 27d6fdbea884d554b9cf1d730baa943a, type: 2}
   - {fileID: 7400000, guid: 1f02d949641269547bb95af63aee4617, type: 2}
   - {fileID: 7400000, guid: 7c601a98aecc36941bd42cc8724fe369, type: 2}
+  - {fileID: 7400000, guid: b6098896627cd2c4a956bd2632486daf, type: 2}
   - {fileID: 7400000, guid: a9a81f8bc6b1a204e8c100c5fdfae5ba, type: 2}
+  - {fileID: 7400000, guid: 3043f8174a1eb7549982916c0808ff4c, type: 2}
   - {fileID: 7400000, guid: 57532f5e0ac33df4d9983ccfdefbdf7f, type: 2}
 --- !u!60 &1582159163923692827
 PolygonCollider2D:
@@ -178,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 260
+  m_SortingOrder: 580
   m_Sprite: {fileID: 21300000, guid: 51b42b7f8e7c20e4d888ef4c617049fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

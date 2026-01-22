@@ -259,7 +259,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	IEnumerator OnInteractCharacterCharles( ICharacter character )
 	{
 		Vector2 luna_attack_pos = C.Charles.Position;
-		luna_attack_pos.y -= 20;
+		luna_attack_pos.y -= 40;
 		yield return C.Luna.WalkTo(luna_attack_pos);
 		yield return C.Luna.FaceUp();
 		D.KillingCharles.Start();

@@ -87,6 +87,7 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
+  - {fileID: 7400000, guid: ad9302f13f692dd4f9f17747cbae5d9d, type: 2}
   - {fileID: 7400000, guid: 05169f57e3ff5b64598ee68e29a7ec98, type: 2}
   - {fileID: 7400000, guid: 33baf2e7b4125e24aa45320a071c6721, type: 2}
   - {fileID: 7400000, guid: d8ffdab7225233443a850b6cc967eb52, type: 2}

@@ -61,11 +61,15 @@ public class DialogKillingCharles : DialogTreeScript<DialogKillingCharles>
 			yield return C.InnerThoughts.Say("Heart");
 			yield return E.Wait(1);
 		
+			C.Charles.Animation = "FallR";
+			C.Charles.SetPosition(C.Charles.Position.x, C.Charles.Position.y - 30);
+		
 			yield return C.InnerThoughts.Say("I did it, He is finally dead... I am free");
 			yield return C.InnerThoughts.Say("I-I saved the town...");
 			yield return E.Wait((float) 0.5);
 			yield return C.Display("A book falls from Charles's coat, it reads:\nThe Blood Moon - By Charles Smith");
 			D.KillingCharles.Stop();
+			C.Charles.Clickable = false;
 			yield return E.Wait((float) 1.5);
 		
 			yield return C.Elton.ChangeRoom(R.Workshop);
