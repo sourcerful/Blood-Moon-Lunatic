@@ -249,7 +249,7 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
 		yield return C.Display("You searched the bed, then cleaned it.");
-		yield return C.Display("Under the blanket, you found an empty wine bottle.");
+		yield return C.Display("Under the blanket, you found an empty wine bottle and laid it on the bed.");
 		Prop("Bed").Animation = "Bed";
 		Prop("EmptyBottle").Visible = true;
 		yield return E.Break;

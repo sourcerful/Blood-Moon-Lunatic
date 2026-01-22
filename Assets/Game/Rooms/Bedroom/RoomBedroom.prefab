@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Cave
-    m_cursor: Up
+    m_description: 'Workshop Door '
+    m_cursor: Right
     m_clickable: 1
     m_baseline: -12
     m_walkToPoint: {x: 89, y: -45}
@@ -887,7 +887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3122547113777150849}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -32, y: -13.7, z: 0}
+  m_LocalPosition: {x: -46.2, y: -13.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4865622036928958}
@@ -1262,7 +1262,7 @@ MonoBehaviour:
     m_position: {x: 0, y: 0}
     m_baseline: -23
     m_baselineFixed: 0
-    m_walkToPoint: {x: -1, y: -47}
+    m_walkToPoint: {x: 10, y: -48}
     m_lookAtPoint: {x: -0, y: -5}
     m_scriptName: Bed
   m_parallaxDepth: 0
