@@ -12,11 +12,20 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	IEnumerator OnEnterRoomAfterFade()
 	{
 		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable") };
-        Globals.m_progressExample = eProgress.Room2;
+		Globals.m_progressExample = eProgress.Room2;
 		C.Plr.SetPosition(Point("EntryPoint"));
 		C.Elton.Disable();
 		C.Charles.Disable();
-		yield return E.Break;
+
+		if (R.Current.FirstTimeVisited)
+		{
+			yield return C.InnerThoughts.Say("...");
+			yield return E.Wait((float)0.5);
+			yield return C.InnerThoughts.Say("Blood...");
+			yield return E.Wait((float)0.5);
+			yield return C.InnerThoughts.Say("Everywhere...");
+			yield return E.Break;
+		}
 	}
 
 	IEnumerator OnInteractPropCloset( IProp prop )
@@ -169,7 +178,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
                 C.Charles.Visible = false;
                 C.Charles.SetPosition(Point("EntryWalk"));
                 yield return C.Charles.FaceRight(true);
-
 				yield return E.WaitSkip();
 				C.Charles.Visible = true;
 				Globals.m_charlesArrive = true;
@@ -179,17 +187,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return C.Charles.Say("I shall finish my work");
 				C.Charles.WalkToBG(Point("WorkshopDoor"));
 				yield return E.Wait(1);
-
 				yield return E.ChangeRoom(R.Workshop);
-				C.Plr.SetPosition(Point("WorkTable"));
-				C.Plr.Visible = true;
+				C.Plr.SetPosition(Point("EntryPoint"));
+				C.Plr.FaceLeft();
+                C.Plr.Visible = true;
 
 				yield return E.WaitSkip();
 				yield return C.Plr.FaceRight();
 				yield return C.InnerThoughts.Say("Oh god, he's here!");
 				yield return E.WaitSkip();
 				yield return C.InnerThoughts.Say("I must hide, FAST");
-				yield return C.Display("HIDE IN THE CLOSET");
 				Prop("NameList").Clickable = false;
 				Prop("WorkTable").Clickable = false;
 			}
