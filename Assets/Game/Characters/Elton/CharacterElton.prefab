@@ -87,27 +87,7 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
-  - {fileID: 7400000, guid: 4d3d6e06cf0b350408ee18543a71130c, type: 2}
-  - {fileID: 7400000, guid: ed06e4bea69a18c46bead52480222fd6, type: 2}
-  - {fileID: 7400000, guid: 830002e0f84302d4abda5821871a049e, type: 2}
-  - {fileID: 7400000, guid: f4f1f74bc6279a5468a88bb1c9d16307, type: 2}
-  - {fileID: 7400000, guid: cac47824a24f59544b2106b771865519, type: 2}
-  - {fileID: 7400000, guid: 7caab760277841e4c9040c2ac8d629e4, type: 2}
-  - {fileID: 7400000, guid: b07ebcdba961a4944a4547bcc3dd80b3, type: 2}
-  - {fileID: 7400000, guid: de3786316bbcb7944ba2837a712ecbf8, type: 2}
   - {fileID: 7400000, guid: 8820e9bf36559294d964ad6f57297b7b, type: 2}
-  - {fileID: 7400000, guid: 2d1f606d85afb2345b6705818a627f1c, type: 2}
-  - {fileID: 7400000, guid: e1c490c43dbf5d843b3974c116b597a4, type: 2}
-  - {fileID: 7400000, guid: ade078bb42e92124ebd002eb357306ef, type: 2}
-  - {fileID: 7400000, guid: 976ed18bea4462746b23bf96493dda3d, type: 2}
-  - {fileID: 7400000, guid: 2ca649a5d8c369e4fb7364562408007e, type: 2}
-  - {fileID: 7400000, guid: 27d6fdbea884d554b9cf1d730baa943a, type: 2}
-  - {fileID: 7400000, guid: 1f02d949641269547bb95af63aee4617, type: 2}
-  - {fileID: 7400000, guid: 7c601a98aecc36941bd42cc8724fe369, type: 2}
-  - {fileID: 7400000, guid: b6098896627cd2c4a956bd2632486daf, type: 2}
-  - {fileID: 7400000, guid: a9a81f8bc6b1a204e8c100c5fdfae5ba, type: 2}
-  - {fileID: 7400000, guid: 3043f8174a1eb7549982916c0808ff4c, type: 2}
-  - {fileID: 7400000, guid: 57532f5e0ac33df4d9983ccfdefbdf7f, type: 2}
 --- !u!60 &1582159163923692827
 PolygonCollider2D:
   m_ObjectHideFlags: 0
