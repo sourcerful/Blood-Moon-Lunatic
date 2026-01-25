@@ -45,14 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_options:
-    - m_name: 1
-      m_text: My Lord, your hand...
+    - m_name: 2
+      m_text: May I ask, where are you off to?
       m_visible: 1
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0
-    - m_name: 2
-      m_text: May I ask, where are you off to?
+    - m_name: 1
+      m_text: My Lord, your hand...
       m_visible: 1
       m_disabled: 0
       m_used: 0

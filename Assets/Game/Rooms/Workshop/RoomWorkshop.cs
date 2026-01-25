@@ -15,14 +15,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	private bool _hit_charles = false;
 	IEnumerator OnEnterRoomAfterFade()
 	{
-		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable") };
+		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable"), Prop("Bookcase") };
 		C.Plr.SetPosition(Point("EntryPoint"));
 		C.Elton.Disable();
 		C.Charles.Disable();
+		C.Plr.FaceRightBG(true);
 		
 		if (R.Current.FirstTimeVisited)
 		{
 			Globals.m_progressExample = eProgress.Room2;
+			C.Plr.ClearInventory();
 			C.Plr.AddInventory(I.FullBottle);
 			C.Plr.AddInventory(I.Key);
 			yield return C.InnerThoughts.Say("...");
@@ -149,6 +151,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	{
 		yield return C.FaceClicked();
 		yield return C.WalkToClicked();
+		C.Plr.FaceUpBG();
 		yield return C.InnerThoughts.Say("Wha-");
 		yield return C.InnerThoughts.Say("Are those... NAMES?!?");
 		yield return E.WaitSkip();
@@ -253,7 +256,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				Prop("NameList").Clickable = false;
 				Prop("WorkTable").Clickable = false;
-			}
+            }
 		}
 		yield return E.Break;
 		
@@ -317,16 +320,41 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return E.Break;
 	}
 
+
 	IEnumerator OnUseInvCharacterCharles( ICharacter character, IInventory item )
 	{
 		if (item == I.BrokenBottle)
 		{
 			D.StabbingCharles.Start();
 		}
+
 		yield return E.Break;
 	}
 
-	void OnEnterRoom()
+	IEnumerator OnInteractPropBookcase( IProp prop )
 	{
+		yield return C.FaceClicked();
+		yield return C.WalkToClicked();
+		C.Plr.FaceUpBG();
+		if(Globals.m_progressExample == eProgress.CharlesArrive)
+		{
+			yield return C.InnerThoughts.Say("I can't hide in here");
+		}
+		else
+		{
+		yield return C.InnerThoughts.Say("Maybe his books will give me more information on how to beat him");
+		yield return C.InnerThoughts.Say("This one looks interesting");
+		yield return C.Display("Luna flips through the pages of \"Basic Anatomy by Leo Sho\", Trying to gather as much information as possible.");
+		yield return C.Display("Luna now somewhat understands the basics of anatomy!");
+		yield return E.WaitSkip();
+		yield return E.WaitFor(()=> this.tryToProceed(prop) );
+		}
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropBookcase( IProp prop )
+	{
+
+		yield return E.Break;
 	}
 }

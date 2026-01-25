@@ -3,6 +3,7 @@ using System.Collections;
 using PowerTools.Quest;
 using PowerScript;
 using static GlobalScript;
+using System;
 
 public class GuiToolbar : GuiScript<GuiToolbar>
 {
@@ -38,10 +39,17 @@ public class GuiToolbar : GuiScript<GuiToolbar>
 		GuiPrompt.Script.Show("Really Save and Quit?", "Yes", "Cancel", ()=>
 		{
 			if ( R.Current != R.Title )
+			{
 				E.Save(1,"Autosave");
-		
-			Application.Quit();
-		});
+				E.ChangeRoomBG(R.Title);
+			}
+
+			if (!(Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)) 
+			{
+				Application.Quit();
+            }
+
+        });
 		yield return E.Break;
 	}
 

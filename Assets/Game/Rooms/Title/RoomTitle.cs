@@ -1,7 +1,8 @@
-using UnityEngine;
-using System.Collections;
 using PowerScript;
 using PowerTools.Quest;
+using System.Collections;
+using PowerTools.Quest;
+using PowerScript;
 using static GlobalScript;
 
 public class RoomTitle : RoomScript<RoomTitle>
@@ -18,13 +19,12 @@ public class RoomTitle : RoomScript<RoomTitle>
 
 	public IEnumerator OnEnterRoomAfterFade()
 	{
-		
 		// Start cutscene, so this can be skipped by pressing ESC
 		E.StartCutscene();
 		
 		// Fade in the title prop
-		Prop("Title").Visible = true;
-		yield return Prop("Title").Fade(0,1,1.0f);
+		Prop("Back").Visible = true;
+		yield return Prop("back").Fade(0,1,1.0f);
 		
 		// Wait a moment
 		yield return E.Wait(0.5f);
@@ -50,9 +50,9 @@ public class RoomTitle : RoomScript<RoomTitle>
 	{		
 		// Turn on the inventory and info bar now that we're starting a game
 		G.InventoryBar.Show();
-		
-		// Move the player to the room
-		E.ChangeRoomBG(R.Bedroom);
+        Globals.m_progressExample = eProgress.None;
+        // Move the player to the room
+        E.ChangeRoomBG(R.Bedroom);
 		yield return E.ConsumeEvent;
 	}
 
@@ -60,6 +60,8 @@ public class RoomTitle : RoomScript<RoomTitle>
 	{
 		// Restore most recent save game
 		E.RestoreLastSave();
+		G.Toolbar.Hide();
+		G.Toolbar.Show();
 		yield return E.ConsumeEvent;
 	}
 

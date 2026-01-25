@@ -70,11 +70,18 @@ MonoBehaviour:
   m_wrapUniformLineWidth: 0
   m_wrapWidthMin: 0
   m_keepOnScreen: 0
+  m_screenPadding:
+    left: 8
+    right: 8
+    top: 8
+    bottom: 8
   m_shaderOverride: {fileID: 0}
+  m_setFiltering: 1
   m_outline:
     m_directions: 0
     m_width: 1
     m_color: {r: 0.027450982, g: 0.03529412, b: 0.10196079, a: 1}
+  m_typeSpeed: 0
   m_unlocalizedText: New Label
   m_outlineMeshes: []
 --- !u!102 &704239611335084410
@@ -111,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af492d8fb484b6f4b9f0a52eda1401ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_horizontal: 0
   m_vertical: 0
+  m_horizontal: 0
   m_object: {fileID: 0}
   m_offset: {x: 0, y: 0}
   m_offsetRatio: {x: 0, y: 0}

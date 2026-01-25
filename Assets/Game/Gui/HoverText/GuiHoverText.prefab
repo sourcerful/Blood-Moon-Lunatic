@@ -70,11 +70,18 @@ MonoBehaviour:
   m_wrapUniformLineWidth: 0
   m_wrapWidthMin: 0
   m_keepOnScreen: 0
+  m_screenPadding:
+    left: 8
+    right: 8
+    top: 8
+    bottom: 8
   m_shaderOverride: {fileID: 0}
+  m_setFiltering: 1
   m_outline:
     m_directions: 138
     m_width: 1
     m_color: {r: 0, g: 0, b: 0, a: 1}
+  m_typeSpeed: 0
   m_unlocalizedText: Mouse over
   m_outlineMeshes:
   - {fileID: 0}
@@ -159,7 +166,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 703176b3361ccab4da6c9d4e7a52ad55, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294941539
+    rgba: 4279899046
 --- !u!1 &6976587785897374010
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6976587785897374010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -90, z: 0}
+  m_LocalPosition: {x: -0.03938307, y: -90, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7868789227040336057}
