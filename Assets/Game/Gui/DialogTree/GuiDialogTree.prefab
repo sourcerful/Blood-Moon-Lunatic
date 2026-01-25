@@ -84,8 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_itemSpacing: 0.01
-  m_colorDefault: {r: 0.38823533, g: 0.60784316, b: 1, a: 1}
-  m_colorUsed: {r: 0.22352941, g: 0.41568628, b: 0.78039217, a: 1}
+  m_colorDefault: {r: 0.9529412, g: 0.1764706, b: 0.19607843, a: 1}
+  m_colorUsed: {r: 0.6745098, g: 0.19607843, b: 0.20784314, a: 1}
   m_colorHover: {r: 1, g: 1, b: 1, a: 1}
   m_changeImageColor: 1
   m_wrapText: 1

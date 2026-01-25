@@ -51,14 +51,16 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 20f34574c6a3efb429fa94b42ca636ae, type: 3}
   - {fileID: 21300000, guid: 67daa94541d37a649af2a015456a816e, type: 3}
+  - {fileID: 21300000, guid: 3e90b118b6a83ac4891b60108af77c24, type: 3}
   - {fileID: 21300000, guid: bcaf7a483a980294d8e3b45aec380a18, type: 3}
   - {fileID: 21300000, guid: 8a1bdfeade3ede54baa8b8a4a9969d9b, type: 3}
   - {fileID: 21300000, guid: 3f54ae0c7a4a35641806b78c3c7fa041, type: 3}
   m_PackedSpriteNamesToIndex:
   - NameList
   - HideSpot
+  - Bookcase_0
   - WorkTable_0
-  - Bg
+  - bg
   - Closet_0
   m_RenderDataMap: {}
   m_Tag: RoomWorkshopAtlas

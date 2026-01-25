@@ -57,10 +57,10 @@ MonoBehaviour:
   m_animClick: 
   m_animOff: 
   m_colorWhat: 3
-  m_color: {r: 0.38823533, g: 0.60784316, b: 1, a: 1}
+  m_color: {r: 0.6509804, g: 0.07450981, b: 0.101960786, a: 1}
   m_colorHover: {r: 1, g: 1, b: 1, a: 1}
   m_colorClick: {r: 1, g: 1, b: 1, a: 1}
-  m_colorOff: {r: 0.13333334, g: 0.2901961, b: 0.6392157, a: 1}
+  m_colorOff: {r: 0.45882353, g: 0.05490196, b: 0.07058824, a: 1}
   m_soundHover: 
   m_soundClick: 
   m_hotspotPadding:
@@ -173,7 +173,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 7699
   m_Sprite: {fileID: 21300000, guid: fe8d013984475254a8436114cc85e380, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6509804, g: 0.07450981, b: 0.101960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -410,7 +410,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 831730778ee56a84b824eb478486d23c, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4279899119
 --- !u!114 &5461859215214647020
 MonoBehaviour:
   m_ObjectHideFlags: 0

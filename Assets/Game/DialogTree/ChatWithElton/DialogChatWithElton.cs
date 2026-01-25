@@ -28,10 +28,8 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.InnerThoughts.Say("He has been helping Charles all this time...");
 		yield return C.InnerThoughts.Say("I have to play along for now.");
 		C.Elton.Description= "Elton";
+		OptionOn(2);
 		
-		if(Option(2).Used){
-			OptionOn(2);
-		}
 		yield return E.Break;
 	}
 

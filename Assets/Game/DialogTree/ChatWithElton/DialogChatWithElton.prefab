@@ -53,7 +53,7 @@ MonoBehaviour:
       m_timesUsed: 0
     - m_name: 2
       m_text: What are you doing here?
-      m_visible: 1
+      m_visible: 0
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0
