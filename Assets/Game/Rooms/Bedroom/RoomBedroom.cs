@@ -22,6 +22,7 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		// Note, you can also just do this at the top of OnEnterRoomAfterFade
 		
 		//C.Charles.SetPosition(Point("WorkshopDoor"), eFace.DownLeft);
+		Prop("EmptyBottle").Disable();
  }
 
     public IEnumerator OnEnterRoomAfterFade()
@@ -248,11 +249,22 @@ public class RoomBedroom : RoomScript<RoomBedroom>
     {
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
-		yield return C.Display("You searched the bed, then cleaned it.");
-		yield return C.Display("Under the blanket, you found an empty wine bottle and laid it on the bed.");
-		Prop("Bed").Animation = "Bed";
-		Prop("EmptyBottle").Visible = true;
+		
+		if(prop.FirstUse)
+		{
+			yield return C.Display("You searched the bed, then cleaned it.");
+			yield return C.Display("Under the blanket, you found an empty wine bottle and laid it on the bed.");
+			Prop("Bed").Animation = "Bed";
+			Prop("EmptyBottle").Enable();
+			Prop("EmptyBottle").Visible = true;
+		}
+		else
+		{
+			yield return C.Display("The bed is clean, nothing to find here.");
+		}
+		
 		yield return E.Break;
+		
 		
  }
 
