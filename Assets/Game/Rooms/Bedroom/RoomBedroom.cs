@@ -33,7 +33,6 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		//{
 		//Audio.PlayMusic("MusicExample");
 		//}
-		Debug.Log(Globals.m_progressExample);
 		if (Globals.m_progressExample != eProgress.Room2)
 		{
 			E.StartCutscene();

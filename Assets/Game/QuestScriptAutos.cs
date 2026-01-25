@@ -26,6 +26,7 @@ namespace PowerScript
 		public static IInventory FullBottle     { get { return PowerQuest.Get.GetInventory("FullBottle"); } }
 		public static IInventory Key            { get { return PowerQuest.Get.GetInventory("Key"); } }
 		public static IInventory EmptyBottle    { get { return PowerQuest.Get.GetInventory("EmptyBottle"); } }
+		public static IInventory BrokenBottle   { get { return PowerQuest.Get.GetInventory("BrokenBottle"); } }
 		// #INVENTORY# - Do not edit this line, it's used by the system to insert rooms for easy access
 	}
 
@@ -58,8 +59,9 @@ namespace PowerScript
 	{
 		// Access to specific dialog trees (Auto-generated)
 		public static IDialogTree ChatWithCharles      { get { return PowerQuest.Get.GetDialogTree("ChatWithCharles"); } }
-		public static IDialogTree KillingCharles       { get { return PowerQuest.Get.GetDialogTree("KillingCharles"); } }
+		public static IDialogTree HittingCharles       { get { return PowerQuest.Get.GetDialogTree("HittingCharles"); } }
 		public static IDialogTree ChatWithElton        { get { return PowerQuest.Get.GetDialogTree("ChatWithElton"); } }
+		public static IDialogTree StabbingCharles      { get { return PowerQuest.Get.GetDialogTree("StabbingCharles"); } }
 		// #DIALOG# - Do not edit this line, it's used by the system to insert rooms for easy access	    	    
 	}
 

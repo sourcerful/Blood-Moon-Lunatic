@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2881768378281442342}
   - component: {fileID: 3295097464029513811}
   m_Layer: 0
-  m_Name: DialogKillingCharles
+  m_Name: DialogHittingCharles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,11 +51,5 @@ MonoBehaviour:
       m_disabled: 0
       m_used: 0
       m_timesUsed: 0
-    - m_name: 2
-      m_text: Stab Charles
-      m_visible: 0
-      m_disabled: 0
-      m_used: 0
-      m_timesUsed: 0
-    m_scriptName: KillingCharles
-    m_scriptClass: DialogKillingCharles
+    m_scriptName: HittingCharles
+    m_scriptClass: DialogHittingCharles

@@ -4,13 +4,15 @@ using PowerTools.Quest;
 using PowerScript;
 using static GlobalScript;
 using System.Collections.Generic;
+using System;
 
 public class RoomWorkshop : RoomScript<RoomWorkshop>
 {
 
 	
 	private HashSet<IProp> _interactToProceed;
-	private bool door_closed = false;
+	private bool _door_closed = false;
+	private bool _hit_charles = false;
 	IEnumerator OnEnterRoomAfterFade()
 	{
 		this._interactToProceed = new HashSet<IProp> { Prop("NameList"), Prop("WorkTable") };
@@ -70,7 +72,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return E.Wait(1);
 		
 		
-			if(!this.door_closed)
+			if(!this._door_closed)
 			{
 				yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
 				yield return E.WaitSkip();
@@ -121,7 +123,9 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return C.InnerThoughts.Say("This is it. I still got the bottle. It has to be now...");
 			yield return C.InnerThoughts.Say("I have to kill this fiend NOW");
 			Prop("Closet").Clickable=false;
+			C.Charles.Cursor = "FullBottle";
 			E.EndCutscene();
+			R.Current.ActiveWalkableArea = 1;
 		}
 		else{
 			yield return C.WalkToClicked();
@@ -227,7 +231,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				C.Charles.Visible = true;
 				Globals.m_progressExample = eProgress.CharlesArrive;
-				Debug.Log(Globals.m_progressExample);
 		
 				yield return E.Wait();
 				Audio.Play("Bucket"); // bedroom door closes
@@ -242,7 +245,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				yield return C.Plr.FaceRight();
 				yield return C.InnerThoughts.Say("Oh god, he's here!");
-				if (!this.door_closed)
+				if (!this._door_closed)
 				{
 					yield return C.InnerThoughts.Say("The door, I left it open!");
 				}
@@ -258,11 +261,20 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator OnInteractCharacterCharles( ICharacter character )
 	{
-		Vector2 luna_attack_pos = C.Charles.Position;
-		luna_attack_pos.y -= 50;
-		yield return C.Luna.WalkTo(luna_attack_pos);
-		yield return C.Luna.FaceUp();
-		D.KillingCharles.Start();
+		
+		if(!_hit_charles)
+		{
+			Vector2 luna_attack_pos = C.Charles.Position;
+			luna_attack_pos.y -= 50;
+			yield return C.Luna.WalkTo(luna_attack_pos);
+			yield return C.Luna.FaceUp();
+			D.HittingCharles.Start();
+			_hit_charles = true;
+        }
+		else
+		{
+			D.StabbingCharles.Start();
+        }
 		yield return E.Break;
 	}
 
@@ -280,28 +292,41 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	{
 		if (item == I.Key)
 		{
-			if(Globals.m_progressExample == eProgress.CharlesArrive && !this.door_closed)
+			if(Globals.m_progressExample == eProgress.CharlesArrive && !this._door_closed)
 			{
 				yield return C.WalkToClicked();
 				yield return C.FaceClicked();
 				// Door lock sound
 				yield return E.WaitSkip();
-				this.door_closed = true;
+				this._door_closed = true;
 				yield return C.Display("Workshop door locked.");
 				yield return E.WaitSkip();
 				yield return C.Plr.FaceRight();
 				yield return C.InnerThoughts.Say("I must hide, AND FAST");
 			}
-			else if(!this.door_closed)
+			else if(!this._door_closed)
 			{
 				yield return C.WalkToClicked();
 				yield return C.FaceClicked();
 				// Door lock sound
 				yield return E.WaitSkip();
-				this.door_closed = true;
+				this._door_closed = true;
 				yield return C.Display("Workshop door locked.");
 			}
 		}
 		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvCharacterCharles( ICharacter character, IInventory item )
+	{
+		if (item == I.BrokenBottle)
+		{
+			D.StabbingCharles.Start();
+		}
+		yield return E.Break;
+	}
+
+	void OnEnterRoom()
+	{
 	}
 }

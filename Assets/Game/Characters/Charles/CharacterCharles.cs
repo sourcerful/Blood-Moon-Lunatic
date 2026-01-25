@@ -14,7 +14,7 @@ public class CharacterCharles : CharacterScript<CharacterCharles>
 		yield return C.FaceClicked();
 		if(R.Workshop.Active)
 		{
-			D.KillingCharles.Start();
+			D.HittingCharles.Start();
 			C.Charles.Clickable=false;
 		}
 		else
