@@ -236,6 +236,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		{
 			if (this._interactToProceed.Count == 0)
 			{
+				Audio.PlayMusic("Obstacle");
 				yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
 				yield return E.WaitSkip();
 				C.Plr.Visible = false;

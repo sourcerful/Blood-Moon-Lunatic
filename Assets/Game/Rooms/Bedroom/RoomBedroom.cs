@@ -22,6 +22,7 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		// Note, you can also just do this at the top of OnEnterRoomAfterFade
 		//C.Charles.SetPosition(Point("WorkshopDoor"), eFace.DownLeft);
 		Prop("EmptyBottle").Disable();
+		Audio.PlayMusic("TheWorkshop");
  }
 
     public IEnumerator OnEnterRoomAfterFade()
@@ -47,7 +48,8 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 			yield return C.Charles.Say("Luna, come now.");
 			yield return C.Charles.FaceLeft();
 			yield return E.Wait(1);
-			yield return C.InnerThoughts.Say("I must speak to Lord Charles or I will suffer the consequences...");
+			yield return C.InnerThoughts.Say("I never dared to refuse a direct order from the lord...");
+			yield return C.InnerThoughts.Say("Because refusing might cost me my life... I will clean the bed later.");
 			yield return C.Player.WalkTo(Point("CharlesDialog"));
 			yield return C.Charles.Face(C.Luna);
 			yield return C.Plr.Face(C.Charles);

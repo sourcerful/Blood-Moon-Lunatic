@@ -8,6 +8,7 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 {
 	public IEnumerator OnStart()
 	{
+		Audio.PlayMusic("EltonTheme",2f);
 		yield return C.Elton.Say("You... You lunatic. Look at what you've done!");
 		yield return C.Elton.Say("He was finally finishing it. The book that was going to put this miserable town on the map");
 		yield return C.Elton.Say("Charles was a genius! A bit eccentric, sure, but he didn't deserve to be slaughtered in his own home!");

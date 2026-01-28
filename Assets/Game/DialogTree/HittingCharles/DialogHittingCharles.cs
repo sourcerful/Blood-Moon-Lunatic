@@ -6,6 +6,8 @@ using static GlobalScript;
 
 public class DialogHittingCharles : DialogTreeScript<DialogHittingCharles>
 {
+	
+	
 	public IEnumerator OnStart()
 	{
 		yield return E.Break;
@@ -23,9 +25,9 @@ public class DialogHittingCharles : DialogTreeScript<DialogHittingCharles>
 		Vector2 slow_walk_speed = new Vector2(20,20);
 		
 		C.Plr.WalkSpeed = slow_walk_speed;
+		Audio.PlayMusic("Climax",1f);
 		yield return C.Plr.WalkTo(luna_attack_pos.x, luna_attack_pos.y + 20);
 		C.Plr.ResetWalkSpeed();
-		yield return C.InnerThoughts.Say("*Head*");
 		yield return C.Display("Luna lifts the bottle and hits Charles on his head");
 		yield return C.Display("The glass shatters against his skull... he's dazed!");
 		

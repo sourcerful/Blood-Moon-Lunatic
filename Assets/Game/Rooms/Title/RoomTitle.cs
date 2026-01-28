@@ -16,7 +16,7 @@ public class RoomTitle : RoomScript<RoomTitle>
 		
 		// Later we could start some music here
 		//SystemAudio.PlayMusic("MusicSlowStrings", 1);
-		Audio.PlayMusic("Title", 2f);
+		Audio.PlayMusic("Title");
 	}
 
 	public IEnumerator OnEnterRoomAfterFade()
@@ -53,8 +53,7 @@ public class RoomTitle : RoomScript<RoomTitle>
 		Audio.StopMusic(1f);
 		E.FadeColor = Color.black;
 		yield return E.FadeOut(1f);
-		yield return C.Display("Georgia, 1700.");
-		yield return C.Display("Zibi");
+		yield return C.Display("Late 19th century, Europe");
 		// Turn on the inventory and info bar now that we're starting a game
 		G.InventoryBar.Show();
 		Globals.m_progressExample = eProgress.None;

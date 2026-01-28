@@ -54,6 +54,7 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 				yield return C.Luna.Say("AGHHHH!!!!");
 				Audio.Play("Stab3");
 				Camera.Shake(1, 0.5f);
+				Audio.StopMusic(2f);
 				yield return E.WaitSkip();
 				Audio.Play("Stab3");
 				Camera.Shake(1, 0.5f);
@@ -61,12 +62,24 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 				Audio.Play("Stab3");
 				Camera.Shake(2, 1f);
 				yield return E.Wait(2);
-		
-			yield return C.InnerThoughts.Say("I did it, He is finally dead... I am free");
-			yield return E.Wait(1);
+			yield return C.Display("A book falls from Charles's coat, it reads:\nThe Blood Moon - By Charles Smith");
+			Audio.PlayMusic("relief",2f);
+			yield return C.InnerThoughts.Say("I did it, He is finally dead...");
+			yield return C.InnerThoughts.Say("The town is safe");
 			yield return C.InnerThoughts.Say("I-I saved the town...");
 			yield return E.WaitSkip();
-			yield return C.Display("A book falls from Charles's coat, it reads:\nThe Blood Moon - By Charles Smith");
+			yield return C.InnerThoughts.Say("I am a HERO");
+			yield return C.InnerThoughts.Say("He made citizens disappear for decades");
+			yield return C.InnerThoughts.Say("Now that my lips aren't sealed, I will tell them everything");
+			yield return C.InnerThoughts.Say("Maybe this way the families will find closure");
+			yield return E.Wait(1f);
+			yield return C.InnerThoughts.Say("*Sigh*");
+			yield return C.InnerThoughts.Say("What a relief");
+			yield return C.InnerThoughts.Say("After so many years of serving him");
+			yield return C.InnerThoughts.Say("No more cleaning and mopping");
+			yield return C.InnerThoughts.Say("No more cooking and frying");
+			yield return C.InnerThoughts.Say("No more listening to his jabbering");
+			yield return C.InnerThoughts.Say("I am FREE...");
 			D.HittingCharles.Stop();
 			C.Charles.Clickable = false;
 			yield return E.Wait(1.5f);
@@ -75,7 +88,10 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 			C.Elton.Enable();
 			C.Elton.SetPosition(Point("EntryPoint"));
 			yield return C.Elton.WalkTo(C.Elton.Position.x + 60, C.Elton.Position.y);
-			yield return C.Elton.Say("You have made a grave mistake little one...");
+			Audio.StopMusic(1f);
+			Audio.Play("VinylStop");
+			yield return C.Elton.Say("W-What have you done?!?");
+			yield return C.InnerThoughts.Say("Who's that?");
 			break;
 		}
 		
