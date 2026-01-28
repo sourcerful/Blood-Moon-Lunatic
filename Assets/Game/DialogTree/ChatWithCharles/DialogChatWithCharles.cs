@@ -79,7 +79,12 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		C.Charles.WalkToBG(-140, -100);
 		yield return E.Wait(2);
 		yield return C.Plr.FaceDownLeft();
+		Audio.Play("Handle");
+		yield return E.Wait(1);
+		Audio.Play("DoorOpen");
+		yield return E.Wait(2.5f);
 		C.Charles.Disable();
+		Audio.Play("DoorClose");
 		Stop();
 		yield return C.InnerThoughts.Say("Why would he still insist on me not entering his office?");
 		yield return C.InnerThoughts.Say("There must be a way to stop him in there");

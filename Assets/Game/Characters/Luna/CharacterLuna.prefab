@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_data:
-    m_description: Test
+    m_description: Luna
     m_cursor: 
     m_room: Bedroom
     m_position: {x: -140, y: -54}
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_turnAnims: []
   m_transitionAnims: []
   m_animations:
+  - {fileID: 7400000, guid: cb3e694f54deab74cb74dc44886471b2, type: 2}
   - {fileID: 7400000, guid: 530ba14c6d0f13d47a5412c6de78dc8a, type: 2}
   - {fileID: 7400000, guid: a99cd211d8705dc4bb0693252bad24ef, type: 2}
   - {fileID: 7400000, guid: 1a9dbed121e0aa042b9f40f54ec7eb77, type: 2}
@@ -94,12 +95,11 @@ MonoBehaviour:
   - {fileID: 7400000, guid: a92393161a5c799438a75a10f6e502da, type: 2}
   - {fileID: 7400000, guid: 6c0ba0a1c07c5e545993b278ef920628, type: 2}
   - {fileID: 7400000, guid: 43f93f7b56fb8014a82ab473b5aae408, type: 2}
-  - {fileID: 7400000, guid: cb3e694f54deab74cb74dc44886471b2, type: 2}
+  - {fileID: 7400000, guid: aa0d3bf00e6cf5e40b3b7a7a3c89b8ec, type: 2}
   - {fileID: 7400000, guid: 9dc068a26bbc466458789f60c94c810d, type: 2}
   - {fileID: 7400000, guid: 3a78e14126b05ca43b8cd536c255a464, type: 2}
   - {fileID: 7400000, guid: 1b47d985a4257834cbec3cd30fa41053, type: 2}
   - {fileID: 7400000, guid: 484f9d946278c0e4faeebc325dd86129, type: 2}
-  - {fileID: 7400000, guid: 44b3d56d386e68a4dbddb51eb7de0668, type: 2}
   - {fileID: 7400000, guid: 1bfb48378f4bc694bbce6ac4069263e3, type: 2}
   - {fileID: 7400000, guid: b5c8a6900d924d048811e3ddaf880b85, type: 2}
   - {fileID: 7400000, guid: 76bf6a4526e0fd44aab12f94a2f44d44, type: 2}

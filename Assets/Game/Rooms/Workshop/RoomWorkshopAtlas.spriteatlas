@@ -60,7 +60,7 @@ SpriteAtlas:
   - HideSpot
   - Bookcase_0
   - WorkTable_0
-  - bg
+  - Bg
   - Closet_0
   m_RenderDataMap: {}
   m_Tag: RoomWorkshopAtlas

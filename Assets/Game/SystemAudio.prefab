@@ -46,16 +46,13 @@ MonoBehaviour:
   m_volumeByType:
   - m_type: 1
     m_volume: 1
-    m_mixerGroup: {fileID: 243360952077068278, guid: 1c6db700d48808a47aeeb712a75a818f,
-      type: 2}
+    m_mixerGroup: {fileID: 243360952077068278, guid: 1c6db700d48808a47aeeb712a75a818f, type: 2}
   - m_type: 2
     m_volume: 1
-    m_mixerGroup: {fileID: 243448924589960726, guid: 1c6db700d48808a47aeeb712a75a818f,
-      type: 2}
+    m_mixerGroup: {fileID: 243448924589960726, guid: 1c6db700d48808a47aeeb712a75a818f, type: 2}
   - m_type: 4
     m_volume: 1
-    m_mixerGroup: {fileID: 243504310622813720, guid: 1c6db700d48808a47aeeb712a75a818f,
-      type: 2}
+    m_mixerGroup: {fileID: 243504310622813720, guid: 1c6db700d48808a47aeeb712a75a818f, type: 2}
   m_musicDuckingMaxVolume: 0.5
   m_falloffMinVol: 0.2
   m_falloffPanMax: 0.75
@@ -64,12 +61,27 @@ MonoBehaviour:
   m_falloffPanStart: 0.5
   m_falloffPanEnd: 2
   m_noDuplicateTime: 0.05
+  m_narratorMixerGroup: {fileID: 0}
   m_autoAddCues: 1
   m_audioCues:
+  - {fileID: 6953111886764254560, guid: efc874cf0d7f5164891a2c78229bfae8, type: 3}
   - {fileID: 11426600, guid: 2c643cf6d170a1845bd86209b6ca496a, type: 3}
+  - {fileID: 110402614576050991, guid: 0ea2da576815b8f4fbbdaa81a884ad22, type: 3}
   - {fileID: 11426600, guid: c6310e800026e2e428019c2a6358d52e, type: 3}
   - {fileID: 114876034982820868, guid: 3b2a729029b4ad04985d489155e1943a, type: 3}
+  - {fileID: 8899616252200865392, guid: 4098f22d1ab58124cb2a4f653d66c503, type: 3}
+  - {fileID: 5648376483112254951, guid: b3e04c0c4465bb340b72dc693267136a, type: 3}
+  - {fileID: 6927933262138987461, guid: 3738dc60f60655844b8d216186dcefaf, type: 3}
+  - {fileID: 1017212139631947490, guid: 5bfa851489cd3864186d29851495b597, type: 3}
+  - {fileID: 8437856287105456822, guid: df8fc884f6c2f49498f83f1f7c9dda55, type: 3}
+  - {fileID: 6773401252899499535, guid: 925a07e7610f19c4d9f82e2cc8417c9c, type: 3}
+  - {fileID: 8377910207241567729, guid: f3023538249833e479d790326d1f99f6, type: 3}
+  - {fileID: 5585855257554261491, guid: 1e2d7b6e13165a64ea558e0727b82046, type: 3}
+  - {fileID: 3149682758835348506, guid: 2718d2fefb5519b49be394a553e9d4d7, type: 3}
   - {fileID: 11426600, guid: 7a3ac0fc4933a4c438c3fa967a310509, type: 3}
   - {fileID: 11426600, guid: 6ace69fdf6921d04aa1a3ae9616a6822, type: 3}
   - {fileID: 11426600, guid: 08c56f42496582a49a839f7213be6ad0, type: 3}
   - {fileID: 11426600, guid: 85d471550f9b57d41bf2b7677dd6a3a0, type: 3}
+  - {fileID: 6938889996281614548, guid: 6a20b64d0842bd5448ed1f593ca4e237, type: 3}
+  - {fileID: 3939325960497352490, guid: d1d8d2e3663ae2d4e9522c70fbf656cf, type: 3}
+  - {fileID: 3371239888505607201, guid: 4b59c0bfb226130408cec15bb88fa33f, type: 3}

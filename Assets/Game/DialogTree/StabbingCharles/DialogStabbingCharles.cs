@@ -22,45 +22,59 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 		
 		switch ( Globals.m_stabCounter){
 			case 1:
-				yield return C.InnerThoughts.Say("*Lungs*");
-				Camera.Shake();
+				Audio.Play("Stab1");
+				Camera.Shake(1, 0.5f);
 				yield return C.Charles.Say("Ghk—!");
+				option.Description = "Stab Kidneys";
 				break;
 			case 2:
-				yield return C.InnerThoughts.Say("*Kidneys*");
-				Camera.Shake();
+				Audio.Play("Stab2");
+				Camera.Shake(1, 0.5f);
 				yield return C.Charles.Say("Ack... h-hah...");
+				option.Description = "Stab Eyes";
 				break;
 			case 3:
-				yield return C.InnerThoughts.Say("*Eyes*");
-				Camera.Shake();
+				Audio.Play("Stab3");
+				Camera.Shake(1, 0.5f);
 				yield return C.Charles.Say("AGHHH-! MY EYES! I CAN'T—!");
+				option.Description = "Stab Heart";
 				break;
 			case 4:
-				yield return C.InnerThoughts.Say("*Heart*");
-				Camera.Shake();
+				Audio.Play("Stab2");
+				Camera.Shake(1, 0.5f);
 				yield return C.Charles.Say("...ghhh...");
+				option.Description = "STAB HEART";
 				break;
 			case 5:
-				yield return C.InnerThoughts.Say("*Heart!*");
-				Camera.Shake();
+				Audio.Play("Stab1");
+				Camera.Shake(1, 0.5f);
+				option.Description = "STAB. HIS. HEART!";
 				break;
 			case 6:
-				yield return C.InnerThoughts.Say("*STAB. THE. HEART!*");
-				Camera.Shake();
-				yield return E.Wait(1);
+				yield return C.Luna.Say("AGHHHH!!!!");
+				Audio.Play("Stab3");
+				Camera.Shake(1, 0.5f);
+				yield return E.WaitSkip();
+				Audio.Play("Stab3");
+				Camera.Shake(1, 0.5f);
+				yield return E.WaitSkip();
+				Audio.Play("Stab3");
+				Camera.Shake(2, 1f);
+				yield return E.Wait(2);
 		
 			yield return C.InnerThoughts.Say("I did it, He is finally dead... I am free");
+			yield return E.Wait(1);
 			yield return C.InnerThoughts.Say("I-I saved the town...");
-			yield return E.Wait((float) 0.5);
+			yield return E.WaitSkip();
 			yield return C.Display("A book falls from Charles's coat, it reads:\nThe Blood Moon - By Charles Smith");
 			D.HittingCharles.Stop();
 			C.Charles.Clickable = false;
-			yield return E.Wait((float) 1.5);
+			yield return E.Wait(1.5f);
 		
 			yield return C.Elton.ChangeRoom(R.Workshop);
 			C.Elton.Enable();
 			C.Elton.SetPosition(Point("EntryPoint"));
+			yield return C.Elton.WalkTo(C.Elton.Position.x + 60, C.Elton.Position.y);
 			yield return C.Elton.Say("You have made a grave mistake little one...");
 			break;
 		}

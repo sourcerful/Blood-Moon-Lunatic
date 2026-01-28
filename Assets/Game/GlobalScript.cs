@@ -43,6 +43,7 @@ public partial class GlobalScript : GlobalScriptBase<GlobalScript>
 	/// Called when game first starts
 	public void OnGameStart()
 	{     
+		C.Player.FootstepSound = "LunaFootstep";
 	} 
 
 	/// Called after restoring a game. Use this if you need to update any references based on saved data.

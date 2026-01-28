@@ -1945,7 +1945,7 @@ public partial class CharacterComponent : MonoBehaviour
 	{
 		if ( m_data == null || m_data.VisibleInRoom == false )
 			return;
-		SystemAudio.Play(m_data.FootstepSound, transform);
+        SystemAudio.Play(m_data.FootstepSound, transform);
 	}
 
 	void AnimMouth(string animName)

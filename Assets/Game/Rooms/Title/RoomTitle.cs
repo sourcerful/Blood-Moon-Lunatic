@@ -4,6 +4,7 @@ using System.Collections;
 using PowerTools.Quest;
 using PowerScript;
 using static GlobalScript;
+using UnityEngine;
 
 public class RoomTitle : RoomScript<RoomTitle>
 {
@@ -15,6 +16,7 @@ public class RoomTitle : RoomScript<RoomTitle>
 		
 		// Later we could start some music here
 		//SystemAudio.PlayMusic("MusicSlowStrings", 1);
+		Audio.PlayMusic("Title", 2f);
 	}
 
 	public IEnumerator OnEnterRoomAfterFade()
@@ -48,11 +50,18 @@ public class RoomTitle : RoomScript<RoomTitle>
 
 	public IEnumerator OnInteractPropNew( Prop prop )
 	{		
+		Audio.StopMusic(1f);
+		E.FadeColor = Color.black;
+		yield return E.FadeOut(1f);
+		yield return C.Display("Georgia, 1700.");
+		yield return C.Display("Zibi");
 		// Turn on the inventory and info bar now that we're starting a game
 		G.InventoryBar.Show();
-        Globals.m_progressExample = eProgress.None;
-        // Move the player to the room
-        E.ChangeRoomBG(R.Bedroom);
+		Globals.m_progressExample = eProgress.None;
+		// Move the player to the room
+		Audio.StopMusic(1f);
+		E.ChangeRoomBG(R.Bedroom);
+		yield return E.FadeIn(1f);
 		yield return E.ConsumeEvent;
 	}
 

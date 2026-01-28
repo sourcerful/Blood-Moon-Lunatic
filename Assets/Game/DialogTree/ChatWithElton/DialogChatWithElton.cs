@@ -112,8 +112,17 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.InnerThoughts.Say("I don't think I can overpower him. I have to follow him for now");
 		yield return C.InnerThoughts.Say("The town will hire investigators and they will find out I saved them all");
 		yield return C.Plr.Say("Okay, Lets go.");
+		
 		Globals.m_progressExample = eProgress.TalkToElton;
-		// End Screen
+		yield return C.Elton.WalkTo(Point("EntryPoint"));
+		C.Elton.Disable();
+		yield return C.Plr.WalkTo(Point("EntryPoint"));
+		C.Plr.Visible = false;
+		E.FadeColor = Color.black;
+		yield return E.FadeOut(1f);
+		yield return C.Display("To Be Continued");
+		Audio.StopMusic(1f);
+		E.Restart();
 		yield return E.Break;
 	}
 }

@@ -20,14 +20,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		C.Elton.Disable();
 		C.Charles.Disable();
 		C.Plr.FaceRightBG(true);
+		Audio.Stop("FireSound");
 		
-		if (R.Current.FirstTimeVisited)
+		if (FirstTimeVisited)
 		{
 			Globals.m_progressExample = eProgress.Room2;
 			C.Plr.ClearInventory();
 			C.Plr.AddInventory(I.FullBottle);
 			C.Plr.AddInventory(I.Key);
-			yield return C.InnerThoughts.Say("...");
+			yield return E.Wait(1);
+			Audio.Play("DoorClose");
 			yield return E.Wait((float)0.5);
 			yield return C.InnerThoughts.Say("Blood...");
 			yield return E.Wait((float)0.5);
@@ -67,17 +69,19 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return C.Charles.FaceRight();
 			C.Charles.SetPosition(Prop("WorkshopDoor").Position.x + 30, Prop("WorkshopDoor").Position.y - 45);
 			yield return E.WaitSkip();
-			C.Charles.Visible = true;
-			yield return E.Wait(1);
-			//TODO: Door close sound
-			yield return C.Charles.FaceLeft(true);
-			yield return E.Wait(1);
 		
 		
 			if(!this._door_closed)
 			{
+				C.Charles.Visible = true;
+				yield return E.Wait(1);
+				yield return C.Charles.FaceLeft(true);
+				yield return E.Wait(1);
+		
 				yield return C.Charles.Say("That's weird, Did I forgot to lock the room?");
-				yield return E.WaitSkip();
+				yield return E.Wait(1);
+				Audio.Play("DoorClose");
+				yield return E.Wait(1);
 				yield return C.Charles.FaceRight();
 				yield return E.WaitSkip();
 				yield return C.Charles.Say("Luna? are you in here?");
@@ -95,6 +99,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			}
 			else
 			{
+				yield return E.Wait(1);
+				Audio.Play("DoorOpen");
+				yield return E.Wait(1);
+				C.Charles.Visible = true;
+				yield return E.Wait(1);
+				yield return C.Charles.FaceLeft(true);
+				yield return E.Wait(1);
+				Audio.Play("DoorClose");
+				yield return E.Wait(1);
+		
 				yield return C.Charles.Say("Hmm...");
 				yield return E.WaitSkip();
 				yield return C.Charles.FaceRight();
@@ -216,7 +230,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator tryToProceed(IProp prop)
 	{
-
+		
 		
 		if (this._interactToProceed.Remove(prop))
 		{
@@ -234,10 +248,11 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				C.Charles.Visible = true;
 				Globals.m_progressExample = eProgress.CharlesArrive;
-		
-				yield return E.Wait();
-				Audio.Play("Bucket"); // bedroom door closes
-				yield return E.WaitSkip();
+				yield return C.Charles.FaceDownLeft();
+				yield return E.Wait(1);
+				Audio.Play("DoorClose"); // bedroom door closes
+				yield return E.Wait(1.5f);
+				yield return C.Charles.FaceRight();
 				yield return C.Charles.Say("I shall finish my work");
 				C.Charles.WalkToBG(Point("WorkshopDoor"));
 				yield return E.Wait(1);
@@ -256,7 +271,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				Prop("NameList").Clickable = false;
 				Prop("WorkTable").Clickable = false;
-            }
+				Prop("Bookcase").Clickable = false;
+			}
 		}
 		yield return E.Break;
 		
@@ -264,7 +280,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator OnInteractCharacterCharles( ICharacter character )
 	{
-		
 		if(!_hit_charles)
 		{
 			Vector2 luna_attack_pos = C.Charles.Position;
@@ -273,21 +288,18 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return C.Luna.FaceUp();
 			D.HittingCharles.Start();
 			_hit_charles = true;
-        }
+		}
 		else
 		{
+			yield return C.WalkToClicked();
+			yield return C.Plr.FaceUpRight();
 			D.StabbingCharles.Start();
-        }
+		}
 		yield return E.Break;
 	}
 
 	IEnumerator OnInteractPropWorkshopDoor( IProp prop )
 	{
-		if(Globals.m_progressExample == eProgress.TalkToElton)
-		{
-			yield return C.Display("The End");
-		}
-		
 		yield return E.Break;
 	}
 
@@ -299,7 +311,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			{
 				yield return C.WalkToClicked();
 				yield return C.FaceClicked();
-				// Door lock sound
+				Audio.Play("Lock");
 				yield return E.WaitSkip();
 				this._door_closed = true;
 				yield return C.Display("Workshop door locked.");
@@ -311,7 +323,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			{
 				yield return C.WalkToClicked();
 				yield return C.FaceClicked();
-				// Door lock sound
+				Audio.Play("Lock");
 				yield return E.WaitSkip();
 				this._door_closed = true;
 				yield return C.Display("Workshop door locked.");

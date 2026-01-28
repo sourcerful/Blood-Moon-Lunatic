@@ -20,7 +20,6 @@ public class RoomBedroom : RoomScript<RoomBedroom>
     {
 		// Put things here that you need to set up BEFORE the room fades in (but nothing "blocking")
 		// Note, you can also just do this at the top of OnEnterRoomAfterFade
-		
 		//C.Charles.SetPosition(Point("WorkshopDoor"), eFace.DownLeft);
 		Prop("EmptyBottle").Disable();
  }
@@ -29,10 +28,12 @@ public class RoomBedroom : RoomScript<RoomBedroom>
     {
 		// Put things here that happen when you enter a room
 		
-		//if ( FirstTimeVisited && EnteredFromEditor == false ) // Only run this part the first time you visit, and not when debugging
-		//{
-		//Audio.PlayMusic("MusicExample");
-		//}
+		if ( FirstTimeVisited ) // Only run this part the first time you visit, and not when debugging
+		{
+			Audio.PlayMusic("BGMusic");
+		}
+		
+		Audio.Play("FireSound").FadeIn(3.0f); // start a looping sound and fade it in
 		
 		if (Globals.m_progressExample != eProgress.Room2)
 		{
@@ -47,7 +48,6 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 			yield return C.Charles.FaceLeft();
 			yield return E.Wait(1);
 			yield return C.InnerThoughts.Say("I must speak to Lord Charles or I will suffer the consequences...");
-			//Audio.PlayMusic("MusicExample");
 			yield return C.Player.WalkTo(Point("CharlesDialog"));
 			yield return C.Charles.Face(C.Luna);
 			yield return C.Plr.Face(C.Charles);
@@ -97,7 +97,12 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		{
 			yield return C.InnerThoughts.Say("It fits");
 			yield return E.Wait(1);
-			yield return C.Display("*Click*");
+			Audio.Play("Lock");
+			yield return E.Wait(1);
+			Audio.Play("Handle");
+			yield return E.Wait(1);
+			Audio.Play("DoorOpen");
+			yield return E.Wait(1);
 			//C.Plr.ChangeRoom(R.Workshop);
 			yield return R.Workshop.Enter();
 		}
@@ -300,6 +305,7 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		yield return C.InnerThoughts.Say("What is this empty bottle doing here?");
 		Audio.Play("Bucket");
 		prop.Disable();
+		yield return C.Display("You found a bottle!");
 		I.EmptyBottle.AddAsActive();
 		yield return E.WaitSkip();
 		yield return C.Plr.FaceDown();
@@ -312,33 +318,36 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 
     IEnumerator OnUseInvPropDresser(IProp prop, IInventory item)
     {
-        // NB: You need to check they used the correct item!
-        if (item == I.FullBottle && Globals.m_progressExample == eProgress.FilledBottle)
-        {
-            yield return C.WalkToClicked();
-            yield return C.FaceClicked();
-            yield return C.InnerThoughts.Say("I hope it's a good idea");
-            yield return C.Display("You fill the chalice with blood...");
-            Globals.m_progressExample = eProgress.Room2;
-            yield return E.Wait(1);
-            yield return C.Display("*Click*");
-            yield return C.InnerThoughts.Say("It actually worked, the spare key was in here");
-            yield return C.InnerThoughts.Say("I can now access the workshop");
-            I.Key.Add();
-            yield return E.WaitSkip();
-            yield return C.Luna.FaceDown();
-            yield return E.WaitSkip();
-        }
-        else
-        {
-            if (item == I.FullBottle)
-            {
-                yield return C.InnerThoughts.Say("I got the key, I should enter the workshop");
-            }
-        }
-        yield return E.Break;
-
-    }
+		// NB: You need to check they used the correct item!
+		if (item == I.FullBottle && Globals.m_progressExample == eProgress.FilledBottle)
+		{
+			yield return C.WalkToClicked();
+			yield return C.FaceClicked();
+			yield return C.InnerThoughts.Say("I hope it's a good idea");
+			yield return C.Display("You fill the chalice with blood...");
+			Globals.m_progressExample = eProgress.Room2;
+			yield return E.Wait(1);
+			Audio.Play("CloseDrawer");
+			yield return C.Display("You found a key!");
+			yield return E.WaitSkip();
+			yield return C.InnerThoughts.Say("It actually worked, the spare key was in here");
+			yield return C.InnerThoughts.Say("I can now access the workshop");
+			I.Key.Add();
+			yield return E.WaitSkip();
+			yield return C.Luna.FaceDown();
+			yield return E.WaitSkip();
+		}
+		else
+		{
+			if (item == I.FullBottle)
+			{
+				yield return C.InnerThoughts.Say("I got the key, I should enter the workshop");
+			}
+		}
+		yield return E.Break;
+		
+		
+ }
 
     IEnumerator OnUseInvPropEmptyBottle(IProp prop, IInventory item)
     {
@@ -381,6 +390,22 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 	{
 		Region("TriggerDialog").Enabled = false;
 		D.ChatWithCharles.Start();
+		yield return E.Break;
+	}
+
+	IEnumerator OnInteractPropFire( IProp prop )
+	{
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		yield return C.Luna.Say("Ahhh");
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropFire( IProp prop )
+	{
+		yield return C.FaceClicked();
+		yield return C.Luna.Say("It's cold");
+		yield return C.Luna.Say("Looks like it can warm me up");
 		yield return E.Break;
 	}
 }

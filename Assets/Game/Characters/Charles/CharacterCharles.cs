@@ -15,7 +15,6 @@ public class CharacterCharles : CharacterScript<CharacterCharles>
 		if(R.Workshop.Active)
 		{
 			D.HittingCharles.Start();
-			C.Charles.Clickable=false;
 		}
 		else
 		{

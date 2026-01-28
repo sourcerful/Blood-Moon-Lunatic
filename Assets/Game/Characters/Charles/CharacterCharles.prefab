@@ -76,9 +76,9 @@ MonoBehaviour:
     m_textOffset: {x: 0, y: 0}
     m_LipSyncEnabled: 0
     m_antiGlide: 0
-    m_footstepSound: 
+    m_footstepSound: CharlesFootstep
     m_useSpriteAsHotspot: 1
-    m_baseline: 0
+    m_baseline: 5
     m_walkToPoint: {x: -34, y: -2}
     m_lookAtPoint: {x: 0, y: -2}
     m_scriptName: Charles
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 609
+  m_SortingOrder: 559
   m_Sprite: {fileID: 21300000, guid: 9af9e101d2b886e4290bdc966569694b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
