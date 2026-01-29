@@ -49,9 +49,25 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 084260224c5610443a01ad99a506f6ea, type: 3}
+  - {fileID: 21300000, guid: 6f85a3421d5a3a048a75b0b5eba6faff, type: 3}
+  - {fileID: 21300000, guid: 0391f0a34ee345f46a80976195f4c7de, type: 3}
+  - {fileID: 21300000, guid: 064943d58bb0c6c46aa9ebf0a20194c1, type: 3}
+  - {fileID: 21300000, guid: 3408cee5e6ae1714db2f5a5e12d9a3fa, type: 3}
+  - {fileID: 21300000, guid: 43eeed4a7e2e0a84ba4a1b15cfcbbb65, type: 3}
+  - {fileID: 21300000, guid: 704ab28abddfc724bb63bfe8f0130815, type: 3}
   - {fileID: 21300000, guid: 51b42b7f8e7c20e4d888ef4c617049fd, type: 3}
+  - {fileID: 21300000, guid: 33789d9f475047e4585a384f9d70b926, type: 3}
   m_PackedSpriteNamesToIndex:
+  - frame_000
+  - frame_001
+  - frame_001
+  - frame_000
+  - frame_003
+  - frame_003
+  - frame_002
   - IdleR_0
+  - frame_002
   m_RenderDataMap: {}
   m_Tag: CharacterEltonAtlas
   m_IsVariant: 0

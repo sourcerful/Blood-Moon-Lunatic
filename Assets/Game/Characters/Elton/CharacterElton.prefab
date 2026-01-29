@@ -88,6 +88,8 @@ MonoBehaviour:
   m_transitionAnims: []
   m_animations:
   - {fileID: 7400000, guid: 8820e9bf36559294d964ad6f57297b7b, type: 2}
+  - {fileID: 7400000, guid: 2ce59d2c987ce074eaaeaadd0d152a23, type: 2}
+  - {fileID: 7400000, guid: 80d392b1bc080264f9529ff6fd645dca, type: 2}
 --- !u!60 &1582159163923692827
 PolygonCollider2D:
   m_ObjectHideFlags: 0
