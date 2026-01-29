@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 76aa8a3695e6d794fb99be0aefb98346
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2908665963296066518
+    second: TorchFire_0
+  - first:
+      213: -3816064470762287084
+    second: TorchFire_1
+  - first:
+      213: 8403858592465528624
+    second: TorchFire_2
+  - first:
+      213: -5055311546247595809
+    second: TorchFire_3
+  - first:
+      213: -5216926242253572828
+    second: TorchFire_4
+  - first:
+      213: -254315631807631443
+    second: TorchFire_5
+  - first:
+      213: -1256545226958525467
+    second: TorchFire_6
+  - first:
+      213: 1114135445604712580
+    second: TorchFire_7
+  - first:
+      213: -6707365560957029159
+    second: TorchFire_8
+  - first:
+      213: -9031918002928261979
+    second: TorchFire_9
+  - first:
+      213: -7488793626688180253
+    second: TorchFire_10
+  - first:
+      213: -2892096506911152991
+    second: TorchFire_11
+  - first:
+      213: 2557533133429208335
+    second: TorchFire_12
+  - first:
+      213: 88628548088568747
+    second: TorchFire_13
+  - first:
+      213: 9055706714725071874
+    second: TorchFire_14
+  - first:
+      213: 6610309893361584897
+    second: TorchFire_15
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TorchFire_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1039.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db08886848ad5820800000000000000
+      internalID: 2908665963296066518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 970.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410993c059d9a0bc0800000000000000
+      internalID: -3816064470762287084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 901.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037a5824dd080a470800000000000000
+      internalID: 8403858592465528624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd83bf0deece7d9b0800000000000000
+      internalID: -5055311546247595809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 763.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 425ff0f1931c997b0800000000000000
+      internalID: -5216926242253572828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 694.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafe641c74d787cf0800000000000000
+      internalID: -254315631807631443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 625.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebace606cadf8ee0800000000000000
+      internalID: -1256545226958525467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 556.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480c0fae844367f00800000000000000
+      internalID: 1114135445604712580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4b7783f86aae2a0800000000000000
+      internalID: -6707365560957029159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a46103fd6e28a280800000000000000
+      internalID: -9031918002928261979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 349.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efaa05bfd5721890800000000000000
+      internalID: -7488793626688180253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4a969cc853dd7d0800000000000000
+      internalID: -2892096506911152991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05f65f95de2e7320800000000000000
+      internalID: 2557533133429208335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab17c5e13fda3100800000000000000
+      internalID: 88628548088568747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20cbe4127455cad70800000000000000
+      internalID: 9055706714725071874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TorchFire_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4.6875
+        width: 74
+        height: 69.3125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b411933d98cbb50800000000000000
+      internalID: 6610309893361584897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

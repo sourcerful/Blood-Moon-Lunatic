@@ -61,8 +61,8 @@ MonoBehaviour:
     m_hasMax: 0
     m_hasValue: 0
   m_pan:
-    m_min: 0
-    m_max: 0
+    m_min: -0.32
+    m_max: -0.32
     m_hasMax: 0
     m_hasValue: 0
   m_alsoPlay: {fileID: 0}

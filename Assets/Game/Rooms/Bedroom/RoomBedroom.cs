@@ -22,14 +22,13 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		// Note, you can also just do this at the top of OnEnterRoomAfterFade
 		//C.Charles.SetPosition(Point("WorkshopDoor"), eFace.DownLeft);
 		Prop("EmptyBottle").Disable();
-		Audio.PlayMusic("TheWorkshop");
  }
 
     public IEnumerator OnEnterRoomAfterFade()
     {
 		// Put things here that happen when you enter a room
 		
-		if ( FirstTimeVisited ) // Only run this part the first time you visit, and not when debugging
+		if (R.Previous.Description != R.Workshop.Description) // Only run this part the first time you visit, and not when debugging
 		{
 			Audio.PlayMusic("BGMusic");
 		}

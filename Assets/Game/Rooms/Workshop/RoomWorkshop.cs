@@ -20,6 +20,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		C.Elton.Disable();
 		C.Charles.Disable();
 		C.Plr.FaceRightBG(true);
+		
 		Audio.Stop("FireSound");
 		
 		if (FirstTimeVisited)
@@ -32,6 +33,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			Audio.Play("DoorClose");
 			yield return E.Wait((float)0.5);
 			yield return C.InnerThoughts.Say("Blood...");
+			yield return E.Wait((float)0.5);
+			Audio.PlayMusic("TheWorkshop", 2.5f);
 			yield return E.Wait((float)0.5);
 			yield return C.InnerThoughts.Say("Everywhere...");
 			yield return E.Break;

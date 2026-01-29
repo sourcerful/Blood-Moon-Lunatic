@@ -51,15 +51,127 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 6883e905d977d7d4fbd6150a495a1adf, type: 3}
   - {fileID: 21300000, guid: a2776975fb5b5844db4a139b71764558, type: 3}
+  - {fileID: 6610309893361584897, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 9055706714725071874, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -2892096506911152991, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -7488793626688180253, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 88628548088568747, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 2557533133429208335, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -6707365560957029159, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -9031918002928261979, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -1256545226958525467, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 1114135445604712580, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -5216926242253572828, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -254315631807631443, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 8403858592465528624, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -5055311546247595809, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: 2908665963296066518, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
+  - {fileID: -3816064470762287084, guid: 76aa8a3695e6d794fb99be0aefb98346, type: 3}
   - {fileID: 21300000, guid: a092fb8723e4d184cbf181e790447aa5, type: 3}
   - {fileID: 21300000, guid: c11deac7de99a4642b2969fdb3c551e5, type: 3}
+  - {fileID: 7030519301073946849, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 4087262602687119236, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -5007456973021497578, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 6281245006308063735, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 905302718285298807, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -6652219370585826391, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -7700663164549676878, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 596513192366460152, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -7545879182916269708, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 2524766604178926182, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 2313993382655906629, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 1322176999101030789, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 5036793780387493159, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 3241844972355103237, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -587843993688917569, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -6289022180702333264, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -1988148434730943143, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 4413715140441648515, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -3595886946658436706, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 8528209041880299383, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -5614311494182667931, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 1610019039562675215, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -6072462762838132277, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 7397559485759213552, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 5752876410602853618, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 4994728430060012801, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -4686430176483714618, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -4676290749143670003, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -981301472276160917, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 3620969805324695579, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 6522722242193578461, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 8766346104824547631, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -576015301925156798, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 5379370420459804118, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -8248300272089978087, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -7744841145594992203, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 4298160758925619307, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: 4869065969763544572, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -6319529916901038555, guid: 180504aae84e93c439e9e129a9976532, type: 3}
+  - {fileID: -3129337390116421230, guid: 180504aae84e93c439e9e129a9976532, type: 3}
   - {fileID: 21300000, guid: f9bc794cdfc678f469cc8432f3d5b27b, type: 3}
   - {fileID: 21300000, guid: 96d8683e308367c41854d57bba2526a6, type: 3}
   m_PackedSpriteNamesToIndex:
   - bedroom
   - Bed
+  - TorchFire_15
+  - TorchFire_14
+  - TorchFire_11
+  - TorchFire_10
+  - TorchFire_13
+  - TorchFire_12
+  - TorchFire_8
+  - TorchFire_9
+  - TorchFire_6
+  - TorchFire_7
+  - TorchFire_4
+  - TorchFire_5
+  - TorchFire_2
+  - TorchFire_3
+  - TorchFire_0
+  - TorchFire_1
   - dresser
   - Messy_Bed
+  - torches_29
+  - torches_24
+  - torches_25
+  - torches_39
+  - torches_26
+  - torches_38
+  - torches_27
+  - torches_37
+  - torches_20
+  - torches_36
+  - torches_21
+  - torches_35
+  - torches_22
+  - torches_34
+  - torches_23
+  - torches_33
+  - torches_32
+  - torches_31
+  - torches_30
+  - torches_6
+  - torches_7
+  - torches_4
+  - torches_5
+  - torches_2
+  - torches_3
+  - torches_0
+  - torches_1
+  - torches_8
+  - torches_9
+  - torches_15
+  - torches_14
+  - torches_17
+  - torches_16
+  - torches_11
+  - torches_10
+  - torches_13
+  - torches_12
+  - torches_19
+  - torches_18
+  - torches_28
   - Keg_0
   - EmptyBottle_0
   m_RenderDataMap: {}
