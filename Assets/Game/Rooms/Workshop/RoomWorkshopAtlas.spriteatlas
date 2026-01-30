@@ -53,15 +53,49 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 67daa94541d37a649af2a015456a816e, type: 3}
   - {fileID: 21300000, guid: 3e90b118b6a83ac4891b60108af77c24, type: 3}
   - {fileID: 21300000, guid: bcaf7a483a980294d8e3b45aec380a18, type: 3}
+  - {fileID: 21300000, guid: 828fd4ea3c6c5c244bc46eae73abad80, type: 3}
   - {fileID: 21300000, guid: 8a1bdfeade3ede54baa8b8a4a9969d9b, type: 3}
   - {fileID: 21300000, guid: 3f54ae0c7a4a35641806b78c3c7fa041, type: 3}
+  - {fileID: 6610309893361584897, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 9055706714725071874, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -2892096506911152991, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -7488793626688180253, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 88628548088568747, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 2557533133429208335, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -6707365560957029159, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -9031918002928261979, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -1256545226958525467, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 1114135445604712580, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -5216926242253572828, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -254315631807631443, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 8403858592465528624, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -5055311546247595809, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: 2908665963296066518, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
+  - {fileID: -3816064470762287084, guid: f3cfce0f0bf9fd94ebba746e91ee0812, type: 3}
   m_PackedSpriteNamesToIndex:
   - NameList
   - HideSpot
   - Bookcase_0
   - WorkTable_0
+  - torches
   - Bg
   - Closet_0
+  - TorchFire_15
+  - TorchFire_14
+  - TorchFire_11
+  - TorchFire_10
+  - TorchFire_13
+  - TorchFire_12
+  - TorchFire_8
+  - TorchFire_9
+  - TorchFire_6
+  - TorchFire_7
+  - TorchFire_4
+  - TorchFire_5
+  - TorchFire_2
+  - TorchFire_3
+  - TorchFire_0
+  - TorchFire_1
   m_RenderDataMap: {}
   m_Tag: RoomWorkshopAtlas
   m_IsVariant: 0

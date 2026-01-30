@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4301344859097485337
+--- !u!1 &8506585887018050294
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7980659855714639790}
-  - component: {fileID: 5585855257554261491}
+  - component: {fileID: 2741273344414546159}
+  - component: {fileID: 3149682758835348506}
   m_Layer: 0
   m_Name: CharlesFootstep
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7980659855714639790
+--- !u!4 &2741273344414546159
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301344859097485337}
+  m_GameObject: {fileID: 8506585887018050294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5585855257554261491
+--- !u!114 &3149682758835348506
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4301344859097485337}
+  m_GameObject: {fileID: 8506585887018050294}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0f23f8c8a71fc149b63985b43cfa47a, type: 3}
@@ -51,9 +51,9 @@ MonoBehaviour:
     m_fadeIn: 0
     m_fadeOut: 0
   m_volume:
-    m_min: 1
+    m_min: 0.9
     m_max: 1
-    m_hasMax: 0
+    m_hasMax: 1
     m_hasValue: 0
   m_pitch:
     m_min: 1
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_highPassFilter: {fileID: 0}
   m_chorusFilter: {fileID: 0}
   m_sounds:
-  - m_sound: {fileID: 8300000, guid: 772d7ed2f05753f41b9fe346867333ed, type: 3}
+  - m_sound: {fileID: 8300000, guid: 406dde60ef2f06346865b197ac861c33, type: 3}
     m_weight: 100
     m_loop: 0
     m_volume:

@@ -25,7 +25,7 @@ public class DialogHittingCharles : DialogTreeScript<DialogHittingCharles>
 		Vector2 slow_walk_speed = new Vector2(20,20);
 		
 		C.Plr.WalkSpeed = slow_walk_speed;
-		Audio.PlayMusic("Climax",1f);
+		Audio.PlayMusic("Climax",2f);
 		yield return C.Plr.WalkTo(luna_attack_pos.x, luna_attack_pos.y + 20);
 		C.Plr.ResetWalkSpeed();
 		yield return C.Display("Luna lifts the bottle and hits Charles on his head");
