@@ -70,9 +70,13 @@ mono_crash.*
 *.apk
 *.aab
 *.unitypackage
+!/[Aa]ssets/PowerQuest/Templates/*.unitypackage
 *.unitypackage.meta
+!/[Aa]ssets/PowerQuest/Templates/*.unitypackage.meta
 *.app
 
+!/[Aa]ssets/PowerQuest/Prefabs/*.unitypackage.meta
+!/[Aa]ssets/PowerQuest/Prefabs/*.unitypackage
 # Crashlytics generated file
 crashlytics-build.properties
 
