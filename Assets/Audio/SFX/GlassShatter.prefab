@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6780856921869447451
+--- !u!1 &520325041695616414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1971784407954399388}
-  - component: {fileID: 6114431633380064901}
+  - component: {fileID: 7508707367204779809}
+  - component: {fileID: 1433450406370394483}
   m_Layer: 0
-  m_Name: Climax
+  m_Name: GlassShatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1971784407954399388
+--- !u!4 &7508707367204779809
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780856921869447451}
+  m_GameObject: {fileID: 520325041695616414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,19 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6114431633380064901
+--- !u!114 &1433450406370394483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6780856921869447451}
+  m_GameObject: {fileID: 520325041695616414}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0f23f8c8a71fc149b63985b43cfa47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_type: 2
+  m_type: 1
   m_loop: 0
   m_loopSection:
     m_startTime: 0
@@ -51,13 +51,13 @@ MonoBehaviour:
     m_fadeIn: 0
     m_fadeOut: 0
   m_volume:
-    m_min: 0.65
-    m_max: 0.65
+    m_min: 0.49
+    m_max: 0.49
     m_hasMax: 0
     m_hasValue: 0
   m_pitch:
-    m_min: 1
-    m_max: 1
+    m_min: 0.8
+    m_max: 0.8
     m_hasMax: 0
     m_hasValue: 0
   m_pan:
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_highPassFilter: {fileID: 0}
   m_chorusFilter: {fileID: 0}
   m_sounds:
-  - m_sound: {fileID: 8300000, guid: 89980b31629a440449b2e3a090ebdf20, type: 3}
+  - m_sound: {fileID: 8300000, guid: 2ba59e2f9a675bc408fdb54746f16336, type: 3}
     m_weight: 100
     m_loop: 0
     m_volume:

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5071481644651799653
+--- !u!1 &5600781317926019496
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4050517674957975818}
-  - component: {fileID: 3371239888505607201}
+  - component: {fileID: 5434664042614973278}
+  - component: {fileID: 1719143080101260919}
   m_Layer: 0
   m_Name: Stab3
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4050517674957975818
+--- !u!4 &5434664042614973278
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5071481644651799653}
+  m_GameObject: {fileID: 5600781317926019496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3371239888505607201
+--- !u!114 &1719143080101260919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5071481644651799653}
+  m_GameObject: {fileID: 5600781317926019496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0f23f8c8a71fc149b63985b43cfa47a, type: 3}
@@ -46,13 +46,13 @@ MonoBehaviour:
   m_type: 1
   m_loop: 0
   m_loopSection:
-    m_startTime: 1
+    m_startTime: 0
     m_endTime: 0
     m_fadeIn: 0
     m_fadeOut: 0
   m_volume:
     m_min: 0.9
-    m_max: 2.5
+    m_max: 1
     m_hasMax: 1
     m_hasValue: 0
   m_pitch:
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_min: 0
     m_max: 0
     m_hasMax: 0
-    m_hasValue: 1
+    m_hasValue: 0
   m_fadeInTime: 0
   m_noDuplicateTime: -1
   m_mixerGroup: {fileID: 0}
@@ -91,8 +91,8 @@ MonoBehaviour:
     m_weight: 100
     m_loop: 0
     m_volume:
-      m_min: 1
-      m_max: 1
+      m_min: 5
+      m_max: 5
       m_hasMax: 0
       m_hasValue: 0
     m_pitch:

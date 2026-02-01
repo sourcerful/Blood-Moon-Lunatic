@@ -52,7 +52,7 @@ MonoBehaviour:
     m_fadeOut: 0
   m_volume:
     m_min: 0.9
-    m_max: 2.5
+    m_max: 5
     m_hasMax: 1
     m_hasValue: 0
   m_pitch:
@@ -91,8 +91,8 @@ MonoBehaviour:
     m_weight: 104
     m_loop: 0
     m_volume:
-      m_min: 2
-      m_max: 2
+      m_min: 5
+      m_max: 5
       m_hasMax: 0
       m_hasValue: 0
     m_pitch:

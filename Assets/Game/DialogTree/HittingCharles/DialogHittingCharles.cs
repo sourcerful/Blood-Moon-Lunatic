@@ -29,11 +29,15 @@ public class DialogHittingCharles : DialogTreeScript<DialogHittingCharles>
 		yield return C.Plr.WalkTo(luna_attack_pos.x, luna_attack_pos.y + 20);
 		C.Plr.ResetWalkSpeed();
 		yield return C.Display("Luna lifts the bottle and hits Charles on his head");
-		yield return C.Display("The glass shatters against his skull... he's dazed!");
-		
-		
+		yield return E.WaitSkip();
+		Audio.Play("GlassShatter");
+		yield return E.WaitSkip();
 		C.Charles.Animation = "FallR";
 		C.Charles.SetPosition(C.Charles.Position.x, C.Charles.Position.y - 30);
+		yield return C.Display("The glass shatters against his skull!");
+		yield return E.WaitSkip();
+		yield return C.InnerThoughts.Say("He's dazed!");
+		yield return E.WaitSkip();
 		yield return C.Charles.Say("Eahhhhhhhhhhhhhhhhhhhhhh");
 		yield return C.Display("Your bottle has been broken, you got a broken bottle!");
 		yield return C.Display("You are now able to stab Charles");
