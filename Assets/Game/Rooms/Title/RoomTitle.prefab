@@ -173,10 +173,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -50.03758, y: -6.686516}
-      - {x: -51.900883, y: 12.087528}
-      - {x: 55.916527, y: 11.41832}
-      - {x: 56.110878, y: -7.347664}
+    - - {x: 10.755804, y: 13.672061}
+      - {x: -20.278927, y: 13.4384}
+      - {x: -20.215454, y: 29.001059}
+      - {x: 34.078888, y: 29.188091}
+      - {x: 34.059464, y: 13.847514}
 --- !u!1 &1334569988241212
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334569988241212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.9, y: 12.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4485019497733486}
@@ -630,7 +631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900612664772818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.8, y: 22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4770888842128280}
@@ -675,7 +676,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 533
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!102 &102839267374336748
 TextMesh:
@@ -907,7 +908,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -62.53262, y: -10.503841}
-      - {x: -65.47016, y: 10.410641}
-      - {x: 63.682663, y: 12.292835}
-      - {x: 59.31933, y: -11.557148}
+    - - {x: -19.714108, y: 5.9815474}
+      - {x: -19.440792, y: 18.546059}
+      - {x: 32.42495, y: 18.930103}
+      - {x: 32.343407, y: 5.998657}

@@ -57,7 +57,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return E.WaitSkip();
 			yield return C.Plr.Say("The closet!");
 			yield return E.WaitSkip();
-			C.Plr.WalkSpeed = new Vector2(80,80);
+            Prop("Bookcase").Clickable = false;
+            C.Plr.WalkSpeed = new Vector2(80,80);
 			yield return C.Plr.WalkTo(Point("HidingSpot"));
 			C.Plr.ResetWalkSpeed();
 			E.EndCutscene();
@@ -276,7 +277,6 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 				yield return E.WaitSkip();
 				Prop("NameList").Clickable = false;
 				Prop("WorkTable").Clickable = false;
-				Prop("Bookcase").Clickable = false;
 			}
 		}
 		yield return E.Break;
