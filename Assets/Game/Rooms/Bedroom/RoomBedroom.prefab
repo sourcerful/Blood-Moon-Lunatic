@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_data:
     m_description: 'Workshop Door '
-    m_cursor: Right
+    m_cursor: Search
     m_clickable: 1
     m_baseline: -12
     m_walkToPoint: {x: 89, y: -45}

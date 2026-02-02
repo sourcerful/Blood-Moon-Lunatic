@@ -16,7 +16,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 		yield return E.WaitSkip();
 		yield return C.Charles.Say("Indeed. The Blood Moon’s arrival is nigh.");
 		yield return E.WaitSkip();
-		yield return C.InnerThoughts.Say("Oh god...");
+		yield return C.InnerThoughts.Say("O Lord...");
 		yield return E.WaitSkip();
 		yield return E.Break;
 	}
@@ -61,7 +61,7 @@ public class DialogChatWithCharles : DialogTreeScript<DialogChatWithCharles>
 	{
 		yield return C.Charles.Say("Luna, before I leave");
 		yield return C.Charles.Say("I'd be glad if you could clean this room for tomorrow's big event.");
-		yield return C.Charles.Say("Do NOT go into my office!");
+		yield return C.Charles.Say("As usual, do NOT go into my office!");
 		yield return E.WaitSkip();
 		yield return C.Plr.Say("Of course my lord.");
 		yield return E.WaitSkip();

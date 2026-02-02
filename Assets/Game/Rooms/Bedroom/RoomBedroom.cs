@@ -28,7 +28,7 @@ public class RoomBedroom : RoomScript<RoomBedroom>
     {
 		// Put things here that happen when you enter a room
 		
-		if (R.Previous.Description != R.Workshop.Description) // Only run this part the first time you visit, and not when debugging
+		if (R.Previous!=null && R.Previous.Description != R.Workshop.Description) // Only run this part the first time you visit, and not when debugging
 		{
 			Audio.PlayMusic("BGMusic");
 		}
@@ -80,15 +80,14 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 
     public IEnumerator OnInteractPropKeg(Prop prop)
     {
-        yield return C.WalkToClicked();
-        yield return C.FaceClicked();
-
-        yield return C.InnerThoughts.Say("T-This keg is filled with blood...");
-        yield return C.InnerThoughts.Say("I wonder how many he has killed to fill it up...");
-
-        yield return E.Break;
-
-    }
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("T-This keg is filled with blood...");
+		yield return C.InnerThoughts.Say("I wonder how many he has killed to fill it up...");
+		yield return E.Break;
+		
+		
+ }
 
     public IEnumerator OnInteractHotspotWorkshopDoor(Hotspot hotspot)
     {
@@ -96,16 +95,8 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		yield return C.FaceClicked();
 		if (I.Key.Owned)
 		{
-			yield return C.InnerThoughts.Say("It fits");
-			yield return E.Wait(1);
-			Audio.Play("Lock");
-			yield return E.Wait(1);
-			Audio.Play("Handle");
-			yield return E.Wait(1);
-			Audio.Play("DoorOpen");
-			yield return E.Wait(1);
-			//C.Plr.ChangeRoom(R.Workshop);
-			yield return R.Workshop.Enter();
+			yield return C.InnerThoughts.Say("It's locked...");
+			yield return C.InnerThoughts.Say("Maybe the key from the drawer will fit here");
 		}
 		else
 		{
@@ -246,8 +237,8 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 
     IEnumerator OnLookAtPropBed(IProp prop)
     {
-
-		yield return C.InnerThoughts.Say("Lord Charles' bed");
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("Lord Charles's bed, I should clean it before he heads back");
 		yield return E.Break;
  }
 
@@ -287,14 +278,15 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 
     IEnumerator OnLookAtPropDresser(IProp prop)
     {
-		yield return C.InnerThoughts.Say("The drawer has an empty chalice on top");
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("That's weird, The drawer has an empty chalice on top");
 		yield return E.Break;
 		
  }
 
     IEnumerator OnLookAtPropEmptyBottle(IProp prop)
     {
-
+		yield return C.FaceClicked();
 		yield return C.InnerThoughts.Say("What is this empty bottle doing here?");
 		yield return E.Break;
  }
@@ -358,8 +350,23 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 
     IEnumerator OnUseInvHotspotWorkshopDoor(IHotspot hotspot, IInventory item)
     {
-        yield return E.Break;
-    }
+		yield return C.WalkToClicked();
+		yield return C.FaceClicked();
+		if (item == I.Key){
+			yield return C.InnerThoughts.Say("It fits");
+			yield return E.Wait(1);
+			Audio.Play("Lock");
+			yield return E.Wait(1);
+			Audio.Play("Handle");
+			yield return E.Wait(1);
+			Audio.Play("DoorOpen");
+			yield return E.Wait(1);
+			//C.Plr.ChangeRoom(R.Workshop);
+			yield return R.Workshop.Enter();
+		}
+		yield return E.Break;
+		
+ }
 
 	IEnumerator OnLookAtHotspotSky( IHotspot hotspot )
 	{
@@ -407,6 +414,18 @@ public class RoomBedroom : RoomScript<RoomBedroom>
 		yield return C.FaceClicked();
 		yield return C.Luna.Say("It's cold");
 		yield return C.Luna.Say("Looks like it can warm me up");
+		yield return E.Break;
+	}
+
+	IEnumerator OnUseInvPropBed( IProp prop, IInventory item )
+	{
+		yield return C.InnerThoughts.Say("Charles's messy bed, I should clean it before he heads back");
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtHotspotWorkshopDoor( IHotspot hotspot )
+	{
+		yield return C.InnerThoughts.Say("Lord Charles's workshop, the secret to overtake him must be hidden in there");
 		yield return E.Break;
 	}
 }

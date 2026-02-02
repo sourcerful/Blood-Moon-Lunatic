@@ -57,8 +57,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return E.WaitSkip();
 			yield return C.Plr.Say("The closet!");
 			yield return E.WaitSkip();
-            Prop("Bookcase").Clickable = false;
-            C.Plr.WalkSpeed = new Vector2(80,80);
+			Prop("Bookcase").Clickable = false;
+			C.Plr.WalkSpeed = new Vector2(80,80);
 			yield return C.Plr.WalkTo(Point("HidingSpot"));
 			C.Plr.ResetWalkSpeed();
 			E.EndCutscene();
@@ -131,7 +131,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 			yield return E.WaitSkip();
 			Camera.SetCharacterToFollow(C.Luna);
 			yield return E.WaitSkip();
-			yield return C.InnerThoughts.Say("Dear god, He killed another one...");
+			yield return C.InnerThoughts.Say("He killed another one...");
+			yield return C.InnerThoughts.Say("O Lord, Give Elton eternal rest...");
 			yield return E.WaitSkip();
 			Camera.SetCharacterToFollow(C.Luna);
 			C.Charles.WalkSpeed = new Vector2(50,50);
@@ -171,18 +172,18 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return C.FaceClicked();
 		yield return C.WalkToClicked();
 		C.Plr.FaceUpBG();
-		yield return C.InnerThoughts.Say("Wha-");
+		yield return C.Plr.Say("Wha-");
 		yield return C.InnerThoughts.Say("Are those... NAMES?!?");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("Is he...");
+		yield return C.InnerThoughts.Say("Is he...");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("Some of the names are checked...");
-		yield return C.Plr.Say("Perhaps... Victims?");
+		yield return C.InnerThoughts.Say("Some of the names are checked...");
+		yield return C.InnerThoughts.Say("Perhaps... Victims?");
 		yield return C.InnerThoughts.Say("Wait... are they... DEAD?!?");
 		yield return C.InnerThoughts.Say("HE MURDERED SO MANY PEOPLE?!?");
 		yield return C.InnerThoughts.Say("THIS ROOM IS FULL OF THEIR BLOOD!");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("This has to stop!");
+		yield return C.InnerThoughts.Say("This has to stop!");
 		yield return E.WaitSkip();
 		yield return E.WaitFor(()=> this.tryToProceed(prop) );
 		
@@ -209,18 +210,18 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	{
 		yield return C.WalkToClicked();
 		yield return C.FaceClicked();
-		yield return C.Plr.Say("Looks like a journal of his.");
+		yield return C.InnerThoughts.Say("Looks like a journal of his.");
 		yield return C.InnerThoughts.Say("What kind of sick things does this monster have here?");
-		yield return C.Plr.Say("The quill... it is resting on the page.");
+		yield return C.InnerThoughts.Say("The quill... it is resting on the page.");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("Red.");
-		yield return C.Plr.Say("A single, heavy drop. It glistens in the candlelight.");
+		yield return C.InnerThoughts.Say("Red.");
+		yield return C.InnerThoughts.Say("A single, heavy drop. It glistens in the candlelight.");
 		
 		
 		yield return C.InnerThoughts.Say("The blood of his victims!");
 		yield return C.InnerThoughts.Say("He uses their blood to write the journal!");
 		yield return E.WaitSkip();
-		yield return C.Plr.Say("I must read his plans. I must know the truth.");
+		yield return C.InnerThoughts.Say("I must read his plans. I must know the truth.");
 		yield return C.Display("\"To unleash the inner beast, one must not hesitate to spill blood.\"");
 		yield return C.Display("A sacrifice of a maiden is required to become immortal.\"");
 		yield return C.InnerThoughts.Say("Immortal...");
@@ -235,14 +236,15 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator tryToProceed(IProp prop)
 	{
-		
+
+		
 		
 		if (this._interactToProceed.Remove(prop))
 		{
 			if (this._interactToProceed.Count == 0)
 			{
 				Audio.PlayMusic("Obstacle");
-				yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
+                yield return C.InnerThoughts.Say("He is watching. I can feel his cold eyes from the shadows.");
 				yield return E.WaitSkip();
 				C.Plr.Visible = false;
 				C.Plr.SetPosition(Point("EntryPoint"));
@@ -268,7 +270,7 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		
 				yield return E.WaitSkip();
 				yield return C.Plr.FaceRight();
-				yield return C.InnerThoughts.Say("Oh god, he's here!");
+				yield return C.InnerThoughts.Say("No... He's here!");
 				if (!this._door_closed)
 				{
 					yield return C.InnerThoughts.Say("The door, I left it open!");
@@ -305,6 +307,8 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 
 	IEnumerator OnInteractPropWorkshopDoor( IProp prop )
 	{
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("Going back would be a waste of time, I have to search up the room for clues");
 		yield return E.Break;
 	}
 
@@ -372,6 +376,23 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 	IEnumerator OnLookAtPropBookcase( IProp prop )
 	{
 
+		yield return C.FaceClicked();
+		if(Globals.m_progressExample == eProgress.CharlesArrive)
+		{
+			yield return C.InnerThoughts.Say("I can't hide in here");
+		}
+		else
+		{
+		yield return C.InnerThoughts.Say("It's filled to the brim with books");
+		}
+		yield return E.Break;
+	}
+
+	IEnumerator OnLookAtPropWorkshopDoor( IProp prop )
+	{
+		yield return C.FaceClicked();
+		yield return C.InnerThoughts.Say("I lived in this castle for most of my life...");
+		yield return C.InnerThoughts.Say("and it's still the first time seeing this door from the opposite side...");
 		yield return E.Break;
 	}
 }

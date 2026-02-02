@@ -77,8 +77,8 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 			yield return C.InnerThoughts.Say("What a relief");
 			yield return C.InnerThoughts.Say("After so many years of serving him");
 			yield return C.InnerThoughts.Say("No more cleaning and mopping");
-			yield return C.InnerThoughts.Say("No more cooking and frying");
-			yield return C.InnerThoughts.Say("No more listening to his jabbering");
+			yield return C.InnerThoughts.Say("no more watching, while he performs his habitual kill for blood");
+			yield return C.InnerThoughts.Say("No more listening to his sadistic jabbering");
 			yield return C.InnerThoughts.Say("I am FREE...");
 			D.HittingCharles.Stop();
 			C.Charles.Clickable = false;
@@ -91,6 +91,7 @@ public class DialogStabbingCharles : DialogTreeScript<DialogStabbingCharles>
 			Audio.StopMusic(1f);
 			Audio.Play("VinylStop");
 			yield return C.Elton.Say("W-What have you done?!?");
+			yield return C.Player.FaceLeft();
 			yield return C.InnerThoughts.Say("Who's that?");
 			break;
 		}

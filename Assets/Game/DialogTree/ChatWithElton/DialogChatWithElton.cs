@@ -49,10 +49,11 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 	{
 		yield return C.Plr.Say(option.Description);
 		
-		yield return C.Elton.Say("What Kill list? The list of preorders?");
+		yield return C.Elton.Say("What Kill list? The list over there?");
+		yield return C.Elton.Say("It's a list of preorders");
 		yield return C.Elton.Say("Those people are ALIVE");
 		yield return C.Elton.Say("They just paid in advance to receive an early copy of the book");
-		
+		yield return E.WaitSkip();
 		yield return C.InnerThoughts.Say("They can't be alive... Why would he say that?");
 		
 		if(Option(3).Used){
@@ -85,7 +86,9 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.Elton.Say("*sigh*");
 		yield return C.Elton.Say("Luna... T-That's just wine...");
 		yield return E.WaitSkip();
+		yield return C.Elton.Say("Your rich imagination sounds unusual...");
 		yield return E.WaitSkip();
+		yield return C.Elton.Say("I think I am starting to get the full story...");
 		yield return C.Elton.Say("Listen, Luna... Have you been diagnosed?");
 		yield return C.InnerThoughts.Say("Diagnosed? What does he mean?");
 		yield return E.WaitSkip();
@@ -109,10 +112,14 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.Elton.Say("I have to take you to the authorities.");
 		yield return C.Elton.Say("At the end of the day, you killed someone");
 		yield return C.Elton.Say("They have places that takes care of people with your condition");
-		
+		yield return E.WaitSkip();
 		yield return C.InnerThoughts.Say("I don't think I can overpower him. I have to follow him for now");
 		yield return C.InnerThoughts.Say("The town will hire investigators and they will find out I saved them all");
 		yield return C.Plr.Say("Okay, Lets go.");
+		yield return C.Elton.Say("One last thing Before we go, Luna... I don't judge you, but I don't forgive you either...");
+		yield return C.Elton.Say("Your condition,It heavily helped your... \"Vivid imagination\"");
+		yield return C.InnerThoughts.Say("He's still doesn't understand, I lived with Charles, I know what he capable of...");
+		yield return C.Elton.Say("Let's just say... If I was sharing your mind and hearing your thoughts, I would have probably believed your theory about Charles");
 		
 		Globals.m_progressExample = eProgress.TalkToElton;
 		yield return C.Elton.WalkTo(Point("EntryPoint"));
