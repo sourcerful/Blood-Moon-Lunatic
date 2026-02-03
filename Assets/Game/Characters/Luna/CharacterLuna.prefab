@@ -72,7 +72,7 @@ MonoBehaviour:
     m_animMouth: 
     m_animShadow: 
     m_useRegionTinting: 1
-    m_useRegionScaling: 1
+    m_useRegionScaling: 0
     m_textOffset: {x: 0, y: 0}
     m_LipSyncEnabled: 0
     m_antiGlide: 0

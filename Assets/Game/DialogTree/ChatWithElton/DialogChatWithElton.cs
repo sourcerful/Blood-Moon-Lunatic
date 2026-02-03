@@ -8,10 +8,19 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 {
 	public IEnumerator OnStart()
 	{
-		Audio.PlayMusic("EltonTheme",2f);
-		yield return C.Elton.Say("You... You lunatic. Look at what you've done!");
-		yield return C.Elton.Say("He was finally finishing it. The book that was going to put this miserable town on the map");
-		yield return C.Elton.Say("Charles was a genius! A bit eccentric, sure, but he didn't deserve to be slaughtered in his own home!");
+		Vector2 slowWalkSpeed = new Vector2(15, 15);
+		Audio.PlayMusic("EltonTheme", 2f);
+		C.Elton.PlayAnimationBG("WalkR");
+		C.Elton.WalkSpeed = slowWalkSpeed;
+		C.Elton.MoveToBG(C.Elton.Position.x - 20, C.Elton.Position.y, true);
+		C.Elton.SayBG("Stay away.");
+		yield return E.Wait(1.75f);
+		C.Elton.StopAnimation();
+		C.Elton.ResetWalkSpeed();
+		yield return C.Elton.Say("...");
+		yield return C.Elton.Say("Charles...");
+		yield return C.Elton.Say("H-He was finally finishing it!");
+		yield return C.Elton.Say("The book that was going to put this miserable town on the map!");
 		yield return E.Break;
 	}
 
@@ -38,8 +47,10 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 	{
 		yield return C.Plr.Say(option.Description);
 		yield return C.Elton.Say("I came over to help Charles with the final arrangements of the book");
-		yield return C.Elton.Say("But YOU killed him.");
-		yield return C.InnerThoughts.Say("He sounds genuine, Maybe he doesn't know that Charles is a blood sucking fiend");
+		yield return C.Elton.Say("But YOU killed him, you bloody psychopath!");
+		yield return C.Elton.Say("Charles was a GENIUS! A bit eccentric, but he didn't deserve to be slaughtered in his own home!");
+		yield return C.InnerThoughts.Say("He sounds... normal.");
+		yield return C.InnerThoughts.Say("Maybe he just doesn't know that Charles is a blood sucking fiend?");
 		OptionOn(3);
 		OptionOn(4);
 		yield return E.Break;
@@ -108,6 +119,7 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 
 	IEnumerator OptionEnd( IDialogOption option )
 	{
+		Vector2 slowWalkSpeed = new Vector2(30, 30);
 		D.ChatWithElton.Stop();
 		yield return C.Elton.Say("I have to take you to the authorities.");
 		yield return C.Elton.Say("At the end of the day, you killed someone");
@@ -121,11 +133,17 @@ public class DialogChatWithElton : DialogTreeScript<DialogChatWithElton>
 		yield return C.InnerThoughts.Say("He's still doesn't understand, I lived with Charles, I know what he capable of...");
 		yield return C.Elton.Say("Let's just say... If I was sharing your mind and hearing your thoughts, I would have probably believed your theory about Charles");
 		
+		C.Elton.WalkSpeed = slowWalkSpeed;
 		Globals.m_progressExample = eProgress.TalkToElton;
-		yield return C.Elton.WalkTo(Point("EntryPoint"));
+		yield return C.Elton.WalkTo(-185, -15);
+		Audio.Play("DoorOpen");
 		C.Elton.Disable();
+		Region("Scale").Enabled = false;
 		yield return C.Plr.WalkTo(Point("EntryPoint"));
 		C.Plr.Visible = false;
+		yield return E.Wait(1);
+		Audio.Play("DoorClose");
+		yield return E.Wait(1.5f);
 		E.FadeColor = Color.black;
 		yield return E.FadeOut(1f);
 		yield return C.Display("To Be Continued");

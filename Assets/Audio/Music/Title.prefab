@@ -51,13 +51,13 @@ MonoBehaviour:
     m_fadeIn: 0
     m_fadeOut: 0
   m_volume:
-    m_min: 0.63
-    m_max: 0.63
+    m_min: 0.47
+    m_max: 0.47
     m_hasMax: 0
     m_hasValue: 0
   m_pitch:
-    m_min: 0.84
-    m_max: 0.84
+    m_min: 0.75
+    m_max: 0.75
     m_hasMax: 0
     m_hasValue: 0
   m_pan:

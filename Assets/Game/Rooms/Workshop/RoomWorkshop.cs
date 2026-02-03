@@ -395,4 +395,16 @@ public class RoomWorkshop : RoomScript<RoomWorkshop>
 		yield return C.InnerThoughts.Say("and it's still the first time seeing this door from the opposite side...");
 		yield return E.Break;
 	}
+
+	IEnumerator OnEnterRegionScale( IRegion region, ICharacter character )
+	{
+
+		yield return E.Break;
+	}
+
+	IEnumerator OnExitRegionScale( IRegion region, ICharacter character )
+	{
+
+		yield return E.Break;
+	}
 }

@@ -51,8 +51,8 @@ MonoBehaviour:
     m_fadeIn: 0
     m_fadeOut: 0
   m_volume:
-    m_min: 1
-    m_max: 1
+    m_min: 0.44
+    m_max: 0.44
     m_hasMax: 0
     m_hasValue: 0
   m_pitch:
@@ -61,8 +61,8 @@ MonoBehaviour:
     m_hasMax: 0
     m_hasValue: 0
   m_pan:
-    m_min: -0.32
-    m_max: -0.32
+    m_min: -0.38
+    m_max: -0.38
     m_hasMax: 0
     m_hasValue: 0
   m_alsoPlay: {fileID: 0}
